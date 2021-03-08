@@ -1,6 +1,9 @@
 {
     "itemGroup.ccamTab": "Colt's Cosmetic Armour Mod",
+    "item.ccam.witch_hat": "Witch Hat",
+    "item.ccam.colt_helmet": "Steampunker Goggles",
     "item.ccam.colt_chestplate": "Steampunker Coat",
     "item.ccam.colt_leggings": "Steampunker Coat flaps",
-    "item.ccam.colt_helmet": "Steampunker Goggles"
+    "item.ccam.tulip_hat": "Tulips",
+    "item.ccam.flower_crown": "Flower Crown"
 }
