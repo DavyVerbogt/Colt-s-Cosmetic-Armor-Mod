@@ -19,4 +19,7 @@ public interface  ISidedReference {
         default <A> A getTulipArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getFlowerCrownArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 }

@@ -1,12 +1,7 @@
 package com.colt.ccam.registries;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.armor.ColtArmorItem;
-import com.colt.ccam.armor.ModArmorMaterial;
-
-import com.colt.ccam.armor.TestArmorItem;
-import com.colt.ccam.armor.TulipArmorItem;
-import com.colt.ccam.armor.WitchHatArmorItem;
+import com.colt.ccam.armor.*;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 
@@ -41,5 +36,8 @@ public class ccamItems {
 
     public static final RegistryObject<TulipArmorItem> TULIP_HAT = ITEMS.register("tulip_hat",
     () -> new TulipArmorItem(ModArmorMaterial.TULIP, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+    
+    public static final RegistryObject<FlowerCrownArmorItem> FLOWER_CROWN = ITEMS.register("flower_crown",
+    () -> new FlowerCrownArmorItem(ModArmorMaterial.FLOWERCROWN, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
     
 }

@@ -9,14 +9,15 @@ import net.minecraftforge.eventbus.api.IEventBus;
 public class ClientRefrence implements ISidedReference {
 
     private final TestArmorModel testArmorModel = new TestArmorModel(1.0f);
-    private final TestArmorModel testArmorLeggings = new TestArmorModel(0.5f); 
+    private final TestArmorModel testArmorLeggings = new TestArmorModel(0.5f);
     private final WitchHatArmorModel witchArmorModel = new WitchHatArmorModel(1.0f);
     private final WitchHatArmorModel witchArmorLeggings = new WitchHatArmorModel(0.5f);
     private final ColtArmorModel coltArmorModel = new ColtArmorModel(1.0f);
     private final ColtArmorModel coltArmorLeggings = new ColtArmorModel(0.5f);
     private final TulipArmorModel tulipArmorModel = new TulipArmorModel(1.0f);
     private final TulipArmorModel tulipArmorLeggings = new TulipArmorModel(0.5f);
-    
+    private final FlowerCrownArmorModel flowerCorwnArmorModel = new FlowerCrownArmorModel(1.0f);
+    private final FlowerCrownArmorModel flowerCorwnArmorLeggings = new FlowerCrownArmorModel(0.5f);
 
     @Override
     public void setup(IEventBus modEventBus, IEventBus forgeEventBus) {
@@ -27,19 +28,28 @@ public class ClientRefrence implements ISidedReference {
     public <A> A getTestArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? testArmorLeggings : testArmorModel);
     }
+
     @SuppressWarnings("unchecked")
     @Override
     public <A> A getWitchArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? witchArmorLeggings : witchArmorModel);
     }
+
     @SuppressWarnings("unchecked")
     @Override
     public <A> A getColtArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? coltArmorLeggings : coltArmorModel);
     }
+
     @SuppressWarnings("unchecked")
     @Override
     public <A> A getTulipArmorModel(EquipmentSlotType armorSlot) {
-        return (A) (armorSlot == EquipmentSlotType.LEGS ? tulipArmorLeggings: tulipArmorModel);
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? tulipArmorLeggings : tulipArmorModel);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getFlowerCrownArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? flowerCorwnArmorLeggings: flowerCorwnArmorModel);
     }
 }
