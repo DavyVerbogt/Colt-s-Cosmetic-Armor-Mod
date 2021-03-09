@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "ccam:item/flower_crown",
-        "layer1": "ccam:item/flower_crown_overlay"
+        "layer0": "ccam:item/flower_crown_overlay",
+        "layer1": "ccam:item/flower_crown"
     }
 }

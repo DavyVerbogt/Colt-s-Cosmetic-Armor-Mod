@@ -1,7 +1,7 @@
 {
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "ccam:item/witch_hat",
-		"layer1": "ccam:item/witch_hat_overlay"
-	}
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "ccam:item/witch_hat_overlay",
+        "layer1": "ccam:item/witch_hat"
+    }
 }
