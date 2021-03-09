@@ -20,7 +20,7 @@ public class ModColorHandeler {
 
 		final IItemColor itemColourHandler = (stack, tintIndex) -> {
 			CompoundNBT color = stack.getChildTag("display");
-			return color != null && color.contains("color", 99) ? color.getInt("color") : 0XADC3D7;
+			return color != null && color.contains("color", 99) ? color.getInt("color") : 0XFFFFFF;
 		};
         itemColors.register(itemColourHandler, ccamItems.FLOWER_CROWN.get(), ccamItems.WITCH_HAT.get());
     }
