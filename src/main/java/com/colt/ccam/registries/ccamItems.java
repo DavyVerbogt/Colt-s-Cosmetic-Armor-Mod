@@ -4,7 +4,6 @@ import com.colt.ccam.ColtCosmeticArmorMod;
 import com.colt.ccam.armor.*;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
-
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -39,5 +38,4 @@ public class ccamItems {
     
     public static final RegistryObject<FlowerCrownArmorItem> FLOWER_CROWN = ITEMS.register("flower_crown",
     () -> new FlowerCrownArmorItem(ModArmorMaterial.FLOWERCROWN, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-    
 }

@@ -22,4 +22,5 @@ public interface  ISidedReference {
         default <A> A getFlowerCrownArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        
 }
