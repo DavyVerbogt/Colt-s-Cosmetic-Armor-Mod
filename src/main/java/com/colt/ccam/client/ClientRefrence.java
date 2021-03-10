@@ -8,8 +8,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 
 public class ClientRefrence implements ISidedReference {
 
-    private final TestArmorModel testArmorModel = new TestArmorModel(1.0f);
-    private final TestArmorModel testArmorLeggings = new TestArmorModel(0.5f);
     private final WitchHatArmorModel witchArmorModel = new WitchHatArmorModel(1.0f);
     private final WitchHatArmorModel witchArmorLeggings = new WitchHatArmorModel(0.5f);
     private final ColtArmorModel coltArmorModel = new ColtArmorModel(1.0f);
@@ -18,15 +16,16 @@ public class ClientRefrence implements ISidedReference {
     private final TulipArmorModel tulipArmorLeggings = new TulipArmorModel(0.5f);
     private final FlowerCrownArmorModel flowerCorwnArmorModel = new FlowerCrownArmorModel(1.0f);
     private final FlowerCrownArmorModel flowerCorwnArmorLeggings = new FlowerCrownArmorModel(0.5f);
+    private final CowBoyHatArmorModel cowBoyHatArmorModel = new CowBoyHatArmorModel(1.0f);
+    private final CowBoyHatArmorModel cowBoyHatArmorLeggings = new CowBoyHatArmorModel(0.5f);
+    private final TraficConeArmorModel traficConeArmorModel = new TraficConeArmorModel(1.0f);
+    private final TraficConeArmorModel traficConeArmorLeggings = new TraficConeArmorModel(0.5f);
+    private final TopHatModel topHatArmorModel = new TopHatModel(1.0f);
+    private final TopHatModel topHatArmorLeggings = new TopHatModel(0.5f);
+
 
     @Override
     public void setup(IEventBus modEventBus, IEventBus forgeEventBus) {
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public <A> A getTestArmorModel(EquipmentSlotType armorSlot) {
-        return (A) (armorSlot == EquipmentSlotType.LEGS ? testArmorLeggings : testArmorModel);
     }
 
     @SuppressWarnings("unchecked")
@@ -51,5 +50,20 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getFlowerCrownArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? flowerCorwnArmorLeggings: flowerCorwnArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getCowBoyArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? cowBoyHatArmorLeggings: cowBoyHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getTraficConeArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? traficConeArmorLeggings: traficConeArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getTopHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? topHatArmorLeggings: topHatArmorModel);
     }
 }

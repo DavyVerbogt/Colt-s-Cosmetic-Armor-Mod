@@ -9,14 +9,13 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
 
-public class TestArmorItem extends ArmorItem {
-	
-	public TestArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties properties) {
-		super(materialIn, slot, properties);
-	}
-	
-	@Override
+public class TopHatArmorItem extends ArmorItem {
+
+    public TopHatArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+        super(materialIn, slot, builderIn);
+    }
+    @Override
 	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return ColtCosmeticArmorMod.SIDED_SYSTEM.getTestArmorModel(armorSlot);
+		return ColtCosmeticArmorMod.SIDED_SYSTEM.getTopHatArmorModel(armorSlot);
 	}
 }

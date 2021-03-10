@@ -7,9 +7,6 @@ public interface  ISidedReference {
 
         void setup(IEventBus modEventBus, IEventBus forgeEventBus); 
 
-        default <A> A getTestArmorModel(EquipmentSlotType armorSlot) {
-            return null;
-        }
         default <A> A getWitchArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
@@ -22,5 +19,13 @@ public interface  ISidedReference {
         default <A> A getFlowerCrownArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
-        
+        default <A> A getCowBoyArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getTraficConeArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getTopHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 }

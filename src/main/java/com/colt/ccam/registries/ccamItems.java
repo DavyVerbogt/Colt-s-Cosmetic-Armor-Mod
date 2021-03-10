@@ -14,15 +14,6 @@ public class ccamItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             ColtCosmeticArmorMod.MOD_ID);
 
-    public static final RegistryObject<TestArmorItem> TEST_HELMET = ITEMS.register("test_helmet",
-    () -> new TestArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-    public static final RegistryObject<TestArmorItem> TEST_CHESTPLATE = ITEMS.register("test_chestplate",
-    () -> new TestArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-    public static final RegistryObject<TestArmorItem> TEST_LEGGINGS = ITEMS.register("test_leggings",
-    () -> new TestArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.LEGS, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-    public static final RegistryObject<TestArmorItem> TEST_BOOTS = ITEMS.register("test_boots",
-    () -> new TestArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.FEET, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-
     public static final RegistryObject<WitchHatArmorItem> WITCH_HAT = ITEMS.register("witch_hat",
     () -> new WitchHatArmorItem(ModArmorMaterial.WITCH, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
@@ -38,4 +29,13 @@ public class ccamItems {
     
     public static final RegistryObject<FlowerCrownArmorItem> FLOWER_CROWN = ITEMS.register("flower_crown",
     () -> new FlowerCrownArmorItem(ModArmorMaterial.FLOWERCROWN, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+    public static final RegistryObject<CowBoyArmorItem> COWBOY_HAT = ITEMS.register("cowboy_hat",
+    () -> new CowBoyArmorItem(ModArmorMaterial.COWBOYHAT, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+    public static final RegistryObject<TraficConeArmorItem> TRAFIC_CONE = ITEMS.register("trafic_cone",
+    () -> new TraficConeArmorItem(ModArmorMaterial.TRAFFICCONE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+    public static final RegistryObject<TopHatArmorItem> TOP_HAT = ITEMS.register("top_hat",
+    () -> new TopHatArmorItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 }
