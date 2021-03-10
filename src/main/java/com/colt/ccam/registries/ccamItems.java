@@ -33,8 +33,8 @@ public class ccamItems {
     public static final RegistryObject<CowBoyArmorItem> COWBOY_HAT = ITEMS.register("cowboy_hat",
     () -> new CowBoyArmorItem(ModArmorMaterial.COWBOYHAT, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-    public static final RegistryObject<TraficConeArmorItem> TRAFIC_CONE = ITEMS.register("trafic_cone",
-    () -> new TraficConeArmorItem(ModArmorMaterial.TRAFFICCONE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+    public static final RegistryObject<TrafficConeArmorItem> traffic_CONE = ITEMS.register("traffic_cone",
+    () -> new TrafficConeArmorItem(ModArmorMaterial.TRAFFICCONE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
     public static final RegistryObject<TopHatArmorItem> TOP_HAT = ITEMS.register("top_hat",
     () -> new TopHatArmorItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));

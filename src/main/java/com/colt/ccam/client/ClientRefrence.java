@@ -18,8 +18,8 @@ public class ClientRefrence implements ISidedReference {
     private final FlowerCrownArmorModel flowerCorwnArmorLeggings = new FlowerCrownArmorModel(0.5f);
     private final CowBoyHatArmorModel cowBoyHatArmorModel = new CowBoyHatArmorModel(1.0f);
     private final CowBoyHatArmorModel cowBoyHatArmorLeggings = new CowBoyHatArmorModel(0.5f);
-    private final TraficConeArmorModel traficConeArmorModel = new TraficConeArmorModel(1.0f);
-    private final TraficConeArmorModel traficConeArmorLeggings = new TraficConeArmorModel(0.5f);
+    private final TrafficConeArmorModel trafficConeArmorModel = new TrafficConeArmorModel(1.0f);
+    private final TrafficConeArmorModel trafficConeArmorLeggings = new TrafficConeArmorModel(0.5f);
     private final TopHatModel topHatArmorModel = new TopHatModel(1.0f);
     private final TopHatModel topHatArmorLeggings = new TopHatModel(0.5f);
 
@@ -58,8 +58,8 @@ public class ClientRefrence implements ISidedReference {
     }
     @SuppressWarnings("unchecked")
     @Override
-    public <A> A getTraficConeArmorModel(EquipmentSlotType armorSlot) {
-        return (A) (armorSlot == EquipmentSlotType.LEGS ? traficConeArmorLeggings: traficConeArmorModel);
+    public <A> A gettrafficConeArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? trafficConeArmorLeggings: trafficConeArmorModel);
     }
     @SuppressWarnings("unchecked")
     @Override

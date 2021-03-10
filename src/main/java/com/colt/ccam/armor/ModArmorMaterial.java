@@ -26,7 +26,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
 	COWBOYHAT("cowboyhat", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
     
-	TRAFFICCONE("traficcone", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
+	TRAFFICCONE("trafficcone", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
 
 	TOPHAT("tophat", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems());
 

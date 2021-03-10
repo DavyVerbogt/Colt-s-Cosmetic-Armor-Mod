@@ -22,7 +22,7 @@ public interface  ISidedReference {
         default <A> A getCowBoyArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
-        default <A> A getTraficConeArmorModel(EquipmentSlotType armorSlot) {
+        default <A> A gettrafficConeArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
         default <A> A getTopHatArmorModel(EquipmentSlotType armorSlot) {
