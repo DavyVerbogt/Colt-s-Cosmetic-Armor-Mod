@@ -11,14 +11,14 @@ import net.minecraft.item.IDyeableArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 
-public class TopHatArmorItem extends ArmorItem implements IDyeableArmorItem{
+public class SmallTopHatArmorItem extends ArmorItem implements IDyeableArmorItem{
 
-    public TopHatArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+    public SmallTopHatArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
     @Override
 	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return ColtCosmeticArmorMod.SIDED_SYSTEM.getTopHatArmorModel(armorSlot);
+		return ColtCosmeticArmorMod.SIDED_SYSTEM.getSmallTopHatArmorModel(armorSlot);
 	}
     
     public int getColor(ItemStack stack) {

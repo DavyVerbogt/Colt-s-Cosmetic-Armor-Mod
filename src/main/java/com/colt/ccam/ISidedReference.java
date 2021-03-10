@@ -28,4 +28,10 @@ public interface  ISidedReference {
         default <A> A getTopHatArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getSmallTopHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getMonacleArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 }

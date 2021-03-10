@@ -22,6 +22,10 @@ public class ClientRefrence implements ISidedReference {
     private final TrafficConeArmorModel trafficConeArmorLeggings = new TrafficConeArmorModel(0.5f);
     private final TopHatModel topHatArmorModel = new TopHatModel(1.0f);
     private final TopHatModel topHatArmorLeggings = new TopHatModel(0.5f);
+    private final SmallTopHatArmorModel smallTopHatArmorModel = new SmallTopHatArmorModel(1.0f);
+    private final SmallTopHatArmorModel smallTopHatArmorLeggings = new SmallTopHatArmorModel(0.5f);
+    private final MonacleArmorModel monacleArmorModel = new MonacleArmorModel(1.0f);
+    private final MonacleArmorModel monacleArmorLeggings = new MonacleArmorModel(0.5f);
 
 
     @Override
@@ -65,5 +69,15 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getTopHatArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? topHatArmorLeggings: topHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getSmallTopHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? smallTopHatArmorLeggings: smallTopHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getMonacleArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? monacleArmorLeggings: monacleArmorModel);
     }
 }
