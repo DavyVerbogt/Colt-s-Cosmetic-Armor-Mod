@@ -11,34 +11,40 @@ public class WitchHatArmorModel extends BipedModel<LivingEntity>{
         super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer WitchHat = new ModelRenderer(this);
-		WitchHat.setRotationPoint(0.0F, -10.1163F, 1.4443F);
+		WitchHat.setRotationPoint(0.0F, -7.0F, 0.0F);
 		bipedHead.addChild(WitchHat);
-		setRotationAngle(WitchHat, -0.1309F, 0.0F, 0.0F);
-		WitchHat.setTextureOffset(0, 52).addBox(-5.0F, 3.1163F, -5.4443F, 10.0F, 2.0F, 10.0F, 0.0F, false);
+		setRotationAngle(WitchHat, -0.0436F, 0.0F, 0.0F);
+		
 
-		ModelRenderer Layer5_r1 = new ModelRenderer(this);
-		Layer5_r1.setRotationPoint(0.0F, -4.4793F, 0.8094F);
-		WitchHat.addChild(Layer5_r1);
-		setRotationAngle(Layer5_r1, -0.2618F, 0.0F, 0.0F);
-		Layer5_r1.setTextureOffset(2, 57).addBox(-1.0F, -1.5F, -1.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
+		ModelRenderer cube_r1 = new ModelRenderer(this);
+		cube_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
+		WitchHat.addChild(cube_r1);
+		setRotationAngle(cube_r1, -0.7854F, 0.0F, 0.0F);
+		cube_r1.setTextureOffset(56, 55).addBox(-1.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, 0.0F, false);
 
-		ModelRenderer Layer4_r1 = new ModelRenderer(this);
-		Layer4_r1.setRotationPoint(0.0F, -1.9766F, 0.0535F);
-		WitchHat.addChild(Layer4_r1);
-		setRotationAngle(Layer4_r1, -0.2618F, 0.0F, 0.0F);
-		Layer4_r1.setTextureOffset(46, 52).addBox(-2.0F, -1.5F, -2.0F, 4.0F, 3.0F, 4.0F, 0.0F, false);
+		ModelRenderer cube_r2 = new ModelRenderer(this);
+		cube_r2.setRotationPoint(0.0F, 0.0F, 0.0F);
+		WitchHat.addChild(cube_r2);
+		setRotationAngle(cube_r2, -0.6109F, 0.0F, 0.0F);
+		cube_r2.setTextureOffset(48, 56).addBox(-2.0F, -9.0F, -3.3F, 4.0F, 4.0F, 4.0F, 0.0F, false);
 
-		ModelRenderer Layer3_r1 = new ModelRenderer(this);
-		Layer3_r1.setRotationPoint(0.0F, -0.2021F, -0.2074F);
-		WitchHat.addChild(Layer3_r1);
-		setRotationAngle(Layer3_r1, -0.1745F, 0.0F, 0.0F);
-		Layer3_r1.setTextureOffset(10, 43).addBox(-3.0F, -1.5F, -3.0F, 6.0F, 3.0F, 6.0F, 0.0F, false);
+		ModelRenderer cube_r3 = new ModelRenderer(this);
+		cube_r3.setRotationPoint(0.0F, 0.0F, 0.0F);
+		WitchHat.addChild(cube_r3);
+		setRotationAngle(cube_r3, -0.48F, 0.0F, 0.0F);
+		cube_r3.setTextureOffset(19, 38).addBox(-3.0F, -6.0F, -3.8F, 6.0F, 4.0F, 6.0F, 0.0F, false);
 
-		ModelRenderer Layer2_r1 = new ModelRenderer(this);
-		Layer2_r1.setRotationPoint(0.0F, 2.5417F, -0.2112F);
-		WitchHat.addChild(Layer2_r1);
-		setRotationAngle(Layer2_r1, -0.0873F, 0.0F, 0.0F);
-		Layer2_r1.setTextureOffset(30, 51).addBox(-4.0F, -1.5F, -4.0F, 8.0F, 3.0F, 8.0F, 0.0F, false);
+		ModelRenderer cube_r4 = new ModelRenderer(this);
+		cube_r4.setRotationPoint(0.0F, 0.0F, 0.0F);
+		WitchHat.addChild(cube_r4);
+		setRotationAngle(cube_r4, -0.2182F, 0.0F, 0.0F);
+		cube_r4.setTextureOffset(3, 40).addBox(-4.0F, -3.0F, -4.0F, 8.0F, 4.0F, 8.0F, 0.2F, false);
+
+		ModelRenderer cube_r5 = new ModelRenderer(this);
+		cube_r5.setRotationPoint(0.0F, 0.0F, 0.0F);
+		WitchHat.addChild(cube_r5);
+		setRotationAngle(cube_r5, -0.0873F, 0.0F, 0.0F);
+		cube_r5.setTextureOffset(0, 52).addBox(-5.0F, 0.0F, -5.0F, 10.0F, 2.0F, 10.0F, 0.0F, false);
 	}
 
 
