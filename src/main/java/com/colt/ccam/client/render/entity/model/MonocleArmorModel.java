@@ -4,9 +4,9 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class MonacleArmorModel extends BipedModel<LivingEntity> {
+public class MonocleArmorModel extends BipedModel<LivingEntity> {
 
-	public MonacleArmorModel(float modelSize) {
+	public MonocleArmorModel(float modelSize) {
 		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer Monical = new ModelRenderer(this);

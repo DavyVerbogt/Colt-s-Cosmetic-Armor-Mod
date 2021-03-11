@@ -42,6 +42,6 @@ public class ccamItems {
     public static final RegistryObject<SmallTopHatArmorItem> SMALL_TOP_HAT = ITEMS.register("small_top_hat",
     () -> new SmallTopHatArmorItem(ModArmorMaterial.SMALLTOPHAT, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-    public static final RegistryObject<MonacleArmorItem> MONACLE = ITEMS.register("monacle",
-    () -> new MonacleArmorItem(ModArmorMaterial.MONACLE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+    public static final RegistryObject<MonocleArmorItem> MONOCLE = ITEMS.register("monocle",
+    () -> new MonocleArmorItem(ModArmorMaterial.MONOCLE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 }
