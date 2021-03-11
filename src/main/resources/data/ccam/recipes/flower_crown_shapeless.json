@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "minecraft:poppy"
+            "tag": "minecraft:small_flowers"
         },
         {
             "item": "minecraft:string"
