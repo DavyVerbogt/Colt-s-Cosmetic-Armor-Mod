@@ -1,0 +1,8 @@
+{
+    "type": "ccam:sewing",
+    "ingredient": {
+        "item": "minecraft:iron_helmet"
+    },
+    "result": "ccamitems:colt_helmet",
+    "count": 1
+}

@@ -44,4 +44,5 @@ public class ccamItems {
 
     public static final RegistryObject<MonocleArmorItem> MONOCLE = ITEMS.register("monocle",
     () -> new MonocleArmorItem(ModArmorMaterial.MONOCLE, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
 }
