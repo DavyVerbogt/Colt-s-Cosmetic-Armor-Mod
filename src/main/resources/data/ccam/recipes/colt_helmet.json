@@ -1,8 +1,10 @@
 {
-    "type": "ccam:sewing",
+    "type": "tutorial:washer",
     "ingredient": {
-        "item": "minecraft:iron_helmet"
+        "tag": "forge:ingots/helmet"
     },
-    "result": "ccamitems:colt_helmet",
-    "count": 1
+    "result": {
+        "item": "ccam:colt_helmet",
+        "count": 1
+    }
 }

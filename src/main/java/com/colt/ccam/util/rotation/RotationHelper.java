@@ -1,4 +1,4 @@
-package com.colt.ccam.rotation;
+package com.colt.ccam.util.rotation;
 
 import java.util.EnumMap;
 import java.util.Map;

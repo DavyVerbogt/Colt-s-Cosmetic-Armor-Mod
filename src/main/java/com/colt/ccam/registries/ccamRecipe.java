@@ -1,28 +1,23 @@
 package com.colt.ccam.registries;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.sewingstation.SewingRecipeSerializer;
+import com.colt.ccam.sewingstation.AbstractSingleItemRecipe;
+import com.colt.ccam.sewingstation.SewingRecipe;
 
-//import com.colt.ccam.sewingstation.SewingRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.item.crafting.IRecipeType;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-
-@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class ccamRecipe {
-    @SubscribeEvent
-    public static void onRecipeRegistry(final RegistryEvent.Register<IRecipeSerializer<?>> RecipeRegistryEvent)
-    {
 
-        RecipeEnum.register(RecipeRegistryEvent);
-        RecipeRegistryEvent.getRegistry().register(SewingRecipeSerializer.sewing.setRegistryName(location("sewing")));
-    }
-    
-    public static ResourceLocation location(String name)
-    {
-        return new ResourceLocation(ColtCosmeticArmorMod.MOD_ID, name);
-    }
+    public static class Type {
+		public static final IRecipeType<SewingRecipe> SEWING = IRecipeType.register(ColtCosmeticArmorMod.MOD_ID + ":sewing");
+	}
+	
+	public static final DeferredRegister<IRecipeSerializer<?>> RECIPES = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, ColtCosmeticArmorMod.MOD_ID);
+	
+	public static final RegistryObject<AbstractSingleItemRecipe.Serializer<SewingRecipe>> SEWING = RECIPES.register("sewing", () -> new AbstractSingleItemRecipe.Serializer<>(SewingRecipe::new));
+
 }

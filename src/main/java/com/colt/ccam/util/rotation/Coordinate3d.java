@@ -1,4 +1,4 @@
-package com.colt.ccam.rotation;
+package com.colt.ccam.util.rotation;
 
 import net.minecraft.util.Direction.Axis;
 import net.minecraft.util.math.vector.Vector3d;

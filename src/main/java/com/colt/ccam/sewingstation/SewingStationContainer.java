@@ -2,6 +2,7 @@ package com.colt.ccam.sewingstation;
 
 import com.colt.ccam.registries.ccamBlocks;
 import com.colt.ccam.registries.ccamContainer;
+import com.colt.ccam.registries.ccamRecipe;
 import com.google.common.collect.Lists;
 import java.util.List;
 import net.minecraftforge.api.distmarker.Dist;
@@ -129,7 +130,7 @@ public class SewingStationContainer extends Container {
 		this.selectedRecipe.set(-1);
 		this.outputInventorySlot.putStack(ItemStack.EMPTY);
 		if (!stack.isEmpty()) {
-			this.recipes = this.world.getRecipeManager().getRecipes(IModdedRecipeType.sewing, inventoryIn, this.world);
+			this.recipes = this.world.getRecipeManager().getRecipes(ccamRecipe.Type.SEWING, inventoryIn, this.world);
 		}
 	}
 
@@ -173,7 +174,7 @@ public class SewingStationContainer extends Container {
 			  if (!this.mergeItemStack(itemstack1, 2, 38, false)) {
 				 return ItemStack.EMPTY;
 			  }
-		   } else if (this.world.getRecipeManager().getRecipe(IModdedRecipeType.sewing, new Inventory(itemstack1), this.world).isPresent()) {
+		   } else if (this.world.getRecipeManager().getRecipe(ccamRecipe.Type.SEWING, new Inventory(itemstack1), this.world).isPresent()) {
 			  if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
 				 return ItemStack.EMPTY;
 			  }

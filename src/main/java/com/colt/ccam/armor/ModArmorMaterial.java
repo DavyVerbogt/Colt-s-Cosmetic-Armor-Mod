@@ -17,6 +17,8 @@ import net.minecraftforge.common.util.Lazy;
 public enum ModArmorMaterial implements IArmorMaterial {
 	
 //New armor types
+BASIC("basic", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
+
 	WITCH("witch", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
 
 	COLT("colt", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),

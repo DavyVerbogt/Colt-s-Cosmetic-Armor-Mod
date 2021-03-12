@@ -1,28 +1,16 @@
 package com.colt.ccam.sewingstation;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.colt.ccam.registries.ccamBlocks;
-import net.minecraft.inventory.IInventory;
+import com.colt.ccam.registries.ccamRecipe;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.crafting.SingleItemRecipe;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
 
-public class SewingRecipe extends SingleItemRecipe {
+public class SewingRecipe extends AbstractSingleItemRecipe {
 
-	public static final List<SewingRecipe> SEWING_LIST = new ArrayList<>();
-
-    public SewingRecipe(ResourceLocation location, String p_i50021_2_, Ingredient ingredient, ItemStack itemStack) {
-        super(IModdedRecipeType.sewing, SewingRecipeSerializer.sewing, location, p_i50021_2_, ingredient, itemStack);
-        SEWING_LIST.add(this);
-    }
-	
-	@Override
-	public boolean matches(IInventory inv, World world) {
-		return this.ingredient.test(inv.getStackInSlot(0));
+	public SewingRecipe(ResourceLocation id, String group, Ingredient ingredient, int time, ItemStack result) {
+		super(ccamRecipe.Type.SEWING, ccamRecipe.SEWING.get(), id, group, ingredient, time, result);
 	}
 
 	@Override

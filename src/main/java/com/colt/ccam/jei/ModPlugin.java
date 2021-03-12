@@ -29,10 +29,10 @@ public class ModPlugin implements IModPlugin {
         );
     }
 
-    @Override
-    public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(SewingRecipe.SEWING_LIST, SewingStationRecipeCategory.UID);
-    }
+    //@Override
+    //public void registerRecipes(IRecipeRegistration registration) {
+    //    registration.addRecipes(SewingRecipe.SEWING_LIST, SewingStationRecipeCategory.UID);
+    //}
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {

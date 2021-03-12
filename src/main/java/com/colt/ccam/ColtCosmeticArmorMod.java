@@ -4,7 +4,9 @@ import com.colt.ccam.client.ClientRefrence;
 import com.colt.ccam.registries.ccamBlocks;
 import com.colt.ccam.registries.ccamContainer;
 import com.colt.ccam.registries.ccamItems;
+import com.colt.ccam.registries.ccamRecipe;
 import com.colt.ccam.server.dedicated.DedicatedServerReference;
+import com.colt.ccam.sewingstation.SewingRecipe;
 import com.colt.ccam.sewingstation.SewingStationContainer;
 import com.colt.ccam.sewingstation.SewingStationScreen;
 
@@ -33,7 +35,6 @@ public class ColtCosmeticArmorMod {
 
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
         addRegistries(modEventBus);
-        //modEventBus.addListener(this::onInitializeClient);
 
     }
 
@@ -41,6 +42,7 @@ public class ColtCosmeticArmorMod {
         ccamItems.ITEMS.register(modEventBus);
         ccamBlocks.BLOCKS.register(modEventBus);
         ccamContainer.CONTAINERS.register(modEventBus);
+        ccamRecipe.RECIPES.register(modEventBus);
         modEventBus.addListener(this::onInitializeClient);
     }
 

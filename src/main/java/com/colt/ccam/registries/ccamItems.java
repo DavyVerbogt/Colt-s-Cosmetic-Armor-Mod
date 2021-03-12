@@ -5,6 +5,7 @@ import com.colt.ccam.armor.*;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,6 +14,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ccamItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             ColtCosmeticArmorMod.MOD_ID);
+
+            public static final RegistryObject<ArmorItem> BASIC_HELMET = ITEMS.register("basic_helmet", () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+            public static final RegistryObject<ArmorItem> BASIC_CHESTPLATE = ITEMS.register("basic_chestplate", () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+            public static final RegistryObject<ArmorItem> BASIC_LEGGINGS = ITEMS.register("basic_leggings", () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.LEGS, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+            public static final RegistryObject<ArmorItem> BASIC_BOOTS = ITEMS.register("basic_boots", () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.FEET, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
     public static final RegistryObject<WitchHatArmorItem> WITCH_HAT = ITEMS.register("witch_hat",
     () -> new WitchHatArmorItem(ModArmorMaterial.WITCH, EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));

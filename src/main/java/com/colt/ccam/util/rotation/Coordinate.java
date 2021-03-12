@@ -1,4 +1,4 @@
-package com.colt.ccam.rotation;
+package com.colt.ccam.util.rotation;
 
 /**
  * Base implementation of coordinate system used to handle models.
