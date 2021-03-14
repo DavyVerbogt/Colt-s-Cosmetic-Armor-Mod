@@ -1,6 +1,7 @@
 package com.colt.ccam;
 
 import com.colt.ccam.client.ClientRefrence;
+import com.colt.ccam.data.SingleItemRecipeProvider;
 import com.colt.ccam.registries.ccamBlocks;
 import com.colt.ccam.registries.ccamContainer;
 import com.colt.ccam.registries.ccamItems;
@@ -13,12 +14,14 @@ import com.colt.ccam.sewingstation.SewingStationScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(ColtCosmeticArmorMod.MOD_ID)
@@ -44,7 +47,16 @@ public class ColtCosmeticArmorMod {
         ccamContainer.CONTAINERS.register(modEventBus);
         ccamRecipe.RECIPES.register(modEventBus);
         modEventBus.addListener(this::onInitializeClient);
+        modEventBus.addListener(this::gatherData);
     }
+
+    private void gatherData(final GatherDataEvent event) {
+		DataGenerator gen = event.getGenerator();
+		
+		if(event.includeServer()) {
+			gen.addProvider(new SingleItemRecipeProvider(gen));
+		}
+	}
 
     private void onInitializeClient(FMLClientSetupEvent e) {
         ScreenManager.registerFactory(SewingStationContainer, SewingStationScreen::new);

@@ -1,7 +1,8 @@
 {
-    "type": "tutorial:washer",
+    "type": "ccam:sewing",
+    "group": "gems",
     "ingredient": {
-        "tag": "forge:ingots/helmet"
+        "tag": "forge:gems/emerald"
     },
     "result": {
         "item": "ccam:colt_helmet",

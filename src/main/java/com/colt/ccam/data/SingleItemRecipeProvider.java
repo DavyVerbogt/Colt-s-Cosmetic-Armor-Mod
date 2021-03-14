@@ -16,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 public class SingleItemRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -26,7 +27,7 @@ public class SingleItemRecipeProvider extends RecipeProvider implements IConditi
 
 	@Override
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-       addSewingRecipe(consumer, ccamTags.Items.HELMET_PART, ccamItems.COLT_HELMET.get(), "");
+       addSewingRecipe(consumer, Tags.Items.GEMS_EMERALD, ccamItems.COLT_HELMET.get(), "gems");
 	}
 
 	protected static void addSmeltingRecipes(Consumer<IFinishedRecipe> consumer, INamedTag<Item> ore, Item result, float experience, int time) {
