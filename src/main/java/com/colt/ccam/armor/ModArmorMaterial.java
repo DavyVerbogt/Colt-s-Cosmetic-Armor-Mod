@@ -37,7 +37,9 @@ BASIC("basic", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 
 
 	MONOCLE("monocle", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
 
-	GLADIATOR("gladiator", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems());
+	GLADIATOR("gladiator", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems()),
+
+	CONSTRUCTION("construction", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.fromItems());
 
 //Stuff that is needed
 	private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
