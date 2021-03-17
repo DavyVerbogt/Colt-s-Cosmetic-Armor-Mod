@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "ccam:basic_helmet"
+    },
+    "result": "ccam:witch_hat",
+    "count": 1
+}
