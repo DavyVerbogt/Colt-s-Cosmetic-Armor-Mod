@@ -11,6 +11,14 @@
     "item.ccam.traffic_cone": "Traffic Cone",
     "item.ccam.monocle": "Monocle",
     "item.ccam.small_top_hat": "Small Top Hat",
+    "item.ccam.basic_helmet": "§bBasic Helmet",
+    "item.ccam.basic_chestplate": "§bBasic Chestplate",
+    "item.ccam.basic_leggings": "§bBasic Leggings",
+    "item.ccam.basic_boots": "§bBasic Boots",
     "block.ccam.sewing_station": "Sewing Machine",
-    "item.ccam.test_helmet":"§3Test helmet"
+    "item.ccam.test_helmet":"§3Test helmet",
+    "item.ccam.gladiator_helmet": "Centurion Helmet",
+    "item.ccam.gladiator_chestplate": "Centurion Chestplate",
+    "item.ccam.gladiator_leggings": "Centurion Leggings",
+    "item.ccam.gladiator_boots": "Centurion Boots"
 }
