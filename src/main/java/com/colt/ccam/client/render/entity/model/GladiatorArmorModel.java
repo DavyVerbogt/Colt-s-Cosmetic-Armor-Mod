@@ -128,7 +128,7 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		ModelRenderer Shoulder_Piece = new ModelRenderer(this);
 		Shoulder_Piece.setRotationPoint(-0F, -0.5F, 0.0F);
 		bipedRightArm.addChild(Shoulder_Piece);
-		Shoulder_Piece.setTextureOffset(10, 57).addBox(-1.0F, -5.0F, -1.5F, 1.0F, 4.0F, 3.0F, 0.0F, false);
+		Shoulder_Piece.setTextureOffset(4, 57).addBox(-1.0F, -5.0F, -1.5F, 1.0F, 4.0F, 3.0F, 0.0F, false);
 
 		ModelRenderer ShoulderLeft_r1 = new ModelRenderer(this);
 		ShoulderLeft_r1.setRotationPoint(-0F, -3.5F, 0.0F);
@@ -153,13 +153,13 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		ShoulderBackRight_r1.setRotationPoint(-0F, -0.5F, 0.0F);
 		Shoulder_Piece.addChild(ShoulderBackRight_r1);
 		setRotationAngle(ShoulderBackRight_r1, 0.3054F, 0.0F, 0.0F);
-		ShoulderBackRight_r1.setTextureOffset(12, 58).addBox(-1.0F, -5.2F, -1.9F, 1.0F, 4.0F, 2.0F, 0.0F, false);
+		ShoulderBackRight_r1.setTextureOffset(6, 58).addBox(-1.0F, -5.2F, -1.9F, 1.0F, 4.0F, 2.0F, 0.0F, false);
 
 		ModelRenderer ShoulderBackLeft_r1 = new ModelRenderer(this);
 		ShoulderBackLeft_r1.setRotationPoint(-0F, -0.5F, 0.0F);
 		Shoulder_Piece.addChild(ShoulderBackLeft_r1);
 		setRotationAngle(ShoulderBackLeft_r1, -0.3054F, 0.0F, 0.0F);
-		ShoulderBackLeft_r1.setTextureOffset(12, 58).addBox(-1.0F, -5.2F, -0.1F, 1.0F, 4.0F, 2.0F, 0.0F, false);
+		ShoulderBackLeft_r1.setTextureOffset(6, 58).addBox(-1.0F, -5.2F, -0.1F, 1.0F, 4.0F, 2.0F, 0.0F, false);
 
 		ModelRenderer ShoulderRight_r1 = new ModelRenderer(this);
 		ShoulderRight_r1.setRotationPoint(-0F, -3.5F, 0.0F);

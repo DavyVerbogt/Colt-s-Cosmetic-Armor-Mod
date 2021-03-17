@@ -15,19 +15,21 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
-public class ColtArmorItem extends ArmorItem {
-	
-	public ColtArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties properties) {
-		super(materialIn, slot, properties);
+public class ConstructionArmorItem extends ArmorItem {
+
+	public ConstructionArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+		super(materialIn, slot, builderIn);
 	}
-	
+
 	@Override
-	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return ColtCosmeticArmorMod.SIDED_SYSTEM.getColtArmorModel(armorSlot);
-	} 
+	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack,
+			EquipmentSlotType armorSlot, A _default) {
+		return ColtCosmeticArmorMod.SIDED_SYSTEM.getConstructionArmorModel(armorSlot);
+	}
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add(new TranslationTextComponent(""));
+		tooltip.add(new TranslationTextComponent("Yes We Can!"));
 	}
+
 }

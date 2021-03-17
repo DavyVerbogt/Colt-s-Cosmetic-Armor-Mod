@@ -28,6 +28,8 @@ public class ClientRefrence implements ISidedReference {
     private final MonocleArmorModel monocleArmorLeggings = new MonocleArmorModel(0.5f);
     private final GladiatorArmorModel gladiatorArmorModel = new GladiatorArmorModel(1.0f);
     private final GladiatorArmorModel gladiatorArmorLeggings = new GladiatorArmorModel(0.5f);
+    private final ConstructionArmorModel constructionArmorModel = new ConstructionArmorModel(1.0f);
+    private final ConstructionArmorModel constructionArmorLeggings = new ConstructionArmorModel(0.5f);
 
 
     @Override
@@ -86,5 +88,10 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getGladiatorArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? gladiatorArmorLeggings: gladiatorArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getConstructionArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? constructionArmorLeggings: constructionArmorModel);
     }
 }
