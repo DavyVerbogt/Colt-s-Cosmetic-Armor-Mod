@@ -30,6 +30,22 @@ public class ClientRefrence implements ISidedReference {
     private final GladiatorArmorModel gladiatorArmorLeggings = new GladiatorArmorModel(0.5f);
     private final ConstructionArmorModel constructionArmorModel = new ConstructionArmorModel(1.0f);
     private final ConstructionArmorModel constructionArmorLeggings = new ConstructionArmorModel(0.5f);
+    private final ArrowArmorModel arrowArmorModel = new ArrowArmorModel(1.0f);
+    private final ArrowArmorModel arrowArmorLeggings = new ArrowArmorModel(0.5f);
+    private final LongSmalTophatArmorModel longSmallTopHatArmorModel = new LongSmalTophatArmorModel(1.0f);
+    private final LongSmalTophatArmorModel longSmallTopHatArmorLeggings = new LongSmalTophatArmorModel(0.5f);
+    private final WolfArmorModel wolfArmorModel = new WolfArmorModel(1.0f);
+    private final WolfArmorModel wolfArmorLeggings = new WolfArmorModel(0.5f);
+    private final TopTopTopHatModel topTopTopHatArmorModel = new TopTopTopHatModel(1.0f);
+    private final TopTopTopHatModel topTopTopHatArmorLeggings = new TopTopTopHatModel(0.5f);
+    private final LongTopHatArmorModel longTopHatArmorModel = new LongTopHatArmorModel(1.0f);
+    private final LongTopHatArmorModel longTopHatArmorLeggings = new LongTopHatArmorModel(0.5f);
+    private final MajimaContructionHatArmorModel majimaContructionHatArmorModel = new MajimaContructionHatArmorModel( 1.0f);
+    private final MajimaContructionHatArmorModel majimaContructionHatArmorLeggings = new MajimaContructionHatArmorModel(0.5f);
+    private final NachoSombraroArmorModel nachoSombraroArmorModel = new NachoSombraroArmorModel( 1.0f);
+    private final NachoSombraroArmorModel nachoSombraroArmorLeggings = new NachoSombraroArmorModel(0.5f);
+    private final SombreroArmorModel sombraroArmorModel = new SombreroArmorModel( 1.0f);
+    private final SombreroArmorModel sombraroArmorLeggings = new SombreroArmorModel(0.5f);
 
 
     @Override
@@ -93,5 +109,45 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getConstructionArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? constructionArmorLeggings: constructionArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getArrowArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? arrowArmorLeggings: arrowArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getLongSmallTopHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? longSmallTopHatArmorLeggings: longSmallTopHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getWolfArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? wolfArmorLeggings: wolfArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getTopTopTopHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? topTopTopHatArmorLeggings: topTopTopHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getLongTopHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? longTopHatArmorLeggings : longTopHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getMajimaContructionHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? majimaContructionHatArmorLeggings  : majimaContructionHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getNachoSombraroArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? nachoSombraroArmorLeggings : nachoSombraroArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getSombraroArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? sombraroArmorLeggings : sombraroArmorModel);
     }
 }

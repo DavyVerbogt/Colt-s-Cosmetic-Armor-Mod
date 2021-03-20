@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [{
+        "item": "minecraft:arrow"
+    }],
+    "result": {
+        "item": "ccam:arrow_through_head"
+    }
+}

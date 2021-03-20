@@ -40,4 +40,28 @@ public interface  ISidedReference {
         default <A> A getConstructionArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getArrowArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getLongSmallTopHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getWolfArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getTopTopTopHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getLongTopHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getMajimaContructionHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getNachoSombraroArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getSombraroArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 }

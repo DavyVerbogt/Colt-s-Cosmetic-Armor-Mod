@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        [{
+                "item": "ccam:top_hat"
+            },
+            {
+                "item": "ccam:small_top_hat"
+            }
+        ],
+        [{
+                "item": "ccam:top_hat"
+            },
+            {
+                "item": "ccam:small_top_hat"
+            }
+        ],
+        [{
+                "item": "ccam:top_hat"
+            },
+            {
+                "item": "ccam:small_top_hat"
+            }
+        ]
+    ],
+    "result": {
+        "item": "ccam:top_top_top_hat"
+    }
+}

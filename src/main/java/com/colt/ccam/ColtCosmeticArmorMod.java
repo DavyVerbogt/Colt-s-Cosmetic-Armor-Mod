@@ -43,11 +43,11 @@ public class ColtCosmeticArmorMod {
 
     private void addRegistries(final IEventBus modEventBus) {
         ccamItems.ITEMS.register(modEventBus);
-        ccamBlocks.BLOCKS.register(modEventBus);
-        ccamContainer.CONTAINERS.register(modEventBus);
-        ccamRecipe.RECIPES.register(modEventBus);
-        modEventBus.addListener(this::onInitializeClient);
-        modEventBus.addListener(this::gatherData);
+        //ccamBlocks.BLOCKS.register(modEventBus);
+        //ccamContainer.CONTAINERS.register(modEventBus);
+        //ccamRecipe.RECIPES.register(modEventBus);
+        //modEventBus.addListener(this::onInitializeClient);
+       //modEventBus.addListener(this::gatherData);
     }
 
     private void gatherData(final GatherDataEvent event) {

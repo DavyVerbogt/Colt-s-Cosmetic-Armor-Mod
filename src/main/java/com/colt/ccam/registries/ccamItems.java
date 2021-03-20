@@ -83,8 +83,51 @@ public class ccamItems {
                         () -> new GladiatorArmorItem(ModArmorMaterial.GLADIATOR, EquipmentSlotType.FEET,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        public static final RegistryObject<ConstructionArmorItem> CONSTRUCTION_HELMET = ITEMS.register("construction_helmet",
-                        () -> new ConstructionArmorItem(ModArmorMaterial.CONSTRUCTION, EquipmentSlotType.HEAD,
+        public static final RegistryObject<ConstructionArmorItem> CONSTRUCTION_HELMET = ITEMS
+                        .register("construction_helmet", () -> new ConstructionArmorItem(ModArmorMaterial.CONSTRUCTION,
+                                        EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<ArrowArmorItem> ARROW_THROUGH_HEAD = ITEMS.register("arrow_through_head",
+                        () -> new ArrowArmorItem(ModArmorMaterial.ARROW, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<LongSmallTophatArmormItem> LONG_SMALL_TOP_HAT = ITEMS.register(
+                        "long_small_top_hat", () -> new LongSmallTophatArmormItem(ModArmorMaterial.LONGSMALLTOPHAT,
+                                        EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<WolfArmorItem> WOLF_HELMET = ITEMS.register("wolf_helmet",
+                        () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<WolfArmorItem> WOLF_CHESTPLATE = ITEMS.register("wolf_chestplate",
+                        () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlotType.CHEST,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<WolfArmorItem> WOLF_LEGGINGS = ITEMS.register("wolf_leggings",
+                        () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlotType.LEGS,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<WolfArmorItem> WOLF_BOOTS = ITEMS.register("wolf_boots",
+                        () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlotType.FEET,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<TopTopTopArmorItem> TOP_TOP_TOP_HAT = ITEMS.register("top_top_top_hat",
+                        () -> new TopTopTopArmorItem(ModArmorMaterial.TOPTOPTOPHAT, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<LongTopHatArmorItem> LONGTOPHAT_HELMET = ITEMS.register("longtophat_helmet",
+                        () -> new LongTopHatArmorItem(ModArmorMaterial.LONGTOPHAT, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<MajimaContructionHatArmorItem> JAPANECECONSTRUCTION_HELMET = ITEMS
+                        .register("japaneseconstruction_helmet",
+                                        () -> new MajimaContructionHatArmorItem(ModArmorMaterial.MAJIMACONSTRUCTIONHAT,
+                                                        EquipmentSlotType.HEAD,
+                                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBRARO_HELMET = ITEMS.register(
+                        "nachosombraro_helmet", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
+                                        EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+                                        public static final RegistryObject<SombreroArmorItem> SOMBRARO_HELMET = ITEMS.register(
+                                                "sombraro_helmet", () -> new SombreroArmorItem(ModArmorMaterial.SOMBRARO,
+                                                                EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
 }
