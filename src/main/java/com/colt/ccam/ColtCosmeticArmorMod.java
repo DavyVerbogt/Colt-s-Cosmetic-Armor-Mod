@@ -38,7 +38,6 @@ public class ColtCosmeticArmorMod {
 
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
         addRegistries(modEventBus);
-
     }
 
     private void addRegistries(final IEventBus modEventBus) {
@@ -49,7 +48,7 @@ public class ColtCosmeticArmorMod {
         //modEventBus.addListener(this::onInitializeClient);
        //modEventBus.addListener(this::gatherData);
     }
-
+/*
     private void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
 		
@@ -64,4 +63,5 @@ public class ColtCosmeticArmorMod {
         RenderTypeLookup.setRenderLayer(ccamBlocks.SEWING_STATION.get(), RenderType.getCutout());
 
     }
+    */
 }
