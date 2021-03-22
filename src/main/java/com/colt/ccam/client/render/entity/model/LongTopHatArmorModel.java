@@ -12,7 +12,7 @@ public class LongTopHatArmorModel extends BipedModel<LivingEntity> {
         ModelRenderer LongTopHat = new ModelRenderer(this);
         LongTopHat.setRotationPoint(0.0F, -7F, 0.0F);
         bipedHead.addChild(LongTopHat);
-        setRotationAngle(LongTopHat, -0.1309F, 0.0F , 0.0F);
+        setRotationAngle(LongTopHat, -0.1309F, 0.0F, 0.0F);
         LongTopHat.setTextureOffset(32, 32).addBox(-4.0F, -25.5F, -4.0F, 8.0F, 24.0F, 8.0F, 0.0F, false);
         LongTopHat.setTextureOffset(32, 54).addBox(-4.0F, -0.5F, -4.0F, 8.0F, 1.0F, 8.0F, 1.0F, false);
     }

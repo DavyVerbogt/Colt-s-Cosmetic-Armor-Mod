@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 
-    public GladiatorArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 128);
+	public GladiatorArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 128);
 
 		ModelRenderer JacketRightLeg = new ModelRenderer(this);
 		JacketRightLeg.setRotationPoint(0.0F, 4.0F, 0.0F);
@@ -17,7 +17,7 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		ModelRenderer LegFlapsRight = new ModelRenderer(this);
 		LegFlapsRight.setRotationPoint(0.2F, 0.0F, 0.0F);
 		bipedRightLeg.addChild(LegFlapsRight);
-	
+
 		ModelRenderer FlapLeft_r1 = new ModelRenderer(this);
 		FlapLeft_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		LegFlapsRight.addChild(FlapLeft_r1);
@@ -171,7 +171,7 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		JacketLeftArm.setRotationPoint(-1.2F, -1.0F, 0.0F);
 		bipedLeftArm.addChild(JacketLeftArm);
 		JacketLeftArm.setTextureOffset(0, 41).addBox(0.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.2F, true);
-		
+
 		ModelRenderer Helmet = new ModelRenderer(this);
 		Helmet.setRotationPoint(0.0F, -0.0F, 0.0F);
 		bipedHead.addChild(Helmet);
@@ -194,37 +194,43 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		HelmetFeatherGaurdMidRight_r1.setRotationPoint(-0.4F, 0.0F, 0.4F);
 		Helmet.addChild(HelmetFeatherGaurdMidRight_r1);
 		setRotationAngle(HelmetFeatherGaurdMidRight_r1, -0.829F, 0.0873F, 0.0873F);
-		HelmetFeatherGaurdMidRight_r1.setTextureOffset(29, 123).addBox(-0.3F, -9.4F, -5.5F, 1.0F, 2.0F, 3.0F, 0.0F, true);
+		HelmetFeatherGaurdMidRight_r1.setTextureOffset(29, 123).addBox(-0.3F, -9.4F, -5.5F, 1.0F, 2.0F, 3.0F, 0.0F,
+				true);
 
 		ModelRenderer HelmetFeatherGaurdBackRight_r1 = new ModelRenderer(this);
 		HelmetFeatherGaurdBackRight_r1.setRotationPoint(-0.6F, -1.1F, -1.4F);
 		Helmet.addChild(HelmetFeatherGaurdBackRight_r1);
 		setRotationAngle(HelmetFeatherGaurdBackRight_r1, -1.7453F, 0.0873F, 0.0F);
-		HelmetFeatherGaurdBackRight_r1.setTextureOffset(16, 120).addBox(0.4F, -5.7F, -8.2F, 1.0F, 2.0F, 5.0F, 0.0F, true);
+		HelmetFeatherGaurdBackRight_r1.setTextureOffset(16, 120).addBox(0.4F, -5.7F, -8.2F, 1.0F, 2.0F, 5.0F, 0.0F,
+				true);
 
 		ModelRenderer HelmetFeatherGaurdFrontRight_r1 = new ModelRenderer(this);
 		HelmetFeatherGaurdFrontRight_r1.setRotationPoint(-0.4F, 1.1F, 1.1F);
 		Helmet.addChild(HelmetFeatherGaurdFrontRight_r1);
 		setRotationAngle(HelmetFeatherGaurdFrontRight_r1, 0.1309F, 0.0F, 0.0873F);
-		HelmetFeatherGaurdFrontRight_r1.setTextureOffset(0, 118).addBox(-0.1F, -11.0F, -3.0F, 1.0F, 3.0F, 7.0F, 0.0F, true);
+		HelmetFeatherGaurdFrontRight_r1.setTextureOffset(0, 118).addBox(-0.1F, -11.0F, -3.0F, 1.0F, 3.0F, 7.0F, 0.0F,
+				true);
 
 		ModelRenderer HelmetFeatherGaurdMidLeft_r1 = new ModelRenderer(this);
 		HelmetFeatherGaurdMidLeft_r1.setRotationPoint(0.7F, 0.0F, 0.4F);
 		Helmet.addChild(HelmetFeatherGaurdMidLeft_r1);
 		setRotationAngle(HelmetFeatherGaurdMidLeft_r1, -0.829F, -0.0873F, -0.0873F);
-		HelmetFeatherGaurdMidLeft_r1.setTextureOffset(29, 123).addBox(-0.7F, -9.4F, -5.5F, 1.0F, 2.0F, 3.0F, 0.0F, false);
+		HelmetFeatherGaurdMidLeft_r1.setTextureOffset(29, 123).addBox(-0.7F, -9.4F, -5.5F, 1.0F, 2.0F, 3.0F, 0.0F,
+				false);
 
 		ModelRenderer HelmetFeatherGaurdBackLeft_r1 = new ModelRenderer(this);
 		HelmetFeatherGaurdBackLeft_r1.setRotationPoint(0.5F, -1.1F, -1.4F);
 		Helmet.addChild(HelmetFeatherGaurdBackLeft_r1);
 		setRotationAngle(HelmetFeatherGaurdBackLeft_r1, -1.7453F, -0.0873F, 0.0F);
-		HelmetFeatherGaurdBackLeft_r1.setTextureOffset(16, 120).addBox(-1.0F, -5.7F, -8.2F, 1.0F, 2.0F, 5.0F, 0.0F, false);
+		HelmetFeatherGaurdBackLeft_r1.setTextureOffset(16, 120).addBox(-1.0F, -5.7F, -8.2F, 1.0F, 2.0F, 5.0F, 0.0F,
+				false);
 
 		ModelRenderer HelmetFeatherGaurdFrontLeft_r1 = new ModelRenderer(this);
 		HelmetFeatherGaurdFrontLeft_r1.setRotationPoint(0.7F, 1.1F, 1.1F);
 		Helmet.addChild(HelmetFeatherGaurdFrontLeft_r1);
 		setRotationAngle(HelmetFeatherGaurdFrontLeft_r1, 0.1309F, 0.0F, -0.0873F);
-		HelmetFeatherGaurdFrontLeft_r1.setTextureOffset(0, 118).addBox(-0.9F, -11.0F, -3.0F, 1.0F, 3.0F, 7.0F, 0.0F, false);
+		HelmetFeatherGaurdFrontLeft_r1.setTextureOffset(0, 118).addBox(-0.9F, -11.0F, -3.0F, 1.0F, 3.0F, 7.0F, 0.0F,
+				false);
 
 		ModelRenderer FrontGaurd_r1 = new ModelRenderer(this);
 		FrontGaurd_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -232,7 +238,6 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		setRotationAngle(FrontGaurd_r1, -0.3491F, 0.0F, 0.0F);
 		FrontGaurd_r1.setTextureOffset(0, 109).addBox(-4.0F, -6.3F, -6.8F, 8.0F, 2.0F, 2.0F, 0.0F, false);
 	}
-
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;

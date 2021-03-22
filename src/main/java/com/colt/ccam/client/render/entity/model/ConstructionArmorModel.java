@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class ConstructionArmorModel extends BipedModel<LivingEntity> {
 
-    public ConstructionArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public ConstructionArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer bone = new ModelRenderer(this);
 		bone.setRotationPoint(0.0F, 0.0F, 0.0F);

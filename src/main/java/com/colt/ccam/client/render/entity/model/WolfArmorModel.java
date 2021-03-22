@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class WolfArmorModel extends BipedModel<LivingEntity> {
 
-    public WolfArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 128);
+	public WolfArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 128);
 
 		ModelRenderer FluffArmourR = new ModelRenderer(this);
 		FluffArmourR.setRotationPoint(-4.9688F, 9.9688F, 0.1563F);
@@ -38,7 +38,6 @@ public class WolfArmorModel extends BipedModel<LivingEntity> {
 		ModelRenderer JacketLeftLeg = new ModelRenderer(this);
 		JacketLeftLeg.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedLeftLeg.addChild(JacketLeftLeg);
-		
 
 		ModelRenderer FluffArmourL = new ModelRenderer(this);
 		FluffArmourL.setRotationPoint(-0.9688F, 8.9688F, 0.1563F);
@@ -103,9 +102,8 @@ public class WolfArmorModel extends BipedModel<LivingEntity> {
 		ModelRenderer JacketLeftArm = new ModelRenderer(this);
 		JacketLeftArm.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedLeftArm.addChild(JacketLeftArm);
-		
 
-        ModelRenderer SholderPieceL = new ModelRenderer(this);
+		ModelRenderer SholderPieceL = new ModelRenderer(this);
 		SholderPieceL.setRotationPoint(-1.2F, -1.0F, -0.0F);
 		JacketLeftArm.addChild(SholderPieceL);
 		SholderPieceL.setTextureOffset(58, 46).addBox(0.0F, 0.0F, -3.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);

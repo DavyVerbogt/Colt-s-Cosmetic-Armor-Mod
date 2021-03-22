@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class SombreroArmorModel extends BipedModel<LivingEntity> {
 
-    public SombreroArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 128);
+	public SombreroArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 128);
 
 		ModelRenderer Sombraro = new ModelRenderer(this);
 		Sombraro.setRotationPoint(-2.0F, 0.6F, 0.0F);

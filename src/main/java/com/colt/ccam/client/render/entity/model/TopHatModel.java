@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class TopHatModel extends BipedModel<LivingEntity> {
 
-    public TopHatModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public TopHatModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer TopHat = new ModelRenderer(this);
 		TopHat.setRotationPoint(0.0F, -6.5F, 0.0F);
@@ -16,6 +16,7 @@ public class TopHatModel extends BipedModel<LivingEntity> {
 		TopHat.setTextureOffset(32, 48).addBox(-4.0F, -9.5F, -4.0F, 8.0F, 8.0F, 8.0F, 0.2F, false);
 		TopHat.setTextureOffset(32, 54).addBox(-4.0F, -0.5F, -4.0F, 8.0F, 1.0F, 8.0F, 1.0F, false);
 	}
+
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;

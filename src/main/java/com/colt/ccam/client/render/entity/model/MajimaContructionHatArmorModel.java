@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class MajimaContructionHatArmorModel extends BipedModel<LivingEntity> {
 
-    public MajimaContructionHatArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public MajimaContructionHatArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer MajimaConstructionHat = new ModelRenderer(this);
 		MajimaConstructionHat.setRotationPoint(0.0F, 0F, 0.0F);
@@ -27,6 +27,7 @@ public class MajimaContructionHatArmorModel extends BipedModel<LivingEntity> {
 		setRotationAngle(Logo_r1, 0.0F, 0.0F, 0.7854F);
 		Logo_r1.setTextureOffset(12, 55).addBox(-0.5F, -0.5F, 0.5F, 1.0F, 1.0F, 1.0F, 0.1F, false);
 	}
+
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;

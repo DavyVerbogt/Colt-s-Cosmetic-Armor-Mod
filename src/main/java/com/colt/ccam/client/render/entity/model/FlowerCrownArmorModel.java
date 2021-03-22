@@ -4,11 +4,11 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class FlowerCrownArmorModel extends BipedModel<LivingEntity>{
+public class FlowerCrownArmorModel extends BipedModel<LivingEntity> {
 
-    public FlowerCrownArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
-        
+	public FlowerCrownArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
+
 		ModelRenderer FlowerCrown = new ModelRenderer(this);
 		FlowerCrown.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedHead.addChild(FlowerCrown);
@@ -55,4 +55,3 @@ public class FlowerCrownArmorModel extends BipedModel<LivingEntity>{
 		modelRenderer.rotateAngleZ = z;
 	}
 }
-

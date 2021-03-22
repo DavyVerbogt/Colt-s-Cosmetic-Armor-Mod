@@ -4,10 +4,10 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class CowBoyHatArmorModel extends BipedModel<LivingEntity>{
+public class CowBoyHatArmorModel extends BipedModel<LivingEntity> {
 
-    public CowBoyHatArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public CowBoyHatArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer CowboyHat = new ModelRenderer(this);
 		CowboyHat.setRotationPoint(0.0F, -6.0F, 0.0F);

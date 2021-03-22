@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class SmallTopHatArmorModel extends BipedModel<LivingEntity> {
 
-    public SmallTopHatArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public SmallTopHatArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer TopHat = new ModelRenderer(this);
 		TopHat.setRotationPoint(4.0F, -7F, 4.0F);

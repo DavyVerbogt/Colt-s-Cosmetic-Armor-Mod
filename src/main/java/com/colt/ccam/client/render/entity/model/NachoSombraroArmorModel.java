@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class NachoSombraroArmorModel extends BipedModel<LivingEntity> {
 
-    public NachoSombraroArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 128);
+	public NachoSombraroArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 128);
 
 		ModelRenderer Sombraro = new ModelRenderer(this);
 		Sombraro.setRotationPoint(0.6F, -7F, 0.0F);
@@ -50,7 +50,6 @@ public class NachoSombraroArmorModel extends BipedModel<LivingEntity> {
 		Nacho.setRotationPoint(0.6F, -7F, 0.0F);
 		bipedHead.addChild(Nacho);
 		setRotationAngle(Nacho, -0.3054F, 0.0F, 0.0F);
-		
 
 		ModelRenderer Fourteen_r1 = new ModelRenderer(this);
 		Fourteen_r1.setRotationPoint(5.0F, -0.5F, -1.5F);

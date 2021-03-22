@@ -4,10 +4,10 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class TulipArmorModel extends BipedModel<LivingEntity>{
+public class TulipArmorModel extends BipedModel<LivingEntity> {
 
 	public TulipArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer Tulip = new ModelRenderer(this);
 		Tulip.setRotationPoint(-4.5F, -5.0F, 0.0F);
@@ -17,7 +17,7 @@ public class TulipArmorModel extends BipedModel<LivingEntity>{
 		Tulip1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Tulip.addChild(Tulip1);
 		setRotationAngle(Tulip1, 0.1309F, 0.1309F, -0.0873F);
-		
+
 		ModelRenderer Stem_r1 = new ModelRenderer(this);
 		Stem_r1.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Tulip1.addChild(Stem_r1);
@@ -35,7 +35,7 @@ public class TulipArmorModel extends BipedModel<LivingEntity>{
 		Tulip2.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Tulip.addChild(Tulip2);
 		setRotationAngle(Tulip2, -0.0873F, 0.0F, 0.0F);
-		
+
 		ModelRenderer Stem_r2 = new ModelRenderer(this);
 		Stem_r2.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Tulip2.addChild(Stem_r2);
@@ -53,7 +53,6 @@ public class TulipArmorModel extends BipedModel<LivingEntity>{
 		Tulip3.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Tulip.addChild(Tulip3);
 		setRotationAngle(Tulip3, -0.2618F, -1.7453F, -0.5236F);
-		
 
 		ModelRenderer BulpBottem_r3 = new ModelRenderer(this);
 		BulpBottem_r3.setRotationPoint(-1.0F, -4.0F, 2.5F);

@@ -6,8 +6,8 @@ import net.minecraft.entity.LivingEntity;
 
 public class TrafficConeArmorModel extends BipedModel<LivingEntity> {
 
-    public TrafficConeArmorModel(float modelSize) {
-        super(modelSize, 0.0F, 64, 64);
+	public TrafficConeArmorModel(float modelSize) {
+		super(modelSize, 0.0F, 64, 64);
 
 		ModelRenderer trafficCone = new ModelRenderer(this);
 		trafficCone.setRotationPoint(0.0F, 1.0F, 0.0F);
@@ -25,5 +25,5 @@ public class TrafficConeArmorModel extends BipedModel<LivingEntity> {
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
-	}   
+	}
 }
