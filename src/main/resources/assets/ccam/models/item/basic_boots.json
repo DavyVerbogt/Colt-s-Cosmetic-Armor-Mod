@@ -1,7 +1,7 @@
 {
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "ccam:item/basic_boots",
-		"layer1": "ccam:item/basic_boots_overlay"
-	}
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "ccam:item/basic_boots_overlay",
+        "layer1": "ccam:item/basic_boots"
+    }
 }

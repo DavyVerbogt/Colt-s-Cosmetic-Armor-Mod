@@ -46,6 +46,8 @@ public class ClientRefrence implements ISidedReference {
     private final NachoSombraroArmorModel nachoSombraroArmorLeggings = new NachoSombraroArmorModel(0.5f);
     private final SombreroArmorModel sombraroArmorModel = new SombreroArmorModel( 1.0f);
     private final SombreroArmorModel sombraroArmorLeggings = new SombreroArmorModel(0.5f);
+    private final BasicArmorModel basicArmorModel = new BasicArmorModel( 1.0f);
+    private final BasicArmorModel basicArmorLeggings = new BasicArmorModel(0.5f);
 
 
     @Override
@@ -149,5 +151,10 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getSombraroArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? sombraroArmorLeggings : sombraroArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getBasicArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? basicArmorLeggings : basicArmorModel);
     }
 }

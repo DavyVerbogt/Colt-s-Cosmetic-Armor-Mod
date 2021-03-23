@@ -64,4 +64,7 @@ public interface  ISidedReference {
         default <A> A getSombraroArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getBasicArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 }

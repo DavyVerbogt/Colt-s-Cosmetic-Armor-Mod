@@ -1,8 +1,11 @@
 package com.colt.ccam.armor;
 
+import java.util.List;
+
 import com.colt.ccam.ColtCosmeticArmorMod;
 
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -10,6 +13,9 @@ import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.IDyeableArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.world.World;
 
 public class TopTopTopArmorItem extends ArmorItem implements IDyeableArmorItem{
 
@@ -25,4 +31,9 @@ public class TopTopTopArmorItem extends ArmorItem implements IDyeableArmorItem{
         CompoundNBT lvt_2_1_ = stack.getChildTag("display");
         return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X9B2D2A;
     }
+    @Override
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add(new TranslationTextComponent("§bThis is just a tophat on a tophat on a tophat"));
+	}
 }

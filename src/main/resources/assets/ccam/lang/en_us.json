@@ -16,10 +16,20 @@
     "item.ccam.basic_leggings": "§bBasic Leggings",
     "item.ccam.basic_boots": "§bBasic Boots",
     "block.ccam.sewing_station": "Sewing Machine",
-    "item.ccam.test_helmet":"§3Test helmet",
     "item.ccam.construction_helmet": "§6Hardhat",
     "item.ccam.gladiator_helmet": "Centurion Helmet",
     "item.ccam.gladiator_chestplate": "Centurion Chestplate",
     "item.ccam.gladiator_leggings": "Centurion Leggings",
-    "item.ccam.gladiator_boots": "Centurion Boots"
+    "item.ccam.gladiator_boots": "Centurion Boots",
+    "item.ccam.japaneseconstruction_helmet": "§6Hardhat",
+    "item.ccam.nachosombrero_helmet": "Nacho Sombrero",
+    "item.ccam.sombrero_helmet": "Sombrero",
+    "item.ccam.wolf_helmet": "Wolf Hide Hat",
+    "item.ccam.wolf_chestplate": "Wolf Hide Coat",
+    "item.ccam.wolf_leggings": "Wolf Hide Pants",
+    "item.ccam.wolf_boots": "Wolf Hide Boots",
+    "item.ccam.arrow_through_head": "Arrow Through Your Head",
+    "item.ccam.long_small_top_hat": "Long Small Top Hat",
+    "item.ccam.longtophat_helmet": "Long Top Hat",
+    "item.ccam.top_top_top_hat": "Top Top Top Hat"
 }

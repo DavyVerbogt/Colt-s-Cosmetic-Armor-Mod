@@ -29,7 +29,7 @@ public class ConstructionArmorItem extends ArmorItem {
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add(new TranslationTextComponent("Yes We Can!"));
+		tooltip.add(new TranslationTextComponent("§bYes We Can!"));
 	}
 
 }

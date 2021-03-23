@@ -32,6 +32,6 @@ public class MajimaContructionHatArmorItem extends ArmorItem {
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent("We build shit!"));
+        tooltip.add(new TranslationTextComponent("§bWe build shit!"));
     }
 }

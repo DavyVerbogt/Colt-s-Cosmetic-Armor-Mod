@@ -37,6 +37,6 @@ public class LongTopHatArmorItem extends ArmorItem implements IDyeableArmorItem 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent("this is really unnecessary"));
+        tooltip.add(new TranslationTextComponent("§bthis is really unnecessary"));
     }
 }

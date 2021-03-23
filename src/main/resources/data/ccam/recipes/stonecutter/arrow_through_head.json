@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "ccam:basic_helmet"
+    },
+    "result": {
+        "item": "ccam:arrow_through_head"
+    }
+}

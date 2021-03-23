@@ -5,7 +5,6 @@ import com.colt.ccam.armor.*;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,17 +14,17 @@ public class ccamItems {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         ColtCosmeticArmorMod.MOD_ID);
 
-        public static final RegistryObject<ArmorItem> BASIC_HELMET = ITEMS.register("basic_helmet",
-                        () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.HEAD,
+        public static final RegistryObject<BasicArmorItem> BASIC_HELMET = ITEMS.register("basic_helmet",
+                        () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        public static final RegistryObject<ArmorItem> BASIC_CHESTPLATE = ITEMS.register("basic_chestplate",
-                        () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.CHEST,
+        public static final RegistryObject<BasicArmorItem> BASIC_CHESTPLATE = ITEMS.register("basic_chestplate",
+                        () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.CHEST,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        public static final RegistryObject<ArmorItem> BASIC_LEGGINGS = ITEMS.register("basic_leggings",
-                        () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.LEGS,
+        public static final RegistryObject<BasicArmorItem> BASIC_LEGGINGS = ITEMS.register("basic_leggings",
+                        () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.LEGS,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        public static final RegistryObject<ArmorItem> BASIC_BOOTS = ITEMS.register("basic_boots",
-                        () -> new ArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.FEET,
+        public static final RegistryObject<BasicArmorItem> BASIC_BOOTS = ITEMS.register("basic_boots",
+                        () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.FEET,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         public static final RegistryObject<WitchHatArmorItem> WITCH_HAT = ITEMS.register("witch_hat",
@@ -122,12 +121,12 @@ public class ccamItems {
                                                         EquipmentSlotType.HEAD,
                                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBRARO_HELMET = ITEMS.register(
-                        "nachosombraro_helmet", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
+        public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBReRO_HELMET = ITEMS.register(
+                        "nachosombrero_helmet", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
                                         EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-                                        public static final RegistryObject<SombreroArmorItem> SOMBRARO_HELMET = ITEMS.register(
-                                                "sombraro_helmet", () -> new SombreroArmorItem(ModArmorMaterial.SOMBRARO,
-                                                                EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<SombreroArmorItem> SOMBRERO_HELMET = ITEMS.register("sombrero_helmet",
+                        () -> new SombreroArmorItem(ModArmorMaterial.SOMBRARO, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
 }
