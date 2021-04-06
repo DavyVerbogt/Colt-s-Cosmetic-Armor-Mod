@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "ccam:item/basic_leggings",
-        "layer1": "ccam:item/basic_leggings_overlay"
+        "layer0": "ccam:item/basic_leggings_overlay",
+        "layer1": "ccam:item/basic_leggings"
     }
 }

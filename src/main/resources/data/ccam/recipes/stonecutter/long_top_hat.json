@@ -3,7 +3,6 @@
     "ingredient": {
         "item": "ccam:basic_helmet"
     },
-    "result": {
-        "item": "ccam:longtophat_helmet"
-    }
+    "result": "ccam:long_top_hat",
+    "count": 1
 }

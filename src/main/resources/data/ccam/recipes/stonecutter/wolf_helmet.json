@@ -3,7 +3,6 @@
     "ingredient": {
         "item": "ccam:basic_helmet"
     },
-    "result": {
-        "item": "ccam:wolf_helmet"
-    }
+    "result": "ccam:wolf_helmet",
+    "count": 1
 }

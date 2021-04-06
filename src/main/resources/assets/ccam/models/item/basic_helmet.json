@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "ccam:item/basic_helmet",
-        "layer1": "ccam:item/basic_helmet_overlay"
+        "layer0": "ccam:item/basic_helmet_overlay",
+        "layer1": "ccam:item/basic_helmet"
     }
 }

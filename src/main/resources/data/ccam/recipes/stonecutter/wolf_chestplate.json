@@ -1,9 +1,8 @@
 {
     "type": "minecraft:stonecutting",
     "ingredient": {
-        "item": "ccam:basic_helmet"
+        "item": "ccam:basic_chestplate"
     },
-    "result": {
-        "item": "ccam:wolf_chestplate"
-    }
+    "result": "ccam:wolf_chestplate",
+    "count": 1
 }

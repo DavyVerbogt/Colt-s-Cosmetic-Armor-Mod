@@ -1,9 +1,8 @@
 {
     "type": "minecraft:stonecutting",
     "ingredient": {
-        "item": "ccam:basic_helmet"
+        "item": "ccam:basic_leggings"
     },
-    "result": {
-        "item": "ccam:wolf_leggigns"
-    }
+    "result": "ccam:wolf_leggings",
+    "count": 1
 }
