@@ -15,11 +15,11 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
-
+/*
 plugins {
     id 'org.ajoberstar.grgit' version '1.7.2'
 }
-
+*/
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
@@ -34,8 +34,8 @@ if (hasProperty("grgit")) { // If there's a valid Git repository, get the latest
 }
 
 version = '1.0'
-group = 'com.yourname.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+group = 'com.Colt.ColtCosmeticArmorMod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'ColtCosmeticArmorMod'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -63,12 +63,6 @@ minecraft {
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
-
-            mods {
-                testmod3 {
-                    source sourceSets.main
-                }
-            }
         }
 
         server {
@@ -80,11 +74,6 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            mods {
-                testmod3 {
-                    source sourceSets.main
-                }
-            }
         }
 
         data {
@@ -97,13 +86,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'testmod3', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                testmod3 {
-                    source sourceSets.main
-                }
-            }
+            args '--mod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
 }
