@@ -1,6 +1,6 @@
 
 # Colt's Cosmetic Armor Mod
-<img width="200" alt="logo" src="https://media.forgecdn.net/avatars/366/982/637533230365914929.png">
+![logo](https://i.imgur.com/pOo0sfi.png "logo")
 
 
 In our opinion, there were not enough mods that really focus on armour for the cosmetics.
