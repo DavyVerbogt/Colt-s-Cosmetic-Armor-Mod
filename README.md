@@ -5,7 +5,7 @@
 
 In our opinion, there were not enough mods that really focus on armour for the cosmetics.
  
-We made this mod with the cosmetic armour mod in mind. Cosmetic Armor Reworked
+We made this mod with the cosmetic armour mod in mind. [Cosmetic Armor Reworked](https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-reworked)
  
 Most of the armours are made with the basic armour and putting them in a stone cutter (Might change it to a custom table later).
 
@@ -54,7 +54,7 @@ Check out the mod on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/c
 
   ![1](https://i.imgur.com/VM90SJD.png "1")
   ![2](https://i.imgur.com/XY0XIzp.png "2")
-  ![3](https://imgur.com/cNnd2sB.png "3")
+  ![3](https://i.imgur.com/cNnd2sB.png "3")
   ![4](https://i.imgur.com/p3OXEkq.png "4")
   ![5](https://i.imgur.com/gvLn4eG.png "5")
 </details>
