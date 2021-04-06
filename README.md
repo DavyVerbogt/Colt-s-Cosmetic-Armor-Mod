@@ -1,11 +1,15 @@
 
 # Colt's Cosmetic Armor Mod
+<img width="200" alt="logo" src="https://media.forgecdn.net/avatars/366/982/637533230365914929.png">
+
 
 In our opinion, there were not enough mods that really focus on armour for the cosmetics.
  
 We made this mod with the cosmetic armour mod in mind. Cosmetic Armor Reworked
  
 Most of the armours are made with the basic armour and putting them in a stone cutter (Might change it to a custom table later).
+
+Check out the mod on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/colts-cosmetic-armor-mod)
 
 
 ##  Crafting Recipes
