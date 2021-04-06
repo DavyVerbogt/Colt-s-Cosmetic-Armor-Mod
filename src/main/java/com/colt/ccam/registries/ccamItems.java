@@ -111,7 +111,7 @@ public class ccamItems {
                         () -> new TopTopTopArmorItem(ModArmorMaterial.TOPTOPTOPHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        public static final RegistryObject<LongTopHatArmorItem> LONGTOPHAT_HELMET = ITEMS.register("longtophat_helmet",
+        public static final RegistryObject<LongTopHatArmorItem> LONGTOPHAT_HELMET = ITEMS.register("long_top_hat",
                         () -> new LongTopHatArmorItem(ModArmorMaterial.LONGTOPHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
@@ -122,10 +122,10 @@ public class ccamItems {
                                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBReRO_HELMET = ITEMS.register(
-                        "nachosombrero_helmet", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
+                        "nacho_sombrero", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
                                         EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        public static final RegistryObject<SombreroArmorItem> SOMBRERO_HELMET = ITEMS.register("sombrero_helmet",
+        public static final RegistryObject<SombreroArmorItem> SOMBRERO_HELMET = ITEMS.register("sombrero",
                         () -> new SombreroArmorItem(ModArmorMaterial.SOMBRARO, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 

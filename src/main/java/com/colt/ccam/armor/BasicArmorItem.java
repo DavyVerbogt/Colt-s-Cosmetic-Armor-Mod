@@ -27,4 +27,5 @@ public class BasicArmorItem extends ArmorItem implements IDyeableArmorItem {
         CompoundNBT lvt_2_1_ = stack.getChildTag("display");
         return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0XF1F6FC;
     }
+    
 }

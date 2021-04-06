@@ -22,8 +22,8 @@ public class GladiatorArmorItem extends ArmorItem implements IDyeableArmorItem {
 		return ColtCosmeticArmorMod.SIDED_SYSTEM.getGladiatorArmorModel(armorSlot);
 	} 
 	
-	public int getColor(ItemStack stack) {
+    public int getColor(ItemStack stack) {
         CompoundNBT lvt_2_1_ = stack.getChildTag("display");
-        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0Xffffff;
+        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X301934;
     }
 } 
