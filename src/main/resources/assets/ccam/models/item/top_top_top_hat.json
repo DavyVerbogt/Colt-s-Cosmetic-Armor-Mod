@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "ccam:item/top_top_top_hat",
+        "layer1": "ccam:item/top_top_top_hat_overlay"
+    }
+}

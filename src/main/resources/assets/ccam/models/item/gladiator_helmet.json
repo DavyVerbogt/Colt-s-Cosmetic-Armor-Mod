@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "ccam:item/gladiator_helmet",
+        "layer1": "ccam:item/gladiator_helmet_overlay"
+    }
+}
