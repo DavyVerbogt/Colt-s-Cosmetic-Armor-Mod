@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -24,6 +25,9 @@ import top.theillusivec4.curios.api.type.capability.ICurio;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import javax.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -41,6 +45,17 @@ public abstract class CurioItem extends ccamItems implements ICurioItem {
                 listener.accept(event);
             }
         });
+    }
+
+    public static List<Float> getColors(ItemStack stack) {
+        List<Float> colors = new ArrayList<Float>();
+        CompoundNBT lvt_2_1_ = stack.getChildTag("display");
+        int color = lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X9B2D2A;
+        colors.add(((color >> 16) & 0xff) / 255.0f); // red
+        colors.add(((color >> 8) & 0xff) / 255.0f); // green
+        colors.add(((color) & 0xff) / 255.0f); // blue
+        colors.add(((color >> 24) & 0xff) / 255.0f); // alpha
+        return colors;
     }
 
     protected <T extends Event> void addListener(Class<T> eventClass, Consumer<T> listener, Function<T, LivingEntity> livingEntitySupplier) {

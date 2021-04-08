@@ -2,6 +2,7 @@ package com.colt.ccam.registries;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 import com.colt.ccam.armor.*;
+import com.colt.ccam.curioitems.TopHatCurioItem;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
@@ -59,6 +60,10 @@ public class ccamItems {
 
         public static final RegistryObject<TopHatArmorItem> TOP_HAT = ITEMS.register("top_hat",
                         () -> new TopHatArmorItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<TopHatCurioItem> TOP_HAT_CURIO = ITEMS.register("curio_top_hat",
+                        () -> new TopHatCurioItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         public static final RegistryObject<SmallTopHatArmorItem> SMALL_TOP_HAT = ITEMS.register("small_top_hat",
@@ -121,8 +126,8 @@ public class ccamItems {
                                                         EquipmentSlotType.HEAD,
                                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBReRO_HELMET = ITEMS.register(
-                        "nacho_sombrero", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
+        public static final RegistryObject<NachoSombraroArmorItem> NACHOSOMBReRO_HELMET = ITEMS
+                        .register("nacho_sombrero", () -> new NachoSombraroArmorItem(ModArmorMaterial.NACHOSOMBRARO,
                                         EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         public static final RegistryObject<SombreroArmorItem> SOMBRERO_HELMET = ITEMS.register("sombrero",
