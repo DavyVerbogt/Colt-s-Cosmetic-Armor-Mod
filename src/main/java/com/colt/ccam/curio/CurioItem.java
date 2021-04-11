@@ -1,6 +1,7 @@
 package com.colt.ccam.curio;
 
 
+import com.colt.ccam.registries.ccamCurio;
 import com.colt.ccam.registries.ccamItems;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -31,21 +32,9 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public abstract class CurioItem extends ccamItems implements ICurioItem {
+public abstract class CurioItem extends ccamCurio implements ICurioItem {
 
     private Object model;
-
-    protected boolean isEquippedBy(@Nullable LivingEntity entity) {
-        return entity != null && CuriosApi.getCuriosHelper().findEquippedCurio(this, entity).isPresent();
-    }
-
-    protected <T extends Event> void addListener(EventPriority priority, Class<T> eventClass, Consumer<T> listener, Function<T, LivingEntity> livingEntitySupplier) {
-        MinecraftForge.EVENT_BUS.addListener(priority, true, eventClass, event -> {
-            if (isEquippedBy(livingEntitySupplier.apply(event))) {
-                listener.accept(event);
-            }
-        });
-    }
 
     public static List<Float> getColors(ItemStack stack) {
         List<Float> colors = new ArrayList<Float>();
@@ -56,18 +45,6 @@ public abstract class CurioItem extends ccamItems implements ICurioItem {
         colors.add(((color) & 0xff) / 255.0f); // blue
         colors.add(((color >> 24) & 0xff) / 255.0f); // alpha
         return colors;
-    }
-
-    protected <T extends Event> void addListener(Class<T> eventClass, Consumer<T> listener, Function<T, LivingEntity> livingEntitySupplier) {
-        addListener(EventPriority.NORMAL, eventClass, listener, livingEntitySupplier);
-    }
-
-    protected <T extends LivingEvent> void addListener(EventPriority priority, Class<T> eventClass, Consumer<T> listener) {
-        addListener(priority, eventClass, listener, LivingEvent::getEntityLiving);
-    }
-
-    protected <T extends LivingEvent> void addListener(Class<T> eventClass, Consumer<T> listener) {
-        addListener(EventPriority.NORMAL, eventClass, listener);
     }
 
     @Override

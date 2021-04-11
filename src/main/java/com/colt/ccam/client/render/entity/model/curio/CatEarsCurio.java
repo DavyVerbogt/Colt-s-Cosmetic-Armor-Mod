@@ -30,7 +30,7 @@ public class CatEarsCurio extends BipedModel<LivingEntity> {
             
     // Plaats voor die bovenste dingen ModelRenderer
     ModelRenderer EarL = new ModelRenderer(this);
-            EarL.setRotationPoint(-1.0F, -24.0F, 0.0F);
+            EarL.setRotationPoint(-1.0F, -0.0F, 0.0F);
             bipedHead.addChild(EarL);
             EarL.setTextureOffset(10, 51).addBox(3.0F, -9.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
             EarL.setTextureOffset(10, 53).addBox(4.0F, -10.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
@@ -41,7 +41,7 @@ public class CatEarsCurio extends BipedModel<LivingEntity> {
             EarL.setTextureOffset(14, 61).addBox(3.0F, -9.0F, -1.0F, 2.0F, 2.0F, 1.0F, 0.0F, false);
     
             ModelRenderer EarR = new ModelRenderer(this);
-            EarR.setRotationPoint(-1.0F, -24.0F, 0.0F);
+            EarR.setRotationPoint(-1.0F, -0.0F, 0.0F);
             bipedHead.addChild(EarR);
             EarR.setTextureOffset(0, 51).addBox(-2.0F, -9.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
             EarR.setTextureOffset(0, 53).addBox(-3.0F, -10.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
