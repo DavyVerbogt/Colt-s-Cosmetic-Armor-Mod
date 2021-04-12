@@ -139,5 +139,8 @@ public class ccamItems {
         public static final RegistryObject<Item>
         CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
         DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
-        RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new);
+        RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new),
+        CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
+        DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
+        RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new);
 }

@@ -24,6 +24,6 @@ public class GladiatorArmorItem extends ArmorItem implements IDyeableArmorItem {
 	
     public int getColor(ItemStack stack) {
         CompoundNBT lvt_2_1_ = stack.getChildTag("display");
-        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X301934;
+        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X9B2D2A;
     }
 } 

@@ -50,12 +50,16 @@ public class ColtCosmeticArmorMod {
     @SubscribeEvent
     public void enqueueIMC(final InterModEnqueueEvent event) {
         SlotTypePreset[] slots = { SlotTypePreset.HEAD, SlotTypePreset.NECKLACE, SlotTypePreset.BACK,
-                SlotTypePreset.BODY, SlotTypePreset.HANDS, SlotTypePreset.RING, SlotTypePreset.CHARM };
+                SlotTypePreset.BODY, SlotTypePreset.HANDS, SlotTypePreset.RING, SlotTypePreset.CHARM,
+                SlotTypePreset.BELT,SlotTypePreset.CURIO };
         List<SlotTypeMessage.Builder> builders = new ArrayList<>();
         for (SlotTypePreset slot : slots) {
             SlotTypeMessage.Builder builder = slot.getMessageBuilder();
             if (slot == SlotTypePreset.RING) {
                 builder.size(2);
+            }
+            if (slot == SlotTypePreset.CURIO) {
+                builder.size(3);
             }
             builder.cosmetic();
             builders.add(builder);
