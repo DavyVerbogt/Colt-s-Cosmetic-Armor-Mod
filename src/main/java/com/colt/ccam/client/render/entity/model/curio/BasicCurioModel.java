@@ -12,7 +12,7 @@ public class BasicCurioModel extends BipedModel<LivingEntity> {
         
 
         ModelRenderer Belt = new ModelRenderer(this);
-        Belt.setRotationPoint(0.0F, 0.0F, 0.0F);
+        Belt.setRotationPoint(0.0F, -1.0F, 0.0F);
         bipedBody.addChild(Belt);
         Belt.setTextureOffset(0, 59).addBox(-4.0F, 11.7F, -2.0F, 8.0F, 1.0F, 4.0F, 0.3F, false);
     }

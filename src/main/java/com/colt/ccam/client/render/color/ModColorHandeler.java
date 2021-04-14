@@ -20,7 +20,8 @@ public class ModColorHandeler {
                 ccamItems.FLOWER_CROWN.get(), ccamItems.WITCH_HAT.get(), ccamItems.SMALL_TOP_HAT.get(),
                 ccamItems.TOP_HAT.get(), ccamItems.TOP_TOP_TOP_HAT.get(), ccamItems.GLADIATOR_HELMET.get(),
                 ccamItems.BASIC_HELMET.get(), ccamItems.BASIC_CHESTPLATE.get(), ccamItems.BASIC_LEGGINGS.get(),
-                ccamItems.BASIC_BOOTS.get(), ccamItems.LONGTOPHAT_HELMET.get(), ccamItems.LONG_SMALL_TOP_HAT.get()
+                ccamItems.BASIC_BOOTS.get(), ccamItems.LONGTOPHAT_HELMET.get(), ccamItems.LONG_SMALL_TOP_HAT.get(),
+                ccamItems.BASIC_CURIO.get()
                 );
     }
 }
