@@ -14,11 +14,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.List;
 
 import com.colt.ccam.itemgroup.ccamItemGroup;
+import com.colt.ccam.itemgroup.ccamItemGroupCurio;
 
 public class ccamCurio extends Item {
 
     public ccamCurio(Properties properties) {
-        super(properties.maxStackSize(1).group(ccamItemGroup.CCAM_TAB));
+        super(properties.maxStackSize(1).group(ccamItemGroupCurio.CCAM_TAB_CURIO));
     }
 
     public ccamCurio() {

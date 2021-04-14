@@ -3,7 +3,6 @@ package com.colt.ccam.registries;
 import com.colt.ccam.ColtCosmeticArmorMod;
 import com.colt.ccam.Item.*;
 import com.colt.ccam.armor.*;
-import com.colt.ccam.curioitems.TopHatCurioItem;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
@@ -61,10 +60,6 @@ public class ccamItems {
 
         public static final RegistryObject<TopHatArmorItem> TOP_HAT = ITEMS.register("top_hat",
                         () -> new TopHatArmorItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD,
-                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-
-        public static final RegistryObject<TopHatCurioItem> TOP_HAT_CURIO = ITEMS.register("curio_top_hat",
-                        () -> new TopHatCurioItem(ModArmorMaterial.TOPHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         public static final RegistryObject<SmallTopHatArmorItem> SMALL_TOP_HAT = ITEMS.register("small_top_hat",
