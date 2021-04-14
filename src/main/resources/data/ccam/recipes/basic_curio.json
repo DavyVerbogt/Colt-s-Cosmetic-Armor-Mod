@@ -1,8 +1,8 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#i",
-        "i#"
+        "# #",
+        "i i"
     ],
     "key": {
         "#": {
@@ -13,6 +13,6 @@
         }
     },
     "result": {
-        "item": "ccam:basic_curio"
+        "item": "ccam:basic_boots"
     }
 }
