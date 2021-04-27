@@ -7,6 +7,7 @@ import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ccamItems {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         ColtCosmeticArmorMod.MOD_ID);
-        //ArmorItems
+        // ArmorItems
         public static final RegistryObject<BasicArmorItem> BASIC_HELMET = ITEMS.register("basic_helmet",
                         () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
@@ -130,13 +131,18 @@ public class ccamItems {
                         () -> new SombreroArmorItem(ModArmorMaterial.SOMBRARO, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-        //Curio Items
-        public static final RegistryObject<Item>
-        CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
-        DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
-        RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new),
-        CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
-        DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
-        RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new),
-        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new);
+        public static final RegistryObject<FurCoatArmorItem> FUR_COAT = ITEMS.register("fur_coat",
+                        () -> new FurCoatArmorItem(ModArmorMaterial.FURCOAT, EquipmentSlotType.CHEST,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        // Curio Items
+        public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
+                        DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
+                        RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new),
+                        CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
+                        DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
+                        RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new),
+                        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new),
+                        TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
+
 }
