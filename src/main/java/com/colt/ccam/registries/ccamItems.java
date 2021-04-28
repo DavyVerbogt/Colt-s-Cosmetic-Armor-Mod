@@ -143,6 +143,7 @@ public class ccamItems {
                         DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
                         RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new),
                         BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new),
+                        HALO = ITEMS.register("halo", HaloItem::new),
                         TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
 
 }
