@@ -30,8 +30,8 @@ public class SamuraiArmorModel  extends BipedModel<LivingEntity>{
 		FrontFlabL03_r1.setTextureOffset(54, 123).addBox(-1.5F, -2.5F, -1.1F, 4.0F, 4.0F, 1.0F, 0.0F, false);
 
 		ModelRenderer Flaps = new ModelRenderer(this);
-		Flaps.setRotationPoint(5.5F, 2.5F, -0.1F);
-		RightLegArmor.addChild(Flaps);
+		Flaps.setRotationPoint(2.5F, 2.5F, -0.1F);
+		bipedLeftLeg.addChild(Flaps);
 		
 
 		ModelRenderer SideFlabR03_r1 = new ModelRenderer(this);
@@ -85,8 +85,8 @@ public class SamuraiArmorModel  extends BipedModel<LivingEntity>{
 		FrontFlabR03_r1.setTextureOffset(54, 123).addBox(-5.5F, -2.5F, -1.1F, 4.0F, 4.0F, 1.0F, 0.0F, false);
 
 		ModelRenderer Flaps2 = new ModelRenderer(this);
-		Flaps2.setRotationPoint(-5.5F, 2.5F, -0.1F);
-		LeftLegArmor.addChild(Flaps2);
+		Flaps2.setRotationPoint(-2.5F, 2.5F, -0.1F);
+		bipedRightLeg.addChild(Flaps2);
 		
 
 		ModelRenderer SideFlabR03_r2 = new ModelRenderer(this);
