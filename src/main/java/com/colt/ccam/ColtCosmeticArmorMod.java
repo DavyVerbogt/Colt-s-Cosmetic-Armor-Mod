@@ -31,7 +31,7 @@ public class ColtCosmeticArmorMod {
             () -> DedicatedServerReference::new);
 
     public ColtCosmeticArmorMod() {
-       // ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigData.SERVER_SPEC);
+       //ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigData.SERVER_SPEC);
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
                 forgeEventBus = MinecraftForge.EVENT_BUS;

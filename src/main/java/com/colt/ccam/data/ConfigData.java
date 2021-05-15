@@ -20,7 +20,7 @@ public class ConfigData {
     //public static List<Integer> Basic_Armor = Arrays.asList(2, 5, 6, 2);
 
     public static class ServerConfig {
-        public final ForgeConfigSpec.ConfigValue<List<Integer>> Basic_Armor;
+        //public final ForgeConfigSpec.ConfigValue<List<Integer>> Basic_Armor;
 
         ServerConfig(ForgeConfigSpec.Builder builder) {
             builder.comment("Armour values\nOrder: (HEAD, CHEST, LEGGINGS, BOOTS)");
