@@ -56,6 +56,8 @@ public class ClientRefrence implements ISidedReference {
     private final CowArmorModel cowArmorLeggings = new CowArmorModel(0.5f);
     private final ShotCowBoyHatArmorModel ShotCowBoyHatArmorModel = new ShotCowBoyHatArmorModel(1.0f);
     private final ShotCowBoyHatArmorModel ShotCowBoyHatArmorLeggings = new ShotCowBoyHatArmorModel(0.5f);
+    private final StrawHayArmorModel StrawHatArmorModel = new StrawHayArmorModel(1.0f);
+    private final StrawHayArmorModel StrawHatArmorLeggings = new StrawHayArmorModel(0.5f);
 
 
 
@@ -185,5 +187,10 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getShotCowBoyHatArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? ShotCowBoyHatArmorLeggings : ShotCowBoyHatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getStrawHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? StrawHatArmorLeggings : StrawHatArmorModel);
     }
 }

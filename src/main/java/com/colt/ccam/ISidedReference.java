@@ -79,6 +79,9 @@ public interface  ISidedReference {
         default <A> A getShotCowBoyHatArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getStrawHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
 
         
         

@@ -136,34 +136,35 @@ public class ccamItems {
                         () -> new FurCoatArmorItem(ModArmorMaterial.FURCOAT, EquipmentSlotType.CHEST,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-
         public static final RegistryObject<SamuraiArmoritem> SAMURAI_HELMET = ITEMS.register("samurai_helmet",
                         () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        public static final RegistryObject<SamuraiArmoritem> SAMURAI_CHESTPLATE = ITEMS
-                        .register("samurai_chestplate", () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI,
-                                        EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<SamuraiArmoritem> SAMURAI_CHESTPLATE = ITEMS.register("samurai_chestplate",
+                        () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.CHEST,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
         public static final RegistryObject<SamuraiArmoritem> SAMURAI_LEGGINGS = ITEMS.register("samurai_leggings",
                         () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.LEGS,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
         public static final RegistryObject<SamuraiArmoritem> SAMURAI_BOOTS = ITEMS.register("samurai_boots",
                         () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.FEET,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-                                        
 
         public static final RegistryObject<CowArmoritem> COW_HELMET = ITEMS.register("cow_helmet",
                         () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        public static final RegistryObject<CowArmoritem> COW_CHESTPLATE = ITEMS
-                        .register("cow_chestplate", () -> new CowArmoritem(ModArmorMaterial.COW,
-                                        EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<CowArmoritem> COW_CHESTPLATE = ITEMS.register("cow_chestplate",
+                        () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlotType.CHEST,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
         public static final RegistryObject<CowArmoritem> COW_LEGGINGS = ITEMS.register("cow_leggings",
                         () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlotType.LEGS,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
-        
-        
+
         public static final RegistryObject<ShotCowBoyHatArmoritem> SHOT_COWBOY_HAT = ITEMS.register("shot_cowboy_hat",
-                         () -> new ShotCowBoyHatArmoritem(ModArmorMaterial.SHOTCOWBOYHAT, EquipmentSlotType.HEAD,
+                        () -> new ShotCowBoyHatArmoritem(ModArmorMaterial.SHOTCOWBOYHAT, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<StrawHatArmorItem> STRAW_HAT = ITEMS.register("straw_hat",
+                        () -> new StrawHatArmorItem(ModArmorMaterial.STRAWHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
         // Curio Items
@@ -177,7 +178,8 @@ public class ccamItems {
                         PONCHO = ITEMS.register("poncho", PonchoItem::new),
                         HALO = ITEMS.register("halo", HaloItem::new),
                         PONCHO_SIDE = ITEMS.register("poncho_side", PonchoSideItem::new),
-                        SPURS = ITEMS.register("spur", SpurItem::new);
-                        //TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
+                        SPURS = ITEMS.register("spur", SpurItem::new),
+                        SUNGLASSES = ITEMS.register("sunglasses", SunGlassesItem::new);
+        // TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
 
 }
