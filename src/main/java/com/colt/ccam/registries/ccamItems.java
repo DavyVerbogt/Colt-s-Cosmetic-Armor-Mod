@@ -166,9 +166,6 @@ public class ccamItems {
                          () -> new ShotCowBoyHatArmoritem(ModArmorMaterial.SHOTCOWBOYHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
-
-        
-
         // Curio Items
         public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
                         DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
@@ -176,8 +173,11 @@ public class ccamItems {
                         CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
                         DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
                         RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new),
-                        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new);
-                        //HALO = ITEMS.register("halo", HaloItem::new),
+                        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new),
+                        PONCHO = ITEMS.register("poncho", PonchoItem::new),
+                        HALO = ITEMS.register("halo", HaloItem::new),
+                        PONCHO_SIDE = ITEMS.register("poncho_side", PonchoSideItem::new),
+                        SPURS = ITEMS.register("spur", SpurItem::new);
                         //TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
 
 }

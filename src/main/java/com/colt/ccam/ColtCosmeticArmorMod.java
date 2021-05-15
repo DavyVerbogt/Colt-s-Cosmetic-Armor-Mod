@@ -3,11 +3,14 @@ package com.colt.ccam;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.colt.ccam.Item.CatTailItem;
 import com.colt.ccam.client.ClientRefrence;
 import com.colt.ccam.data.ConfigData;
 import com.colt.ccam.registries.ccamItems;
 import com.colt.ccam.server.dedicated.DedicatedServerReference;
 
+import net.minecraft.inventory.container.PlayerContainer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +21,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
 
@@ -63,6 +67,8 @@ public class ColtCosmeticArmorMod {
             SlotTypeMessage message = builder.build();
             InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> message);
         }
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("feet").priority(220).icon(PlayerContainer.EMPTY_ARMOR_SLOT_BOOTS).build());
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("tail").priority(90).icon(new ResourceLocation(ColtCosmeticArmorMod.MOD_ID, "textures/item/tail_slot.png")).build());
     }
     /*
      * public void modConfig(ModConfig.ModConfigEvent event) { ModConfig config =
