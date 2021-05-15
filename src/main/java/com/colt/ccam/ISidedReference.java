@@ -70,4 +70,16 @@ public interface  ISidedReference {
         default <A> A getFurCoatArmorModel(EquipmentSlotType armorSlot) {
             return null;
         }
+        default <A> A getSamuraiArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getCowArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+        default <A> A getShotCowBoyHatArmorModel(EquipmentSlotType armorSlot) {
+            return null;
+        }
+
+        
+        
 }

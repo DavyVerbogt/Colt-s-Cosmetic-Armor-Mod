@@ -40,5 +40,15 @@
     "item.ccam.cat_tail": "Cat Tail",
     "item.ccam.dog_tail": "Dog Tail",
     "item.ccam.rabbit_tail": "Rabbit Tail",
-    "item.ccam.basic_curio": "§bBasic Curio"
+    "item.ccam.basic_curio": "§bBasic Curio",
+    "item.ccam.samurai_helmet": "samurai Helmet",
+    "item.ccam.samurai_chestplate": "samurai Chestplate",
+    "item.ccam.samurai_leggings": "samurai Leggings",
+    "item.ccam.samurai_boots": "samurai Boots",
+    "item.ccam.cow_helmet": "cow Helmet",
+    "item.ccam.cow_chestplate": "cow Chestplate",
+    "item.ccam.cow_leggings": "cow Leggings",
+    "item.ccam.cow_boots": "cow Boots",
+    "item.ccam.shot_cowboy_hat": "Shot Cowboy Hat"
+    
 }

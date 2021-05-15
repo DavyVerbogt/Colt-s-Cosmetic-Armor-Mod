@@ -50,6 +50,13 @@ public class ClientRefrence implements ISidedReference {
     private final BasicArmorModel basicArmorLeggings = new BasicArmorModel(0.5f);
     private final FurCoatArmorModel furCoatArmorModel = new FurCoatArmorModel( 1.0f);
     private final FurCoatArmorModel furCoatArmorLeggings = new FurCoatArmorModel(0.5f);
+    private final SamuraiArmorModel samuraiArmorModel = new SamuraiArmorModel( 1.0f);
+    private final SamuraiArmorModel samuraiArmorLeggings = new SamuraiArmorModel(0.5f);
+    private final CowArmorModel cowArmorModel = new CowArmorModel( 1.0f);
+    private final CowArmorModel cowArmorLeggings = new CowArmorModel(0.5f);
+    private final ShotCowBoyHatArmorModel ShotCowBoyHatArmorModel = new ShotCowBoyHatArmorModel(1.0f);
+    private final ShotCowBoyHatArmorModel ShotCowBoyHatArmorLeggings = new ShotCowBoyHatArmorModel(0.5f);
+
 
 
     @Override
@@ -163,5 +170,20 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getFurCoatArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? furCoatArmorLeggings : furCoatArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getSamuraiArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? samuraiArmorLeggings : samuraiArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getCowArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? cowArmorLeggings : cowArmorModel);
+    }
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getShotCowBoyHatArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? ShotCowBoyHatArmorLeggings : ShotCowBoyHatArmorModel);
     }
 }

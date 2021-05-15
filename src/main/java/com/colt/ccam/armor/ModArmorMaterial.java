@@ -81,6 +81,15 @@ public enum ModArmorMaterial implements IArmorMaterial {
 			() -> Ingredient.fromItems()),
 
 	FURCOAT("furcoat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.fromItems()),
+
+	SAMURAI("samurai", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.fromItems()),
+
+	COW("cow", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.fromItems()),
+
+	SHOTCOWBOYHAT("shotcowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
 			() -> Ingredient.fromItems());
 
 	// Stuff that is needed

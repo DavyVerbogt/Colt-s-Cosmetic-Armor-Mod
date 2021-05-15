@@ -3,6 +3,7 @@ package com.colt.ccam.registries;
 import com.colt.ccam.ColtCosmeticArmorMod;
 import com.colt.ccam.Item.*;
 import com.colt.ccam.armor.*;
+import com.colt.ccam.client.render.entity.model.FurCoatArmorModel;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
@@ -135,6 +136,39 @@ public class ccamItems {
                         () -> new FurCoatArmorItem(ModArmorMaterial.FURCOAT, EquipmentSlotType.CHEST,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
+
+        public static final RegistryObject<SamuraiArmoritem> SAMURAI_HELMET = ITEMS.register("samurai_helmet",
+                        () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<SamuraiArmoritem> SAMURAI_CHESTPLATE = ITEMS
+                        .register("samurai_chestplate", () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI,
+                                        EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<SamuraiArmoritem> SAMURAI_LEGGINGS = ITEMS.register("samurai_leggings",
+                        () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.LEGS,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<SamuraiArmoritem> SAMURAI_BOOTS = ITEMS.register("samurai_boots",
+                        () -> new SamuraiArmoritem(ModArmorMaterial.SAMURAI, EquipmentSlotType.FEET,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+                                        
+
+        public static final RegistryObject<CowArmoritem> COW_HELMET = ITEMS.register("cow_helmet",
+                        () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<CowArmoritem> COW_CHESTPLATE = ITEMS
+                        .register("cow_chestplate", () -> new CowArmoritem(ModArmorMaterial.COW,
+                                        EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        public static final RegistryObject<CowArmoritem> COW_LEGGINGS = ITEMS.register("cow_leggings",
+                        () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlotType.LEGS,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+        
+        
+        public static final RegistryObject<ShotCowBoyHatArmoritem> SHOT_COWBOY_HAT = ITEMS.register("shot_cowboy_hat",
+                         () -> new ShotCowBoyHatArmoritem(ModArmorMaterial.SHOTCOWBOYHAT, EquipmentSlotType.HEAD,
+                                        new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+
+        
+
         // Curio Items
         public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
                         DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
@@ -142,8 +176,8 @@ public class ccamItems {
                         CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
                         DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
                         RABBIT_Tail = ITEMS.register("rabbit_tail", RabbitTail::new),
-                        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new),
-                        HALO = ITEMS.register("halo", HaloItem::new),
-                        TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
+                        BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new);
+                        //HALO = ITEMS.register("halo", HaloItem::new),
+                        //TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
 
 }
