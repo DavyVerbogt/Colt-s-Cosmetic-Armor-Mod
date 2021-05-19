@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "ccam:basic_chestplate"
+    },
+    "result": "ccam:fur_coat",
+    "count": 1
+}

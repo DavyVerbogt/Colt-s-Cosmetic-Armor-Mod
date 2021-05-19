@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "ccam:basic_curio"
+    },
+    "result": "ccam:poncho_side",
+    "count": 1
+}
