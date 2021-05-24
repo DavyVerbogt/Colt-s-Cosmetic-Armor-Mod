@@ -8,6 +8,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ConfigData {
+    /*
     public static final ServerConfig SERVER;
     public static final ForgeConfigSpec SERVER_SPEC;
 
@@ -39,4 +40,5 @@ public class ConfigData {
 
     public static void refreshServer() {
     }
+    */
 }

@@ -68,6 +68,8 @@ public class ClientRefrence implements ISidedReference {
     private final ShotCowBoyHatArmorModel ShotCowBoyHatArmorLeggings = new ShotCowBoyHatArmorModel(0.5f);
     private final StrawHayArmorModel StrawHatArmorModel = new StrawHayArmorModel(1.0f);
     private final StrawHayArmorModel StrawHatArmorLeggings = new StrawHayArmorModel(0.5f);
+    private final MileStoneGlasesArmorModel MileStoneGlassesArmorModel = new MileStoneGlasesArmorModel(1.0f);
+    private final MileStoneGlasesArmorModel MileStoneGlassesArmorLeggings = new MileStoneGlasesArmorModel(0.5f);
 
     @Override
     public void setup(IEventBus modEventBus, IEventBus forgeEventBus) {
@@ -222,6 +224,12 @@ public class ClientRefrence implements ISidedReference {
     @Override
     public <A> A getStrawHatArmorModel(EquipmentSlotType armorSlot) {
         return (A) (armorSlot == EquipmentSlotType.LEGS ? StrawHatArmorLeggings : StrawHatArmorModel);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public <A> A getMileStoneGlassesArmorModel(EquipmentSlotType armorSlot) {
+        return (A) (armorSlot == EquipmentSlotType.LEGS ? MileStoneGlassesArmorLeggings : MileStoneGlassesArmorModel);
     }
 
 }

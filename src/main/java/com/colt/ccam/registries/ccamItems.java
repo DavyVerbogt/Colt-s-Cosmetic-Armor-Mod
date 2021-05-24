@@ -167,6 +167,14 @@ public class ccamItems {
                         () -> new StrawHatArmorItem(ModArmorMaterial.STRAWHAT, EquipmentSlotType.HEAD,
                                         new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
 
+        public static final RegistryObject<MileStoneGlassesArmorItem> MILESTONE_GLASSES = ITEMS.register(
+                        "milestone_glasses", () -> new MileStoneGlassesArmorItem(ModArmorMaterial.MILESTONEGLASSES,
+                                        EquipmentSlotType.HEAD, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
+        public static final RegistryObject<MilestoneShirtArmorItem> MILESTONE_SHIRT = ITEMS.register(
+                        "milestone_shirt", () -> new MilestoneShirtArmorItem(ModArmorMaterial.MILESTONE,
+                                        EquipmentSlotType.CHEST, new Item.Properties().group(ccamItemGroup.CCAM_TAB)));
+
         // Curio Items
         public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
                         DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),

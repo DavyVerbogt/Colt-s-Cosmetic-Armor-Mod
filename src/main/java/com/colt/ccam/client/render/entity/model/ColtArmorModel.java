@@ -1,8 +1,12 @@
 package com.colt.ccam.client.render.entity.model;
 
+import com.mojang.authlib.GameProfile;
+
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.datafix.fixes.EntityUUID;
 
 public class ColtArmorModel extends BipedModel<LivingEntity> {
 
@@ -45,11 +49,11 @@ public class ColtArmorModel extends BipedModel<LivingEntity> {
 		bipedBody.addChild(Jacket);
 		Jacket.setTextureOffset(17, 41).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.2F, false);
 
-		ModelRenderer JacketRightArm = new ModelRenderer(this);
-		JacketRightArm.setRotationPoint(1.2F, -1.0F, -0.0F);
-		bipedRightArm.addChild(JacketRightArm);
-		JacketRightArm.setTextureOffset(41, 41).addBox(-4.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.2F, false);
-
+			ModelRenderer JacketRightArm = new ModelRenderer(this);
+			JacketRightArm.setRotationPoint(1.2F, -1.0F, -0.0F);
+			bipedRightArm.addChild(JacketRightArm);
+			JacketRightArm.setTextureOffset(41, 41).addBox(-4.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.2F, false);
+			
 		ModelRenderer JacketLeftArm = new ModelRenderer(this);
 		JacketLeftArm.setRotationPoint(-1.2F, -1.0F, 0.0F);
 		bipedLeftArm.addChild(JacketLeftArm);

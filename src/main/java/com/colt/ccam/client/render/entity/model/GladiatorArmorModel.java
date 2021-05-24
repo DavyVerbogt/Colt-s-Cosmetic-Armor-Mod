@@ -175,7 +175,7 @@ public class GladiatorArmorModel extends BipedModel<LivingEntity> {
 		ModelRenderer Helmet = new ModelRenderer(this);
 		Helmet.setRotationPoint(0.0F, -0.0F, 0.0F);
 		bipedHead.addChild(Helmet);
-		Helmet.setTextureOffset(0, 93).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.2F, false);
+		Helmet.setTextureOffset(0, 93).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.3F, false);
 		Helmet.setTextureOffset(44, 109).addBox(0.2F, -12.7F, -4.1F, 0.0F, 9.0F, 10.0F, 0.0F, false);
 
 		ModelRenderer FeathersRight_r1 = new ModelRenderer(this);
