@@ -187,7 +187,8 @@ public class ccamItems {
                         HALO = ITEMS.register("halo", HaloItem::new),
                         PONCHO_SIDE = ITEMS.register("poncho_side", PonchoSideItem::new),
                         SPURS = ITEMS.register("spur", SpurItem::new),
-                        SUNGLASSES = ITEMS.register("sunglasses", SunGlassesItem::new);
+                        SUNGLASSES = ITEMS.register("sunglasses", SunGlassesItem::new),
+                        MILESTONE_CHAIN = ITEMS.register("milestone_chain", MilestoneChainItem::new);
         // TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
 
 }
