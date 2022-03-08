@@ -13,7 +13,7 @@ public class ShotCowBoyHatArmorModel  extends BipedModel<LivingEntity>{
     
     
         ModelRenderer CowboyHat = new ModelRenderer(this);
-            CowboyHat.setRotationPoint(0.0F, -32.0F, 0.0F);
+            CowboyHat.setRotationPoint(0.0F, -6.0F, 0.0F);
             bipedHead.addChild(CowboyHat);
             CowboyHat.setTextureOffset(0, 51).addBox(-4.0F, -4.0F, -4.0F, 8.0F, 4.0F, 8.0F, 0.0F, false);
             CowboyHat.setTextureOffset(34, 42).addBox(1.0F, -5.0F, -4.0F, 3.0F, 1.0F, 8.0F, 0.0F, false);

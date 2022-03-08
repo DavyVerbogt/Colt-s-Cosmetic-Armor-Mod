@@ -1,78 +1,145 @@
-import groovy.transform.Field
-
-import java.util.jar.Attributes
-import java.util.jar.JarFile
-import java.util.jar.Manifest
-import java.util.zip.ZipInputStream
-
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
+        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
+        maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
-
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-
-final commitId
-
-if (hasProperty("grgit")) { 
-    commitId = "${grgit.head().abbreviatedId}"
-} else { 
-    commitId = "NOGIT"
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
 }
+apply plugin: 'net.minecraftforge.gradle'
+
 
 version = '1.0'
 group = 'com.Colt.ColtCosmeticArmorMod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'ColtCosmeticArmorMod'
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
+    // The mappings can be changed at any time and must be in the following format.
+    // Channel:   Version:
+    // official   MCVersion             Official field/method names from Mojang mapping files
+    // parchment  YYYY.MM.DD-MCVersion  Open community-sourced parameter names and javadocs layered on top of official
+    //
+    // You must be aware of the Mojang license when using the 'official' or 'parchment' mappings.
+    // See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
+    //
+    // Parchment is an unofficial project maintained by ParchmentMC, separate from MinecraftForge
+    // Additional setup is needed to use their mappings: https://github.com/ParchmentMC/Parchment/wiki/Getting-Started
+    //
+    // Use non-default mappings at your own risk. They may not always work.
+    // Simply re-run your setup task after changing the mappings to update your workspace.
+    mappings channel: 'official', version: '1.18.2'
 
-    mappings channel: 'snapshot', version: '20201028-1.16.3'
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
+    // Default run configurations.
+    // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
             workingDirectory project.file('run')
 
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            // Recommended logging data for a userdev environment
+            // The markers can be added/remove as needed separated by commas.
+            // "SCAN": For mods scan.
+            // "REGISTRIES": For firing of registry events.
+            // "REGISTRYDUMP": For getting the contents of all registries.
+            property 'forge.logging.markers', 'REGISTRIES'
 
+            // Recommended logging level for the console
+            // You can set various levels here.
+            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
+
+            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+            property 'forge.enabledGameTestNamespaces', 'examplemod'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
 
         server {
             workingDirectory project.file('run')
 
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
 
             property 'forge.logging.console.level', 'debug'
 
+            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+            property 'forge.enabledGameTestNamespaces', 'examplemod'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        // This run config launches GameTestServer and runs all registered gametests, then exits.
+        // By default, the server will crash when no gametests are provided.
+        // The gametest system is also enabled by default for other run configs under the /test command.
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            // The markers can be added/remove as needed separated by commas.
+            // "SCAN": For mods scan.
+            // "REGISTRIES": For firing of registry events.
+            // "REGISTRYDUMP": For getting the contents of all registries.
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            // Recommended logging level for the console
+            // You can set various levels here.
+            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            property 'forge.logging.console.level', 'debug'
+
+            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+            property 'forge.enabledGameTestNamespaces', 'examplemod'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
 
         data {
             workingDirectory project.file('run')
 
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
+            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
 
+// Include resources generated by data generators.
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-
 repositories {
+    // Put repositories for dependencies here
+    // ForgeGradle automatically adds the Forge maven and Maven Central for you
     maven {
         name "curios"
         url "https://maven.theillusivec4.top/"
@@ -92,51 +159,46 @@ repositories {
     //maven {
     //    url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' 
     //}
-}
-
-configurations {
-    embed {
-        transitive = false
-    }
-
-    compile.extendsFrom embed
+    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
+    // flatDir {
+    //     dir 'libs'
+    // }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.12'
 
     //implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.32')
 
-    compileOnly fg.deobf("mezz.jei:jei-1.16.4:7.6.1.71:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:7.6.1.71")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2-9.4.1.113:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2-9.4.1.113")
 
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.4.0:api")
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.4.0")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.6.3:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.6.3")
 
 
 
+
+// Example for how to get properties into the manifest for reading at runtime.
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "examplemod",
+                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "examplemodsareus",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-    options.compilerArgs.addAll(['-Xlint:unchecked', '-Xlint:deprecation'])
-}
-
-tasks.withType(Javadoc) {
-    options.encoding = 'UTF-8'
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    from javadoc.destinationDir
-    classifier = 'javadoc'
-}
-
-artifacts {
-
-}
-
+// Example configuration to allow publishing using the maven-publish plugin
+// This is the preferred method to reobfuscate your jar file
 jar.finalizedBy('reobfJar')
-
+// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
+// publish.dependsOn('reobfJar')
 
 publishing {
     publications {
@@ -146,75 +208,11 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
+            url "file://${project.projectDir}/mcmodsrepo"
         }
     }
 }
 
-@Field def MAVEN_ARTIFACT = new Attributes.Name("Maven-Artifact")
-
-task makeLibraryMetas {
-    outputs.upToDateWhen { false }
-
-    def temp = getTemporaryDir()
-    if (temp.exists()) {
-        delete temp.listFiles()
-    }
-
-    def configuration = configurations.embed
-
-    configuration.getResolvedConfiguration().getResolvedArtifacts().forEach { dep ->
-        def file = dep.getFile()
-        def mavenArtifact = dep.getId().getComponentIdentifier().toString()
-        if (!hasMavenArtifactAttribute(file)) {
-            def manifest = new Manifest()
-            def attributes = manifest.getMainAttributes()
-            attributes.put Attributes.Name.MANIFEST_VERSION, "1.0"
-            attributes.put MAVEN_ARTIFACT, mavenArtifact
-
-            new File(temp, file.getName() + ".meta").withOutputStream { os ->
-                manifest.write(os)
-            }
-        }
-    }
-
-    def str = configuration.collect { file -> file.getName() }.join(" ")
-    def tasks = project.tasks.withType(Jar.class)
-    tasks.each { task -> task.from temp, { CopySpec spec -> spec.rename '(.+.jar.meta)', 'META-INF/libraries/$1' } }
-    tasks.each { task -> task.from configuration, { CopySpec spec -> spec.rename '(.+.jar)', 'META-INF/libraries/$1' } }
-    tasks.each { task -> task.getManifest().getAttributes().putAt 'ContainedDeps', str }
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
-
-tasks.withType(Jar.class).each { task ->
-    task.dependsOn(makeLibraryMetas)
-}
-
-boolean hasMavenArtifactAttribute(File file) {
-    def zi = new ZipInputStream((InputStream) new FileInputStream(file))
-
-    def ze = zi.getNextEntry()
-    while (ze != null) {
-        if (ze.getName().equalsIgnoreCase(JarFile.MANIFEST_NAME)) {
-            def manifest = new Manifest((InputStream) zi)
-            if (manifest.getMainAttributes().containsKey(MAVEN_ARTIFACT)) {
-                zi.closeQuietly()
-                return true
-            }
-        }
-        ze = zi.getNextEntry()
-    }
-
-    try {
-        zi.close()
-    }
-    catch (ignored) {
-    }
-
-    return false
-
-    }
-    repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
-    }

@@ -49,6 +49,8 @@
     "item.ccam.cow_chestplate": "cow Chestplate",
     "item.ccam.cow_leggings": "cow Leggings",
     "item.ccam.cow_boots": "cow Boots",
-    "item.ccam.shot_cowboy_hat": "Shot Cowboy Hat"
-    
+    "item.ccam.shot_cowboy_hat": "Shot Cowboy Hat",
+
+    "curios.identifier.feet": "Feet",
+    "curios.identifier.tail": "Tail"
 }
