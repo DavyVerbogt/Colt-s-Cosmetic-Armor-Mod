@@ -5,92 +5,91 @@ import java.util.function.Supplier;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.Lazy;
-import com.colt.ccam.data.ConfigData;
 
-public enum ModArmorMaterial implements IArmorMaterial {
+public enum ModArmorMaterial implements ArmorMaterial {
 
 	// New armor types
-	BASIC("basic", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	BASIC("basic", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	WITCH("witch", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	WITCH("witch", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	COLT("colt", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	COLT("colt", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	TULIP("tulip", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems(Items.RED_TULIP, Items.ORANGE_TULIP, Items.WHITE_TULIP, Items.PINK_TULIP)),
+	TULIP("tulip", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of(Items.RED_TULIP, Items.ORANGE_TULIP, Items.WHITE_TULIP, Items.PINK_TULIP)),
 
-	FLOWERCROWN("flowercrown", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems(Items.STRING)),
+	FLOWERCROWN("flowercrown", 5, new int[] { 1, 2, 3, 1 }, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of(Items.STRING)),
 
-	COWBOYHAT("cowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	COWBOYHAT("cowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	TRAFFICCONE("trafficcone", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	TRAFFICCONE("trafficcone", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	TOPHAT("tophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	TOPHAT("tophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	SMALLTOPHAT("smalltophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	SMALLTOPHAT("smalltophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	MONOCLE("monocle", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	MONOCLE("monocle", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	GLADIATOR("gladiator", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	GLADIATOR("gladiator", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	CONSTRUCTION("construction", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	CONSTRUCTION("construction", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	ARROW("arrow", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ENTITY_ARROW_HIT, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	ARROW("arrow", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARROW_HIT, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	LONGSMALLTOPHAT("longsmalltophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F,
-			0.0F, () -> Ingredient.fromItems()),
+	LONGSMALLTOPHAT("longsmalltophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F,
+			0.0F, () -> Ingredient.of()),
 
-	WOLFHIDE("wolfhide", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	WOLFHIDE("wolfhide", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	TOPTOPTOPHAT("toptoptophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	TOPTOPTOPHAT("toptoptophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	LONGTOPHAT("longtophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	LONGTOPHAT("longtophat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	MAJIMACONSTRUCTIONHAT("majimacontructionhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON,
-			0.0F, 0.0F, () -> Ingredient.fromItems()),
+	MAJIMACONSTRUCTIONHAT("majimacontructionhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON,
+			0.0F, 0.0F, () -> Ingredient.of()),
 
-	NACHOSOMBRARO("nachosombraro", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	NACHOSOMBRARO("nachosombraro", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	SOMBRARO("sombraro", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	SOMBRARO("sombraro", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	FURCOAT("furcoat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	FURCOAT("furcoat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	SAMURAI("samurai", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	SAMURAI("samurai", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	COW("cow", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F,
-			() -> Ingredient.fromItems()),
+	COW("cow", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+			() -> Ingredient.of()),
 
-	SHOTCOWBOYHAT("shotcowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
-			() -> Ingredient.fromItems());
+	SHOTCOWBOYHAT("shotcowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of());
 
 	// Stuff that is needed
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
@@ -117,27 +116,27 @@ public enum ModArmorMaterial implements IArmorMaterial {
 	}
 
 	@Override
-	public int getDurability(EquipmentSlotType slotIn) {
+	public int getDurabilityForSlot(EquipmentSlot slotIn) {
 		return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
 	}
 
 	@Override
-	public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+	public int getDefenseForSlot(EquipmentSlot slotIn) {
 		return this.damageReductionAmountArray[slotIn.getIndex()];
 	}
 
 	@Override
-	public int getEnchantability() {
+	public int getEnchantmentValue() {
 		return this.enchantability;
 	}
 
 	@Override
-	public SoundEvent getSoundEvent() {
-		return this.soundEvent;
+	public net.minecraft.sounds.SoundEvent getEquipSound() {
+	return this.soundEvent;
 	}
 
 	@Override
-	public Ingredient getRepairMaterial() {
+	public Ingredient getRepairIngredient() {
 		return this.repairMaterialLazy.get();
 	}
 

@@ -2,21 +2,25 @@ package com.colt.ccam.armor;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 
-import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.ItemStack;
+import com.colt.ccam.itemgroup.ccamItemGroup;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.*;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 public class TulipArmorItem extends ArmorItem {
 	
-	public TulipArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties properties) {
-		super(materialIn, slot, properties);
+	public TulipArmorItem(ArmorMaterial materialIn, EquipmentSlot slot ) {
+		super(materialIn, slot,  new Item.Properties().tab(ccamItemGroup.CCAM_TAB));
 	}
-	
+
 	@Override
-	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return ColtCosmeticArmorMod.SIDED_SYSTEM.getTulipArmorModel(armorSlot);
-	} 
+	public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
+		consumer.accept((net.minecraftforge.client.IItemRenderProperties) ColtCosmeticArmorMod.SIDED_SYSTEM.getArmorRenderProperties());
+	}
 }

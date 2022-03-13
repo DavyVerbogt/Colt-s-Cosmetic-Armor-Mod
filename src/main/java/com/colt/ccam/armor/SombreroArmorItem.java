@@ -4,25 +4,25 @@ import java.util.List;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 
-import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import com.colt.ccam.itemgroup.ccamItemGroup;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.*;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 public class SombreroArmorItem extends ArmorItem {
 	
-	public SombreroArmorItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties properties) {
-		super(materialIn, slot, properties);
+	public SombreroArmorItem(ArmorMaterial materialIn, EquipmentSlot slot ) {
+		super(materialIn, slot,  new Item.Properties().tab(ccamItemGroup.CCAM_TAB));
 	}
-	
+
 	@Override
-	public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-		return ColtCosmeticArmorMod.SIDED_SYSTEM.getSombraroArmorModel(armorSlot);
-	} 
+	public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
+		consumer.accept((net.minecraftforge.client.IItemRenderProperties) ColtCosmeticArmorMod.SIDED_SYSTEM.getArmorRenderProperties());
+	}
 } 

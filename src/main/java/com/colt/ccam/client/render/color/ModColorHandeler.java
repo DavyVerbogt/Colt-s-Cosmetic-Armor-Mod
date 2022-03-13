@@ -3,7 +3,7 @@ package com.colt.ccam.client.render.color;
 import com.colt.ccam.ColtCosmeticArmorMod;
 import com.colt.ccam.registries.ccamItems;
 
-import net.minecraft.item.IDyeableArmorItem;
+import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,12 +16,59 @@ public class ModColorHandeler {
 
     public static void onItemColors(ColorHandlerEvent.Item event) {
         event.getItemColors().register(
-                (stack, colorIn) -> colorIn < 1 ? -1 : ((IDyeableArmorItem) stack.getItem()).getColor(stack),
-                ccamItems.FLOWER_CROWN.get(), ccamItems.WITCH_HAT.get(), ccamItems.SMALL_TOP_HAT.get(),
-                ccamItems.TOP_HAT.get(), ccamItems.TOP_TOP_TOP_HAT.get(), ccamItems.GLADIATOR_HELMET.get(),
-                ccamItems.BASIC_HELMET.get(), ccamItems.BASIC_CHESTPLATE.get(), ccamItems.BASIC_LEGGINGS.get(),
-                ccamItems.BASIC_BOOTS.get(), ccamItems.LONGTOPHAT_HELMET.get(), ccamItems.LONG_SMALL_TOP_HAT.get(),
-                ccamItems.BASIC_CURIO.get()
-                );
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.BASIC_HELMET.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.BASIC_CHESTPLATE.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.BASIC_LEGGINGS.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack), ccamItems.BASIC_BOOTS.get()
+        );
+
+
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.FLOWER_CROWN.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.GLADIATOR_HELMET.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.LONG_SMALL_TOPHAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.LONG_TOPHAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.SMALL_TOPHAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.TOPHAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.LONG_TOPHAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.TOP_TOP_TOP_HAT.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.WITCH_HAT.get()
+        );
+
+
     }
 }

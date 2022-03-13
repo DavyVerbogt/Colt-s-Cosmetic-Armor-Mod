@@ -1,7 +1,15 @@
+import groovy.transform.Field
+
+import java.util.jar.Attributes
+import java.util.jar.JarFile
+import java.util.jar.Manifest
+import java.util.zip.ZipInputStream
+
 buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
+        jcenter()
         mavenCentral()
     }
     dependencies {
@@ -61,10 +69,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'ColtCosmeticArmorMod'
 
             mods {
-                examplemod {
+                ColtCosmeticArmorMod {
                     source sourceSets.main
                 }
             }
@@ -78,10 +86,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'ColtCosmeticArmorMod'
 
             mods {
-                examplemod {
+                ColtCosmeticArmorMod {
                     source sourceSets.main
                 }
             }
@@ -106,10 +114,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'ColtCosmeticArmorMod'
 
             mods {
-                examplemod {
+                ColtCosmeticArmorMod {
                     source sourceSets.main
                 }
             }
@@ -123,10 +131,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'ColtCosmeticArmorMod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                examplemod {
+                ColtCosmeticArmorMod {
                     source sourceSets.main
                 }
             }
@@ -142,7 +150,7 @@ repositories {
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
     maven {
         name "curios"
-        url "https://maven.theillusivec4.top/"
+        url = "https://maven.theillusivec4.top/"
     }
 
     maven {
@@ -153,8 +161,12 @@ repositories {
         url "https://maven.tterrag.com/"
     }
     maven {
-        name "jei"
-        url "https://dvs1.progwml6.com/files/maven/"
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
     }
     //maven {
     //    url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' 
@@ -170,25 +182,25 @@ dependencies {
 
     //implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.32')
 
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2-9.4.1.113:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2-9.4.1.113")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.4.1.113:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.4.1.113")
 
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.6.3:api")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.6.3")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.6.3:api")
 
-
+}
 
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "examplemod",
-                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Title"     : "ColtCosmeticArmorMod",
+                "Specification-Vendor"    : "ColtCosmeticArmorModsareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "examplemodsareus",
+                "Implementation-Vendor"   : "ColtCosmeticArmorModsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

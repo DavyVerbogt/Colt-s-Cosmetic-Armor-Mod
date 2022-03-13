@@ -2,13 +2,15 @@ package com.colt.ccam.itemgroup;
 
 import com.colt.ccam.registries.ccamItems;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class ccamItemGroup extends ItemGroup {
+
+
+public class ccamItemGroup extends  CreativeModeTab {
 
     
-    public static final ccamItemGroup CCAM_TAB = new ccamItemGroup(ItemGroup.GROUPS.length, "ccamTab");
+    public static final ccamItemGroup CCAM_TAB = new ccamItemGroup(TABS.length, "ccamTab");
 
     
         public ccamItemGroup(int index, String label) {
@@ -16,8 +18,8 @@ public class ccamItemGroup extends ItemGroup {
     }
 
     @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ccamItems.COLT_HELMET.get());
+        public ItemStack makeIcon() {
+            return new ItemStack(ccamItems.TOP_TOP_TOP_HAT.get());
         }
     
 }
