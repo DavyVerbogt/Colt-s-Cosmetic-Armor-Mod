@@ -40,7 +40,6 @@ public class GladiatorArmorModel extends HumanoidModel {
 			.texOffs(0, 80).mirror().addBox(-0.3F, -1.0F, -2.3F, 1.0F, 5.0F, 0.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.0873F, 0.0436F, 0.0F));
 	PartDefinition BootLeft = left_leg.addOrReplaceChild("BootLeft", CubeListBuilder.create().texOffs(24, 80).addBox(-2.0F, 11.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-
 	PartDefinition Jacket = body.addOrReplaceChild("Jacket", CubeListBuilder.create().texOffs(40, 41).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 	PartDefinition Belt = body.addOrReplaceChild("Belt", CubeListBuilder.create().texOffs(41, 74).addBox(-2.0F, 10.4F, -2.6F, 4.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
 			.texOffs(0, 80).addBox(-4.0F, 11.0F, -2.0F, 8.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, -0.5F, 0.0F));
@@ -49,16 +48,14 @@ public class GladiatorArmorModel extends HumanoidModel {
 	PartDefinition IronGaurdLeft_2_r1 = Belt.addOrReplaceChild("IronGaurdLeft_2_r1", CubeListBuilder.create().texOffs(32, 70).addBox(-0.4F, 1.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.2F))
 			.texOffs(32, 70).addBox(0.2F, 0.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offsetAndRotation(4.0F, 11.0F, 0.0F, 0.0F, 0.0F, -0.48F));
 
-
-	PartDefinition JacketRightArm = right_arm.addOrReplaceChild("JacketRightArm", CubeListBuilder.create().texOffs(48, 64).addBox(-4.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 	PartDefinition Arm_Part = right_arm.addOrReplaceChild("Arm_Part", CubeListBuilder.create().texOffs(32, 70).addBox(0.0F, 0.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.3F))
 			.texOffs(32, 70).addBox(1.0F, 1.7F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.3F))
 			.texOffs(32, 70).addBox(1.8F, 3.3F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.3F))
-			.texOffs(32, 70).addBox(2.6F, 5.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.3F)), PartPose.offsetAndRotation(-4.5F, -0.3F, 0.0F, 0.0F, 0.0F, 0.3927F));
+			.texOffs(32, 70).addBox(2.6F, 5.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.3F)), PartPose.offsetAndRotation(-3.5F, -1.0F, 0.0F, 0.0F, 0.0F, 0.3927F));
 	PartDefinition LeatherStrapBottem_r1 = Arm_Part.addOrReplaceChild("LeatherStrapBottem_r1", CubeListBuilder.create().texOffs(25, 59).addBox(-3.5F, 2.3F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F))
 			.texOffs(25, 59).addBox(-3.5F, -0.7F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offsetAndRotation(4.5F, 0.3F, 0.0F, 0.0F, 0.0F, -0.3927F));
-	PartDefinition LeatherStrapIronGaurds_r1 = Arm_Part.addOrReplaceChild("LeatherStrapIronGaurds_r1", CubeListBuilder.create().texOffs(18, 54).addBox(-0.2F, -0.5F, -1.5F, 1.0F, 7.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.3927F));
-	PartDefinition Shoulder_Piece = right_arm.addOrReplaceChild("Shoulder_Piece", CubeListBuilder.create().texOffs(10, 57).addBox(-1.0F, -5.0F, -1.5F, 1.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+	PartDefinition LeatherStrapIronGaurds_r1 = Arm_Part.addOrReplaceChild("LeatherStrapIronGaurds_r1", CubeListBuilder.create().texOffs(18, 54).addBox(-0.2F, -0.5F, -1.5F, 1.0F, 7.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(.0F, -1.0F, 0.0F, 0.0F, 0.0F, -0.3927F));
+	PartDefinition Shoulder_Piece = right_arm.addOrReplaceChild("Shoulder_Piece", CubeListBuilder.create().texOffs(10, 57).addBox(-1.0F, -5.0F, -1.5F, 1.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(1F, -1F, -0F));
 	PartDefinition ShoulderLeft_r1 = Shoulder_Piece.addOrReplaceChild("ShoulderLeft_r1", CubeListBuilder.create().texOffs(0, 57).addBox(-0.7F, -5.0F, 0.9F, 1.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, -4.0F, 0.0F, 0.0F, -0.3054F, -2.0944F));
 	PartDefinition ShoulderIn2_r1 = Shoulder_Piece.addOrReplaceChild("ShoulderIn2_r1", CubeListBuilder.create().texOffs(8, 57).addBox(-3.3F, -3.0F, -2.0F, 1.0F, 3.0F, 4.0F, new CubeDeformation(0.0F))
 			.texOffs(8, 57).addBox(-2.3F, -3.0F, -2.0F, 1.0F, 3.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, -4.0F, 0.0F, 0.0F, 0.0F, -1.789F));
@@ -67,10 +64,10 @@ public class GladiatorArmorModel extends HumanoidModel {
 	PartDefinition ShoulderBackLeft_r1 = Shoulder_Piece.addOrReplaceChild("ShoulderBackLeft_r1", CubeListBuilder.create().texOffs(12, 58).addBox(-1.0F, -5.2F, -0.1F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.3054F, 0.0F, 0.0F));
 	PartDefinition ShoulderRight_r1 = Shoulder_Piece.addOrReplaceChild("ShoulderRight_r1", CubeListBuilder.create().texOffs(0, 57).addBox(-0.7F, -5.0F, -2.9F, 1.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, -4.0F, 0.0F, 0.0F, 0.3054F, -2.0944F));
 
-	PartDefinition JacketLeftArm = left_arm.addOrReplaceChild("JacketLeftArm", CubeListBuilder.create().texOffs(0, 41).mirror().addBox(0.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(0.0F, 0.0F, 0.0F));
+	PartDefinition JacketLeftArm = left_arm.addOrReplaceChild("JacketLeftArm", CubeListBuilder.create().texOffs(0, 41).mirror().addBox(0.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(-1F, -1F, -0F));
 
-	PartDefinition Helmet = head.addOrReplaceChild("Helmet", CubeListBuilder.create().texOffs(0, 93).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.2F))
-			.texOffs(44, 109).addBox(0.2F, -12.7F, -4.1F, 0.0F, 9.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+	PartDefinition Helmet = head.addOrReplaceChild("Helmet", CubeListBuilder.create().texOffs(0, 93).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.4F))
+			.texOffs(44, 109).addBox(0.2F, -12.7F, -4.1F, 0.0F, 9.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 	PartDefinition FeathersRight_r1 = Helmet.addOrReplaceChild("FeathersRight_r1", CubeListBuilder.create().texOffs(44, 109).addBox(0.2F, -12.7F, -4.1F, 0.0F, 9.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.1745F, 0.0F, 0.0436F));
 	PartDefinition FeathersLeft_r1 = Helmet.addOrReplaceChild("FeathersLeft_r1", CubeListBuilder.create().texOffs(44, 109).addBox(0.2F, -12.7F, -4.1F, 0.0F, 9.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.0873F, 0.0F, -0.0436F));
 	PartDefinition HelmetFeatherGaurdMidRight_r1 = Helmet.addOrReplaceChild("HelmetFeatherGaurdMidRight_r1", CubeListBuilder.create().texOffs(29, 123).mirror().addBox(-0.3F, -9.4F, -5.5F, 1.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(-0.4F, 0.0F, 0.4F, -0.829F, 0.0873F, 0.0873F));

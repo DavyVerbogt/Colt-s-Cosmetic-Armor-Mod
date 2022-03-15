@@ -1,5 +1,7 @@
 package com.colt.ccam.client.render.model;
 
+import com.colt.ccam.ColtCosmeticArmorMod;
+import com.colt.ccam.curio.render.model.CatEarCurioModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.resources.ResourceLocation;
@@ -11,32 +13,31 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 @OnlyIn(Dist.CLIENT)
 public class CCAMModelLayers {
 
-    public static final ModelLayerLocation ARROW = createLocation("arrow", "main");
-    public static final ModelLayerLocation BASIC = createLocation("basic", "main");
-    public static final ModelLayerLocation COLT = createLocation("colt", "main");
-    public static final ModelLayerLocation CONSTRUCTION_HELMET = createLocation("constructionhelmet", "main");
-    public static final ModelLayerLocation COW = createLocation("cow", "main");
-    public static final ModelLayerLocation COWBOY_HAT = createLocation("cowboyhat", "main");
-    public static final ModelLayerLocation FLOWER_CROWN = createLocation("flowercrown", "main");
-    public static final ModelLayerLocation FURCOAT = createLocation("furcoat", "main");
-    public static final ModelLayerLocation GLADIATOR = createLocation("gladiator", "main");
-    public static final ModelLayerLocation LONG_SMALL_TOPHAT = createLocation("longsmalltophat", "main");
-    public static final ModelLayerLocation LONG_TOPHAT = createLocation("longtophat", "main");
-    public static final ModelLayerLocation MAJIMA_CONSTRUCTION_HAT = createLocation("majimaconstructionhat", "main");
-    public static final ModelLayerLocation MONOCLE = createLocation("monocle", "main");
-    public static final ModelLayerLocation NACHO_SOMBRARO = createLocation("nachosombraro", "main");
-    public static final ModelLayerLocation SAMURAI = createLocation("samurai", "main");
-    public static final ModelLayerLocation SHOT_COWBOY_HAT = createLocation("shotcowboyhat", "main");
-    public static final ModelLayerLocation SMALL_TOPHAT = createLocation("smalltophat", "main");
-    public static final ModelLayerLocation SOMBRARO = createLocation("sombraro", "main");
-    public static final ModelLayerLocation TOPHAT = createLocation("tophat", "main");
-    public static final ModelLayerLocation TOP_TOP_TOPHAT = createLocation("toptoptophat", "main");
-    public static final ModelLayerLocation TRAFFIC_CONE = createLocation("trafficcone", "main");
-    public static final ModelLayerLocation TULIP = createLocation("tulip", "main");
-    public static final ModelLayerLocation WITCH_HAT = createLocation("witchhat", "main");
-    public static final ModelLayerLocation WOLF = createLocation("wolf", "main");
-
-
+    public static final ModelLayerLocation
+ARROW = createLocation("arrow", "main"),
+BASIC = createLocation("basic", "main"),
+COLT = createLocation("colt", "main"),
+CONSTRUCTION_HELMET = createLocation("constructionhelmet", "main"),
+COW = createLocation("cow", "main"),
+COWBOY_HAT = createLocation("cowboyhat", "main"),
+FLOWER_CROWN = createLocation("flowercrown", "main"),
+FURCOAT = createLocation("furcoat", "main"),
+GLADIATOR = createLocation("gladiator", "main"),
+LONG_SMALL_TOPHAT = createLocation("longsmalltophat", "main"),
+LONG_TOPHAT = createLocation("longtophat", "main"),
+MAJIMA_CONSTRUCTION_HAT = createLocation("majimaconstructionhat", "main"),
+MONOCLE = createLocation("monocle", "main"),
+NACHO_SOMBRARO = createLocation("nachosombraro", "main"),
+SAMURAI = createLocation("samurai", "main"),
+SHOT_COWBOY_HAT = createLocation("shotcowboyhat", "main"),
+SMALL_TOPHAT = createLocation("smalltophat", "main"),
+SOMBRARO = createLocation("sombraro", "main"),
+TOPHAT = createLocation("tophat", "main"),
+TOP_TOP_TOPHAT = createLocation("toptoptophat", "main"),
+ TRAFFIC_CONE = createLocation("trafficcone", "main"),
+TULIP = createLocation("tulip", "main"),
+ WITCH_HAT = createLocation("witchhat", "main"),
+ WOLF = createLocation("wolf", "main");
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ARROW, () -> ArrowArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
@@ -44,7 +45,7 @@ public class CCAMModelLayers {
         event.registerLayerDefinition(COLT, () -> ColtArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(CONSTRUCTION_HELMET, () -> ConstructionArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(COW, () -> CowArmorModel.createArmorLayer(new CubeDeformation(1f)));
-        event.registerLayerDefinition(COWBOY_HAT, () -> CowArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
+        event.registerLayerDefinition(COWBOY_HAT, () -> CowBoyHatArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(FLOWER_CROWN, () -> FlowerCrownArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(FURCOAT, () -> FurCoatArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(GLADIATOR, () -> GladiatorArmorModel.createArmorLayer(new CubeDeformation(1f)));
@@ -66,6 +67,6 @@ public class CCAMModelLayers {
     }
 
     private static ModelLayerLocation createLocation(String model, String layer) {
-        return new ModelLayerLocation(new ResourceLocation("ccam", model), layer);
+        return new ModelLayerLocation(new ResourceLocation(ColtCosmeticArmorMod.MOD_ID, model), layer);
     }
 }

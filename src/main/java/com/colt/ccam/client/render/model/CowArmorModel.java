@@ -23,7 +23,7 @@ public class CowArmorModel extends HumanoidModel{
 		PartDefinition right_leg = partdefinition.getChild("right_leg");
 		PartDefinition left_leg = partdefinition.getChild("left_leg");
 
-		PartDefinition Pants = right_leg.addOrReplaceChild("Pants", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Pants = left_leg.addOrReplaceChild("Pants", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition KneePad2 = Pants.addOrReplaceChild("KneePad2", CubeListBuilder.create().texOffs(48, 36).addBox(-6.0F, 11.5F, 0.3F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(-0.0238F, -6.5442F, -2.2F));
 		PartDefinition Knee_r1 = KneePad2.addOrReplaceChild("Knee_r1", CubeListBuilder.create().texOffs(56, 32).mirror().addBox(-5.5F, 10.5F, 1.3F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.1309F, 0.0F, 0.0F));
@@ -32,7 +32,7 @@ public class CowArmorModel extends HumanoidModel{
 		PartDefinition Side_r1 = Skirt.addOrReplaceChild("Side_r1", CubeListBuilder.create().texOffs(44, 32).mirror().addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(-2.0F, 0.0F, -2.0F, 0.0F, 0.0F, 0.1745F));
 		PartDefinition Frond_r1 = Skirt.addOrReplaceChild("Frond_r1", CubeListBuilder.create().texOffs(58, 28).mirror().addBox(-2.0F, 0.0F, 0.0F, 3.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, -4.0F, -0.1745F, 0.0F, 0.0F));
 
-		PartDefinition Pants2 = left_leg.addOrReplaceChild("Pants2", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Pants2 = right_leg.addOrReplaceChild("Pants2", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition kneePad = Pants2.addOrReplaceChild("kneePad", CubeListBuilder.create().texOffs(48, 36).addBox(2.0F, 11.5F, 0.3F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0238F, -6.5442F, -2.2F));
 		PartDefinition Knee_r2 = kneePad.addOrReplaceChild("Knee_r2", CubeListBuilder.create().texOffs(56, 32).addBox(2.5F, 10.5F, 1.3F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.1309F, 0.0F, 0.0F));
 		PartDefinition Skirt2 = Pants2.addOrReplaceChild("Skirt2", CubeListBuilder.create(), PartPose.offset(4.0F, -1.0F, -2.0F));
@@ -61,7 +61,7 @@ public class CowArmorModel extends HumanoidModel{
 				.texOffs(36, 55).addBox(-5.0F, 0.0F, 4.0F, 4.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(-2.0F, 1.0F, 4.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.0623F, 4.9122F, 0.5F));
 
-		PartDefinition ArmArmorR = right_arm.addOrReplaceChild("ArmArmorR", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition ArmArmorR = right_arm.addOrReplaceChild("ArmArmorR", CubeListBuilder.create(), PartPose.offset(1.9F, 0.0F, 0.0F));
 		PartDefinition LeatherR = ArmArmorR.addOrReplaceChild("LeatherR", CubeListBuilder.create().texOffs(36, 55).addBox(-1.5F, -2.0F, -0.5F, 3.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(-2.5F, -2.0F, -1.5F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F))
 				.texOffs(44, 45).addBox(-2.5F, -3.0F, -4.5F, 5.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
@@ -69,11 +69,11 @@ public class CowArmorModel extends HumanoidModel{
 				.texOffs(36, 55).addBox(-2.5F, -2.0F, -3.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(-1.5F, 2.0F, -0.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(0.5F, 2.0F, -0.5F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, 1.0F, 2.5F));
-		PartDefinition ElbowPad = ArmArmorR.addOrReplaceChild("ElbowPad", CubeListBuilder.create().texOffs(0, 40).mirror().addBox(-6.0F, 11.5F, 0.1F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(1.9762F, -7.5442F, -2.2F));
+		PartDefinition ElbowPad = ArmArmorR.addOrReplaceChild("ElbowPad", CubeListBuilder.create().texOffs(0, 40).mirror().addBox(-6.0F, 11.5F, 0.1F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(1F, -7.5442F, -2.2F));
 		PartDefinition Pad_r1 = ElbowPad.addOrReplaceChild("Pad_r1", CubeListBuilder.create().texOffs(6, 44).mirror().addBox(-5.5F, 10.5F, -2.3F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 4.4F, 0.1309F, 0.0F, 0.0F));
 
-		PartDefinition ArmArmorL = left_arm.addOrReplaceChild("ArmArmorL", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition ElbowPad2 = ArmArmorL.addOrReplaceChild("ElbowPad2", CubeListBuilder.create().texOffs(0, 40).addBox(2.0F, 11.5F, 0.1F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(-1.9762F, -7.5442F, -2.2F));
+		PartDefinition ArmArmorL = left_arm.addOrReplaceChild("ArmArmorL", CubeListBuilder.create(), PartPose.offset(-1.9F, 0.0F, -0.0F));
+		PartDefinition ElbowPad2 = ArmArmorL.addOrReplaceChild("ElbowPad2", CubeListBuilder.create().texOffs(0, 40).addBox(2.0F, 11.5F, 0.1F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(-1F, -7.5442F, -2.2F));
 		PartDefinition Pad_r2 = ElbowPad2.addOrReplaceChild("Pad_r2", CubeListBuilder.create().texOffs(6, 44).addBox(2.5F, 10.5F, -2.3F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 4.4F, 0.1309F, 0.0F, 0.0F));
 		PartDefinition bone6 = ArmArmorL.addOrReplaceChild("bone6", CubeListBuilder.create().texOffs(36, 55).mirror().addBox(-1.5F, -2.0F, -0.5F, 3.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
 				.texOffs(36, 55).mirror().addBox(1.5F, -2.0F, -1.5F, 1.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false)
@@ -86,7 +86,7 @@ public class CowArmorModel extends HumanoidModel{
 		PartDefinition Cow = head.addOrReplaceChild("Cow", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition CowHead = Cow.addOrReplaceChild("CowHead", CubeListBuilder.create().texOffs(0, 52).addBox(4.0F, -17.0F, 0.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(4, 52).addBox(-5.0F, -17.0F, 0.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(1, 49).addBox(-4.0F, -16.0F, -2.0F, 8.0F, 8.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(1, 49).addBox(-4.0F, -16.0F, -2.0F, 8.0F, 8.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 		PartDefinition Leather = Cow.addOrReplaceChild("Leather", CubeListBuilder.create().texOffs(36, 56).addBox(-5.0F, -8.0F, 4.0F, 10.0F, 7.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(4.0F, -9.0F, 0.0F, 1.0F, 6.0F, 2.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(4.0F, -8.0F, 2.0F, 1.0F, 7.0F, 2.0F, new CubeDeformation(0.0F))
@@ -96,7 +96,7 @@ public class CowArmorModel extends HumanoidModel{
 				.texOffs(36, 55).addBox(-1.0F, -1.0F, 4.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(-4.0F, -1.0F, 4.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(36, 55).addBox(1.0F, 2.0F, 4.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(36, 55).addBox(0.0F, -1.0F, 4.0F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(36, 55).addBox(0.0F, -1.0F, 4.0F, 3.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 

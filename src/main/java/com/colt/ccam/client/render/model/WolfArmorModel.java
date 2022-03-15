@@ -76,10 +76,10 @@ public class WolfArmorModel extends HumanoidModel {
 				.texOffs(48, 59).addBox(-5.0F, 2.0F, 1.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(42, 57).addBox(-5.0F, -1.0F, 2.0F, 1.0F, 6.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(38, 40).addBox(-4.0F, -1.0F, 2.0F, 4.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(42, 52).addBox(-1.0F, 2.0F, 2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+				.texOffs(42, 52).addBox(-1.0F, 2.0F, 2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.0F, 0.0F, 0.0F));
 
 		PartDefinition JacketLeftArm = left_arm.addOrReplaceChild("JacketLeftArm", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition SholderPieceL = JacketLeftArm.addOrReplaceChild("SholderPieceL", CubeListBuilder.create().texOffs(58, 46).addBox(0.0F, 0.0F, -3.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+		PartDefinition SholderPieceL = JacketLeftArm.addOrReplaceChild("SholderPieceL", CubeListBuilder.create().texOffs(58, 46).addBox(0.0F, 0.0F, -1.0F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(24, 41).addBox(0.0F, 1.0F, -3.0F, 5.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(37, 34).addBox(0.0F, 2.5F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.5F))
 				.texOffs(44, 41).addBox(0.0F, 4.0F, -3.0F, 5.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
@@ -100,7 +100,7 @@ public class WolfArmorModel extends HumanoidModel {
 				.texOffs(37, 41).addBox(0.0F, 4.0F, 2.0F, 5.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(42, 52).addBox(0.0F, 10.0F, 2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(38, 39).addBox(0.0F, 8.0F, 2.0F, 4.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(42, 57).addBox(4.0F, 8.0F, 2.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+				.texOffs(42, 57).addBox(4.0F, 8.0F, 2.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, -2.0F, 0.0F));
 
 		PartDefinition Bones = JacketLeftArm.addOrReplaceChild("Bones", CubeListBuilder.create().texOffs(60, 38).addBox(-5.0F, 3.0F, -0.5F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(33, 37).mirror().addBox(-4.0F, 4.0F, -0.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false)
@@ -111,7 +111,7 @@ public class WolfArmorModel extends HumanoidModel {
 		PartDefinition WolfHead = head.addOrReplaceChild("WolfHead", CubeListBuilder.create().texOffs(0, 54).addBox(-3.0F, -12.0F, -2.0F, 6.0F, 4.0F, 4.0F, new CubeDeformation(0.0F))
 				.texOffs(10, 51).addBox(1.0F, -14.0F, 0.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(10, 51).addBox(-3.0F, -14.0F, 0.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(20, 59).addBox(-1.5F, -9.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(20, 59).addBox(-1.5F, -9.0F, -5.0F, 3.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 		PartDefinition TheethR_r1 = WolfHead.addOrReplaceChild("TheethR_r1", CubeListBuilder.create().texOffs(35, 61).addBox(-0.3F, -0.8F, 0.0F, 1.0F, 1.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, -7.0F, -4.5F, 0.0F, 0.0F, 0.8727F));
 		PartDefinition TheethL_r1 = WolfHead.addOrReplaceChild("TheethL_r1", CubeListBuilder.create().texOffs(35, 61).addBox(-0.7F, -0.3F, 0.0F, 1.0F, 1.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, -7.0F, -4.5F, 0.0F, 0.0F, 0.8727F));
 		PartDefinition WolfHide = head.addOrReplaceChild("WolfHide", CubeListBuilder.create().texOffs(16, 53).addBox(-5.0F, -9.0F, 0.0F, 10.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
@@ -125,13 +125,13 @@ public class WolfArmorModel extends HumanoidModel {
 				.texOffs(46, 56).addBox(-4.0F, 0.0F, 4.0F, 8.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(46, 56).addBox(4.0F, 0.0F, 4.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(46, 56).addBox(-3.0F, 2.0F, 4.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(46, 56).addBox(0.0F, 2.0F, 4.0F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(46, 56).addBox(0.0F, 2.0F, 4.0F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 		PartDefinition WolfTail = head.addOrReplaceChild("WolfTail", CubeListBuilder.create().texOffs(54, 51).addBox(1.0F, -2.0F, 5.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(58, 50).addBox(-1.0F, -2.0F, 6.0F, 2.0F, 5.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(44, 54).addBox(-1.0F, -3.0F, 5.0F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(50, 52).addBox(-2.0F, -2.0F, 5.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(58, 49).addBox(-1.0F, 0.0F, 5.0F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-				.texOffs(46, 49).addBox(-0.5F, 1.0F, 5.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(46, 49).addBox(-0.5F, 1.0F, 5.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 128);
 	}

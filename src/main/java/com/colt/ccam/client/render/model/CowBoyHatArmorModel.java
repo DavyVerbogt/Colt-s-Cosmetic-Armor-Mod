@@ -20,7 +20,7 @@ public class CowBoyHatArmorModel extends HumanoidModel {
 		PartDefinition CowboyHat = head.addOrReplaceChild("CowboyHat", CubeListBuilder.create().texOffs(0, 51).addBox(-4.0F, -4.0F, -4.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.0F))
 				.texOffs(34, 42).addBox(1.0F, -5.0F, -4.0F, 3.0F, 1.0F, 8.0F, new CubeDeformation(0.0F))
 				.texOffs(42, 33).addBox(-4.0F, -5.0F, -4.0F, 3.0F, 1.0F, 8.0F, new CubeDeformation(0.0F))
-				.texOffs(20, 51).addBox(-5.0F, 0.0F, -6.0F, 10.0F, 1.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -32.0F, 0.0F));
+				.texOffs(20, 51).addBox(-5.0F, 0.0F, -6.0F, 10.0F, 1.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -7.0F, 0.0F));
 
 		PartDefinition FlabRight_r1 = CowboyHat.addOrReplaceChild("FlabRight_r1", CubeListBuilder.create().texOffs(0, 38).addBox(-1.0F, -2.0F, -5.0F, 1.0F, 3.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-5.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.1745F));
 

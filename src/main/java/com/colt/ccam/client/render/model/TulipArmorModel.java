@@ -16,7 +16,7 @@ public class TulipArmorModel extends HumanoidModel {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition head = partdefinition.getChild("head");
 
-		PartDefinition Tulip = head.addOrReplaceChild("Tulip", CubeListBuilder.create(), PartPose.offset(-3.0F, -5.0F, 3.0F));
+		PartDefinition Tulip = head.addOrReplaceChild("Tulip", CubeListBuilder.create(), PartPose.offset(-3.0F, -5.0F, 2.0F));
 
 		PartDefinition Tulip1 = Tulip.addOrReplaceChild("Tulip1", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.1309F, 0.1309F, -0.0873F));
 

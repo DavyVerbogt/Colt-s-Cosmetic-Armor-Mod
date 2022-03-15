@@ -17,7 +17,7 @@ public class ArrowArmorModel extends HumanoidModel{
 		PartDefinition partdefinition  = meshdefinition.getRoot();
 		PartDefinition head = partdefinition.getChild("head");
 
-		PartDefinition Arrow = head.addOrReplaceChild("Arrow", CubeListBuilder.create(), PartPose.offsetAndRotation(1.7143F, -30.0F, -0.5F, 0.0F, 0.0F, -0.1745F));
+		PartDefinition Arrow = head.addOrReplaceChild("Arrow", CubeListBuilder.create(), PartPose.offsetAndRotation(1.7143F, -7.0F, -0.5F, 0.0F, 0.0F, -0.1745F));
 
 		PartDefinition FeatherFlat2_r1 = Arrow.addOrReplaceChild("FeatherFlat2_r1", CubeListBuilder.create().texOffs(37, 54).addBox(-1.0F, -2.5F, -2.5F, 0.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(6.2857F, 0.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
 

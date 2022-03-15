@@ -15,6 +15,8 @@ public class FurCoatArmorModel extends HumanoidModel {
         MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0F);
         PartDefinition partdefinition = meshdefinition.getRoot();
         PartDefinition body = partdefinition.getChild("body");
+        PartDefinition right_arm = partdefinition.getChild("right_arm");
+        PartDefinition left_arm = partdefinition.getChild("left_arm");
 
         PartDefinition Jacket = body.addOrReplaceChild("Jacket", CubeListBuilder.create().texOffs(40, 48).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
@@ -78,13 +80,8 @@ public class FurCoatArmorModel extends HumanoidModel {
                 .texOffs(35, 60).addBox(-4.9F, -1.4F, -2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(-0.2F))
                 .texOffs(35, 60).mirror().addBox(3.9F, -1.4F, -2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(-0.2F)).mirror(false), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition bipedRightArm = partdefinition.addOrReplaceChild("bipedRightArm", CubeListBuilder.create(), PartPose.offset(-4.0F, 1.0F, 0.0F));
-
-        PartDefinition RightLegJacket = bipedRightArm.addOrReplaceChild("RightLegJacket", CubeListBuilder.create().texOffs(0, 48).addBox(-4.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-
-        PartDefinition bipedLeftArm = partdefinition.addOrReplaceChild("bipedLeftArm", CubeListBuilder.create(), PartPose.offset(4.0F, 1.0F, 0.0F));
-
-        PartDefinition LeftLegJacket = bipedLeftArm.addOrReplaceChild("LeftLegJacket", CubeListBuilder.create().texOffs(0, 48).mirror().addBox(0.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition RightLegJacket = right_arm.addOrReplaceChild("RightLegJacket", CubeListBuilder.create().texOffs(0, 48).addBox(-4.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition LeftLegJacket = left_arm.addOrReplaceChild("LeftLegJacket", CubeListBuilder.create().texOffs(0, 48).mirror().addBox(0.0F, -1.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(0.0F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }

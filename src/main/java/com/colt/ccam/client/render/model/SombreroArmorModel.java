@@ -42,7 +42,7 @@ public class SombreroArmorModel extends HumanoidModel {
 				.texOffs(0, 68).addBox(-2.0F, -11.0F, 2.0F, 4.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(0, 78).addBox(-3.0F, -11.0F, -2.0F, 1.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
 				.texOffs(0, 78).addBox(2.0F, -11.0F, -2.0F, 1.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
-				.texOffs(6, 66).addBox(-2.0F, -12.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-2.0F, -23.6F, 0.0F, 0.0F, 0.0F, 0.3054F));
+				.texOffs(6, 66).addBox(-2.0F, -12.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-2.0F, -0.0F, 0.0F, 0.0F, 0.0F, 0.3054F));
 
 		return LayerDefinition.create(meshdefinition, 64, 128);
 	}

@@ -1,6 +1,8 @@
 package com.colt.ccam.client.render;
 
 import com.colt.ccam.client.render.model.*;
+import com.colt.ccam.curio.render.CurioModelLayers;
+import com.colt.ccam.curio.render.model.CatEarCurioModel;
 import com.colt.ccam.registries.ccamItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
@@ -37,6 +39,7 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
     public static TulipArmorModel TULIP;
     public static WitchHatArmorModel WITCH_HAT;
     public static WolfArmorModel WOLF;
+    public static CatEarCurioModel CAT_EARS;
 
     public static void initializeModels() {
 
@@ -48,7 +51,7 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         COW = new CowArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.COW));
         COWBOY_HAT = new CowBoyHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.COWBOY_HAT));
         FLOWER_CROWN = new FlowerCrownArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.FLOWER_CROWN));
-        FURCOAT = new FurCoatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.FLOWER_CROWN));
+        FURCOAT = new FurCoatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.FURCOAT));
         GLADIATOR = new GladiatorArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.GLADIATOR));
         LONG_SMALL_TOPHAT = new LongSmalTophatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.LONG_SMALL_TOPHAT));
         LONG_TOPHAT = new LongTopHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.LONG_TOPHAT));
@@ -98,7 +101,8 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         if(itemStack.getItem() == ccamItems.COLT_CHESATPLATE.get())
         {
             return COLT;
-        }        if(itemStack.getItem() == ccamItems.COLT_LEGGINGS.get())
+        }
+        if(itemStack.getItem() == ccamItems.COLT_LEGGINGS.get())
         {
             return COLT;
         }
@@ -106,7 +110,7 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         {
             return CONSTRUCTION_HELMET;
         }
-        if(itemStack.getItem() == ccamItems.COLT_HELMET.get())
+        if(itemStack.getItem() == ccamItems.COW_HELMET.get())
         {
             return COW;
         }
@@ -225,11 +229,11 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         if(itemStack.getItem() == ccamItems.WOLF_LEGGINGS.get())
         {
             return WOLF;
-        }        if(itemStack.getItem() == ccamItems.WOLF_BOOTS.get())
+        }
+        if(itemStack.getItem() == ccamItems.WOLF_BOOTS.get())
         {
             return WOLF;
         }
-
         return _default;
     }
 }

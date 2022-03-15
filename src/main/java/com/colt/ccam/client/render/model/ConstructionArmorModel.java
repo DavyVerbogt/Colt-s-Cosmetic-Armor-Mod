@@ -29,7 +29,7 @@ public class ConstructionArmorModel extends HumanoidModel {
 				.texOffs(21, 55).addBox(1.0F, -11.0F, -5.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(27, 54).addBox(-1.0F, -12.0F, -5.0F, 2.0F, 4.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(52, 47).addBox(-2.0F, -12.0F, -4.0F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
-				.texOffs(52, 47).addBox(1.0F, -12.0F, -4.0F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(52, 47).addBox(1.0F, -12.0F, -4.0F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}

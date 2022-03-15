@@ -18,7 +18,7 @@ public class ccamItemGroupCurio extends CreativeModeTab {
 
     @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ccamItems.TOP_TOP_TOP_HAT.get());
+            return new ItemStack(ccamItems.CAT_EARS.get());
         }
     
 }

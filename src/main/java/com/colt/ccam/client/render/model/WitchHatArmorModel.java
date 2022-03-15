@@ -16,7 +16,7 @@ public class WitchHatArmorModel extends HumanoidModel {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition head = partdefinition.getChild("head");
 
-		PartDefinition WitchHat = head.addOrReplaceChild("WitchHat", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, -32.0F, 0.0F, -0.0436F, 0.0F, 0.0F));
+		PartDefinition WitchHat = head.addOrReplaceChild("WitchHat", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, -6.0F, 0.0F, -0.0436F, 0.0F, 0.0F));
 
 		PartDefinition cube_r1 = WitchHat.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(56, 55).addBox(-1.0F, -11.0F, -4.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
 

@@ -23,7 +23,7 @@ public class MajimaContructionHatArmorModel extends HumanoidModel {
 				.texOffs(6, 51).addBox(-3.0F, -11.0F, 3.0F, 6.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(6, 51).addBox(-3.0F, -11.0F, -4.0F, 6.0F, 3.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(18, 52).addBox(-4.0F, -11.0F, -3.0F, 1.0F, 3.0F, 6.0F, new CubeDeformation(0.0F))
-				.texOffs(18, 52).addBox(3.0F, -11.0F, -3.0F, 1.0F, 3.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(18, 52).addBox(3.0F, -11.0F, -3.0F, 1.0F, 3.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.25F, 0.0F));
 
 		PartDefinition Logo_r1 = MajimaConstructionHat.addOrReplaceChild("Logo_r1", CubeListBuilder.create().texOffs(12, 55).addBox(-0.5F, -0.5F, 0.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.0F, -9.5F, -4.5F, 0.0F, 0.0F, 0.7854F));
 

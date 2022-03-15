@@ -2,6 +2,7 @@ package com.colt.ccam.registries;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 
+import com.colt.ccam.Item.*;
 import com.colt.ccam.armor.ModArmorMaterial;
 import com.colt.ccam.armor.*;
 
@@ -38,7 +39,7 @@ public class ccamItems {
     public static final RegistryObject<ConstructionArmorItem> CONSTRUCTION_HELMET = ITEMS.register("construction_helmet",
             () -> new ConstructionArmorItem(ModArmorMaterial.CONSTRUCTION, EquipmentSlot.HEAD));
 
-    public static final RegistryObject<CowArmoritem> COW_HELEMT = ITEMS.register("cow_helmet",
+    public static final RegistryObject<CowArmoritem> COW_HELMET = ITEMS.register("cow_helmet",
             () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlot.HEAD));
     public static final RegistryObject<CowArmoritem> COW_CHESTPLATE = ITEMS.register("cow_chestplate",
             () -> new CowArmoritem(ModArmorMaterial.COW, EquipmentSlot.CHEST));
@@ -90,7 +91,7 @@ public class ccamItems {
     public static final RegistryObject<ShotCowBoyHatArmoritem> SHOT_COWBOY_HAT = ITEMS.register("shot_cowboy_hat",
             () -> new ShotCowBoyHatArmoritem(ModArmorMaterial.SHOTCOWBOYHAT, EquipmentSlot.HEAD));
 
-    public static final RegistryObject<SmallTopHatArmorItem> SMALL_TOPHAT = ITEMS.register("small_tophat",
+    public static final RegistryObject<SmallTopHatArmorItem> SMALL_TOPHAT = ITEMS.register("small_top_hat",
             () -> new SmallTopHatArmorItem(ModArmorMaterial.SMALLTOPHAT, EquipmentSlot.HEAD));
 
     public static final RegistryObject<SombreroArmorItem> SOMBRARO = ITEMS.register("sombrero",
@@ -109,7 +110,7 @@ public class ccamItems {
             () -> new TulipArmorItem(ModArmorMaterial.TULIP, EquipmentSlot.HEAD));
 
     public static final RegistryObject<WitchHatArmorItem> WITCH_HAT = ITEMS.register("witch_hat",
-            () -> new WitchHatArmorItem(ModArmorMaterial.TULIP, EquipmentSlot.HEAD));
+            () -> new WitchHatArmorItem(ModArmorMaterial.WITCH, EquipmentSlot.HEAD));
 
     public static final RegistryObject<WolfArmorItem> WOLF_HELMET = ITEMS.register("wolf_helmet",
             () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlot.HEAD));
@@ -121,8 +122,8 @@ public class ccamItems {
             () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlot.FEET));
 
     // Curio Items
-        /*public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
-                        DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
+ public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new);
+                               /*DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
                         RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new),
                         CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
                         DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),

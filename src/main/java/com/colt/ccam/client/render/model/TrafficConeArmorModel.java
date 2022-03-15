@@ -23,7 +23,7 @@ public class TrafficConeArmorModel extends HumanoidModel {
 				.texOffs(26, 39).addBox(-4.0F, -10.0F, -4.0F, 8.0F, 2.0F, 8.0F, new CubeDeformation(0.0F))
 				.texOffs(7, 43).addBox(-3.0F, -14.0F, -3.0F, 6.0F, 4.0F, 6.0F, new CubeDeformation(0.0F))
 				.texOffs(42, 41).addBox(-2.0F, -16.0F, -2.0F, 4.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))
-				.texOffs(54, 59).addBox(-1.0F, -18.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+				.texOffs(54, 59).addBox(-1.0F, -18.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}

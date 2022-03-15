@@ -1,9 +1,6 @@
 {
     "replace": false,
     "values": [
-        "ccam:cat_ears",
-        "ccam:dog_ears",
-        "ccam:rabbit_ears",
-        "ccam:halo"
+        "ccam:cat_ears"
     ]
 }

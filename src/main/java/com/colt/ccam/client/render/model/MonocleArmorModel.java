@@ -26,7 +26,7 @@ public class MonocleArmorModel extends HumanoidModel {
 				.texOffs(44, 61).addBox(-4.0F, 2.0F, 0.5F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
 				.texOffs(46, 59).addBox(-4.0F, 1.0F, 1.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(38, 61).addBox(-3.0F, 1.0F, 1.5F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
-				.texOffs(37, 58).addBox(-3.0F, 0.0F, 2.5F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -27.0F, -4.5F));
+				.texOffs(37, 58).addBox(-3.0F, 0.0F, 2.5F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -4.0F, -4.5F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}

@@ -39,13 +39,13 @@ public class NachoSombraroArmorModel extends HumanoidModel {
 				.texOffs(0, 68).addBox(-2.6F, -3.4F, 2.0F, 4.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
 				.texOffs(0, 78).addBox(-3.6F, -3.4F, -2.0F, 1.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
 				.texOffs(0, 78).addBox(1.4F, -3.4F, -2.0F, 1.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
-				.texOffs(6, 66).addBox(-2.6F, -4.4F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.6F, -31.2F, 0.0F, -0.3054F, 0.0F, 0.0F));
+				.texOffs(6, 66).addBox(-2.6F, -4.4F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.6F, -6.2F, 0.0F, -0.3054F, 0.0F, 0.0F));
 
 		PartDefinition MiddelSideL_r1 = Sombraro.addOrReplaceChild("MiddelSideL_r1", CubeListBuilder.create().texOffs(0, 87).addBox(3.6F, -2.0F, -4.0F, 1.0F, 2.0F, 8.0F, new CubeDeformation(0.5F))
 				.texOffs(12, 75).addBox(-4.1F, -2.0F, -3.0F, 1.0F, 2.0F, 6.0F, new CubeDeformation(0.5F))
 				.texOffs(20, 71).addBox(-3.0F, -2.0F, -4.0F, 6.0F, 2.0F, 8.0F, new CubeDeformation(0.5F)), PartPose.offsetAndRotation(-0.6F, 0.1F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
-		PartDefinition Nacho = head.addOrReplaceChild("Nacho", CubeListBuilder.create(), PartPose.offsetAndRotation(0.6F, -31.2F, 0.0F, -0.3054F, 0.0F, 0.0F));
+		PartDefinition Nacho = Sombraro.addOrReplaceChild("Nacho", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, -0.0F, 0.0F, -0F, 0.0F, 0.0F));
 
 		PartDefinition Fourteen_r1 = Nacho.addOrReplaceChild("Fourteen_r1", CubeListBuilder.create().texOffs(0, 101).addBox(0.2F, -0.6F, -0.6F, 0.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(5.0F, -0.5F, -1.5F, -0.7854F, -1.5708F, 0.0F));
 
