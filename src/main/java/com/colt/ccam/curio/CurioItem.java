@@ -47,5 +47,4 @@ public abstract class CurioItem extends ccamCurio implements ICurioItem {
         return true;
     }
 
-    protected abstract ResourceLocation getTexture();
 }

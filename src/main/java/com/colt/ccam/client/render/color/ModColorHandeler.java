@@ -68,6 +68,15 @@ public class ModColorHandeler {
                 (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
                 ccamItems.WITCH_HAT.get()
         );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.SUNGLASSES.get()
+        );
+        event.getItemColors().register(
+                (stack, colorIn) -> colorIn < 1 ? -1 : ((DyeableLeatherItem) stack.getItem()).getColor(stack),
+                ccamItems.BASIC_CURIO.get()
+        );
+
 
 
     }

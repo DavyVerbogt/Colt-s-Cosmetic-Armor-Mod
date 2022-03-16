@@ -1,7 +1,7 @@
 package com.colt.ccam.client.render.model;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.render.model.CatEarCurioModel;
+import com.colt.ccam.curio.render.model.*;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.resources.ResourceLocation;
@@ -37,7 +37,20 @@ TOP_TOP_TOPHAT = createLocation("toptoptophat", "main"),
  TRAFFIC_CONE = createLocation("trafficcone", "main"),
 TULIP = createLocation("tulip", "main"),
  WITCH_HAT = createLocation("witchhat", "main"),
- WOLF = createLocation("wolf", "main");
+ WOLF = createLocation("wolf", "main"),
+    //Curio
+    CAT_EARS = createLocation("catears","main"),
+    CAT_TAIL = createLocation("cattail","main"),
+    DOG_EARS = createLocation("dogears","main"),
+    DOG_TAIL = createLocation("dogtail","main"),
+    BUN_EARS = createLocation("bunears","main"),
+    BUN_TAIL = createLocation("buntail","main"),
+    PONCHO = createLocation("poncho","main"),
+    PONCHO_SIDE = createLocation("ponchoside","main"),
+    HALO = createLocation("halo","main"),
+    SPURS = createLocation("spurs","main"),
+    BASIC_CURIO = createLocation("basiccurio","main"),
+            SUNGLASS_CURIO = createLocation("sunglass","main");
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ARROW, () -> ArrowArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
@@ -64,6 +77,19 @@ TULIP = createLocation("tulip", "main"),
         event.registerLayerDefinition(TULIP, () -> TulipArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(WITCH_HAT, () -> WitchHatArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(WOLF, () -> WolfArmorModel.createArmorLayer(new CubeDeformation(1f)));
+//Curio
+        event.registerLayerDefinition(CAT_EARS, () -> CatEarCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(CAT_TAIL, () -> CatTailCurio.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(DOG_EARS, () -> DogEarsCurio.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(DOG_TAIL, () -> DogTailCurio.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(BUN_EARS, () -> RabitEarsCurio.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(BUN_TAIL, () -> RabbitTailCurio.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(HALO, () -> HaloCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(PONCHO, () -> PonchoCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(PONCHO_SIDE, () -> PonchoSideCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(SPURS, () -> SpurCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(BASIC_CURIO, () -> BasicCurioModel.createCurioModel(new CubeDeformation(1f)));
+        event.registerLayerDefinition(SUNGLASS_CURIO, () -> SunglassCurioModel.createCurioModel(new CubeDeformation(1f)));
     }
 
     private static ModelLayerLocation createLocation(String model, String layer) {

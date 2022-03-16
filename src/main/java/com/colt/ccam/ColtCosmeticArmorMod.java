@@ -3,33 +3,26 @@ package com.colt.ccam;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.colt.ccam.Item.ItemTags;
 import com.colt.ccam.client.ClientRefrence;
+import com.colt.ccam.client.render.CustomArmorRenderProperties;
 import com.colt.ccam.client.render.model.CCAMModelLayers;
-import com.colt.ccam.curio.render.CurioRender;
+import com.colt.ccam.curio.render.model.CatEarCurioModel;
+import com.colt.ccam.curio.render.model.CurioRender;
 import com.colt.ccam.registries.ccamItems;
 
 import com.colt.ccam.server.dedicated.DedicatedServerReference;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import top.theillusivec4.curios.api.SlotTypeMessage;
@@ -45,7 +38,6 @@ public class ColtCosmeticArmorMod {
 
     public ColtCosmeticArmorMod() {
         //ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigData.SERVER_SPEC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupEntityModelLayers);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
                 forgeEventBus = MinecraftForge.EVENT_BUS;
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
@@ -56,11 +48,13 @@ public class ColtCosmeticArmorMod {
     private void addRegistries(final IEventBus modEventBus) {
         ccamItems.ITEMS.register(modEventBus);
         modEventBus.addListener(this::enqueueIMC);
+        modEventBus.addListener(this::setupEntityModelLayers);
+        modEventBus.addListener(this::CurioRenderReader);
     }
-    @OnlyIn(Dist.CLIENT)
+
     private void CurioRenderReader(final FMLClientSetupEvent event)
     {
-        CuriosRendererRegistry.register(ccamItems.CAT_EARS.get(), CurioRender::new);
+        CustomArmorRenderProperties.CurioRenderReader(event);
     }
 
     private void setupEntityModelLayers(final EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -89,6 +83,7 @@ public class ColtCosmeticArmorMod {
         InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("tail").priority(90).icon(new ResourceLocation("curios:slot/tail_slot")).build());
 
     }
+
     /*
      * public void modConfig(ModConfig.ModConfigEvent event) { ModConfig config =
      * event.getConfig(); if (config.getSpec() == ConfigData.SERVER_SPEC)

@@ -1,15 +1,23 @@
 package com.colt.ccam.client.render;
 
+import com.colt.ccam.Item.BasicCurio;
+import com.colt.ccam.Item.HaloItem;
+import com.colt.ccam.Item.RabbitEarItem;
 import com.colt.ccam.client.render.model.*;
-import com.colt.ccam.curio.render.CurioModelLayers;
-import com.colt.ccam.curio.render.model.CatEarCurioModel;
+import com.colt.ccam.curio.render.model.*;
 import com.colt.ccam.registries.ccamItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 public class CustomArmorRenderProperties implements IItemRenderProperties {
 
@@ -40,34 +48,62 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
     public static WitchHatArmorModel WITCH_HAT;
     public static WolfArmorModel WOLF;
     public static CatEarCurioModel CAT_EARS;
+    public static CatTailCurio CAT_TAIL;
+    public static DogEarsCurio DOG_EARS;
+    public static DogTailCurio DOG_TAIL;
+    public static RabitEarsCurio BUN_EARS;
+    public static RabbitTailCurio BUN_TAIL;
+    public static HaloCurioModel HALO;
+    public static PonchoCurioModel PONCHO;
+    public static PonchoSideCurioModel PONCHO_SIDE;
+    public static SpurCurioModel SPURS;
+    public static BasicCurioModel BASIC_CURIO;
+    public static SunglassCurioModel SUNGLASSES;
 
     public static void initializeModels() {
 
         init=true;
-        ARROW = new ArrowArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.ARROW));
-        BASIC = new BasicArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.BASIC));
-        COLT = new ColtArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.COLT));
-        CONSTRUCTION_HELMET = new ConstructionArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.CONSTRUCTION_HELMET));
-        COW = new CowArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.COW));
-        COWBOY_HAT = new CowBoyHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.COWBOY_HAT));
-        FLOWER_CROWN = new FlowerCrownArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.FLOWER_CROWN));
-        FURCOAT = new FurCoatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.FURCOAT));
-        GLADIATOR = new GladiatorArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.GLADIATOR));
-        LONG_SMALL_TOPHAT = new LongSmalTophatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.LONG_SMALL_TOPHAT));
-        LONG_TOPHAT = new LongTopHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.LONG_TOPHAT));
-        MAJIMA_CONSTRUCTION_HAT = new MajimaContructionHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.MAJIMA_CONSTRUCTION_HAT));
-        MONOCLE = new MonocleArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.MONOCLE));
-        NACHO_SOMBRARO = new NachoSombraroArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.NACHO_SOMBRARO));
-        SAMURAI = new SamuraiArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.SAMURAI));
-        SHOT_COWBOY_HAT = new ShotCowBoyHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.SHOT_COWBOY_HAT));
-        SMALL_TOPHAT = new SmallTopHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.SMALL_TOPHAT));
-        SOMBRARO = new SombreroArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.SOMBRARO));
-        TOPHAT = new TopHatModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.TOPHAT));
-        TOP_TOP_TOPHAT = new TopTopTopHatModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.TOP_TOP_TOPHAT));
-        TRAFFIC_CONE = new TrafficConeArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.TRAFFIC_CONE));
-        TULIP = new TulipArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.TULIP));
-        WITCH_HAT = new WitchHatArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.WITCH_HAT));
-        WOLF = new WolfArmorModel(Minecraft.getInstance().getEntityModels().bakeLayer(CCAMModelLayers.WOLF));
+        ARROW = new ArrowArmorModel(bakeLayer(CCAMModelLayers.ARROW));
+        BASIC = new BasicArmorModel(bakeLayer(CCAMModelLayers.BASIC));
+        COLT = new ColtArmorModel(bakeLayer(CCAMModelLayers.COLT));
+        CONSTRUCTION_HELMET = new ConstructionArmorModel(bakeLayer(CCAMModelLayers.CONSTRUCTION_HELMET));
+        COW = new CowArmorModel(bakeLayer(CCAMModelLayers.COW));
+        COWBOY_HAT = new CowBoyHatArmorModel(bakeLayer(CCAMModelLayers.COWBOY_HAT));
+        FLOWER_CROWN = new FlowerCrownArmorModel(bakeLayer(CCAMModelLayers.FLOWER_CROWN));
+        FURCOAT = new FurCoatArmorModel(bakeLayer(CCAMModelLayers.FURCOAT));
+        GLADIATOR = new GladiatorArmorModel(bakeLayer(CCAMModelLayers.GLADIATOR));
+        LONG_SMALL_TOPHAT = new LongSmalTophatArmorModel(bakeLayer(CCAMModelLayers.LONG_SMALL_TOPHAT));
+        LONG_TOPHAT = new LongTopHatArmorModel(bakeLayer(CCAMModelLayers.LONG_TOPHAT));
+        MAJIMA_CONSTRUCTION_HAT = new MajimaContructionHatArmorModel(bakeLayer(CCAMModelLayers.MAJIMA_CONSTRUCTION_HAT));
+        MONOCLE = new MonocleArmorModel(bakeLayer(CCAMModelLayers.MONOCLE));
+        NACHO_SOMBRARO = new NachoSombraroArmorModel(bakeLayer(CCAMModelLayers.NACHO_SOMBRARO));
+        SAMURAI = new SamuraiArmorModel(bakeLayer(CCAMModelLayers.SAMURAI));
+        SHOT_COWBOY_HAT = new ShotCowBoyHatArmorModel(bakeLayer(CCAMModelLayers.SHOT_COWBOY_HAT));
+        SMALL_TOPHAT = new SmallTopHatArmorModel(bakeLayer(CCAMModelLayers.SMALL_TOPHAT));
+        SOMBRARO = new SombreroArmorModel(bakeLayer(CCAMModelLayers.SOMBRARO));
+        TOPHAT = new TopHatModel(bakeLayer(CCAMModelLayers.TOPHAT));
+        TOP_TOP_TOPHAT = new TopTopTopHatModel(bakeLayer(CCAMModelLayers.TOP_TOP_TOPHAT));
+        TRAFFIC_CONE = new TrafficConeArmorModel(bakeLayer(CCAMModelLayers.TRAFFIC_CONE));
+        TULIP = new TulipArmorModel(bakeLayer(CCAMModelLayers.TULIP));
+        WITCH_HAT = new WitchHatArmorModel(bakeLayer(CCAMModelLayers.WITCH_HAT));
+        WOLF = new WolfArmorModel(bakeLayer(CCAMModelLayers.WOLF));
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void CurioRenderReader(final FMLClientSetupEvent event)
+    {
+        CuriosRendererRegistry.register(ccamItems.CAT_EARS.get(), () -> new CurioRender("catears_curio",CAT_EARS = new CatEarCurioModel(bakeLayer(CCAMModelLayers.CAT_EARS))));
+        CuriosRendererRegistry.register(ccamItems.CAT_TAIL.get(), () -> new CurioRender("cattail_curio",CAT_TAIL = new CatTailCurio(bakeLayer(CCAMModelLayers.CAT_TAIL))));
+        CuriosRendererRegistry.register(ccamItems.DOG_EARS.get(), () -> new CurioRender("dogears_curio",DOG_EARS = new DogEarsCurio(bakeLayer(CCAMModelLayers.DOG_EARS))));
+        CuriosRendererRegistry.register(ccamItems.DOG_TAIL.get(), () -> new CurioRender("dogtail_curio",DOG_TAIL = new DogTailCurio(bakeLayer(CCAMModelLayers.DOG_TAIL))));
+        CuriosRendererRegistry.register(ccamItems.RABBIT_EARS.get(), () -> new CurioRender("bunnyears_curio",BUN_EARS = new RabitEarsCurio(bakeLayer(CCAMModelLayers.BUN_EARS))));
+        CuriosRendererRegistry.register(ccamItems.RABBIT_Tail.get(), () -> new CurioRender("bunnytail_curio",BUN_TAIL = new RabbitTailCurio(bakeLayer(CCAMModelLayers.BUN_TAIL))));
+        CuriosRendererRegistry.register(ccamItems.BASIC_CURIO.get(), () -> new CurioRender("basic_curio", BASIC_CURIO = new BasicCurioModel(bakeLayer(CCAMModelLayers.BASIC_CURIO))));
+        CuriosRendererRegistry.register(ccamItems.SPURS.get(), () -> new CurioRender("spur_curio",SPURS = new SpurCurioModel(bakeLayer(CCAMModelLayers.SPURS))));
+        CuriosRendererRegistry.register(ccamItems.HALO.get(), () -> new CurioRender("halo_curio",HALO = new HaloCurioModel(bakeLayer(CCAMModelLayers.HALO))));
+        CuriosRendererRegistry.register(ccamItems.PONCHO.get(), () -> new CurioRender("poncho_curio",PONCHO = new PonchoCurioModel(bakeLayer(CCAMModelLayers.PONCHO))));
+        CuriosRendererRegistry.register(ccamItems.PONCHO_SIDE.get(), () -> new CurioRender("ponchoside_curio",PONCHO_SIDE = new PonchoSideCurioModel(bakeLayer(CCAMModelLayers.PONCHO_SIDE))));
+        CuriosRendererRegistry.register(ccamItems.SUNGLASSES.get(), () -> new CurioRender("sunglasses_curio",SUNGLASSES = new SunglassCurioModel(bakeLayer(CCAMModelLayers.SUNGLASS_CURIO))));
     }
 
     public HumanoidModel<?> getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlot armorSlot, HumanoidModel<?> _default) {
@@ -235,5 +271,9 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
             return WOLF;
         }
         return _default;
+    }
+
+    public static ModelPart bakeLayer(ModelLayerLocation layerLocation) {
+        return Minecraft.getInstance().getEntityModels().bakeLayer(layerLocation);
     }
 }

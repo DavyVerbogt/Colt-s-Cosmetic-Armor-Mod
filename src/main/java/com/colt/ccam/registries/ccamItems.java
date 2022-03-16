@@ -1,5 +1,6 @@
 package com.colt.ccam.registries;
 
+import ca.weblite.objc.Proxy;
 import com.colt.ccam.ColtCosmeticArmorMod;
 
 import com.colt.ccam.Item.*;
@@ -122,8 +123,9 @@ public class ccamItems {
             () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlot.FEET));
 
     // Curio Items
- public static final RegistryObject<Item> CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new);
-                               /*DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
+ public static final RegistryObject<Item>
+                        CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
+                        DOG_EARS = ITEMS.register("dog_ears", DogEarItem::new),
                         RABBIT_EARS = ITEMS.register("rabbit_ears", RabbitEarItem::new),
                         CAT_TAIL = ITEMS.register("cat_tail", CatTailItem::new),
                         DOG_TAIL = ITEMS.register("dog_tail", DogTailItem::new),
@@ -132,7 +134,7 @@ public class ccamItems {
                         PONCHO = ITEMS.register("poncho", PonchoItem::new),
                         HALO = ITEMS.register("halo", HaloItem::new),
                         PONCHO_SIDE = ITEMS.register("poncho_side", PonchoSideItem::new),
-                        SPURS = ITEMS.register("spur", SpurItem::new);
-                        //TEST_CURIO = ITEMS.register("test_curio", TestCurio::new);
-*/
+                        SPURS = ITEMS.register("spur", SpurItem::new),
+                        SUNGLASSES = ITEMS.register("sunglasses", SunglassItem::new);
+
 }

@@ -16,12 +16,12 @@ public class CatEarCurioModel extends HumanoidModel<LivingEntity> {
         super(root);
     }
 
-        public static LayerDefinition createCatEars (CubeDeformation deformation){
+        public static LayerDefinition createCurioModel (CubeDeformation deformation){
         MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0F);
         PartDefinition partdefinition = meshdefinition.getRoot();
         PartDefinition head = partdefinition.getChild("head");
 
-        head.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 6.0F, 0.0F));
+        head.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
         PartDefinition EarL = head.addOrReplaceChild("EarL", CubeListBuilder.create().texOffs(10, 51).addBox(3.0F, -9.0F, -2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(10, 53).addBox(4.0F, -10.0F, -2.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
