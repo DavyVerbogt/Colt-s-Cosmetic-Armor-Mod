@@ -8,9 +8,13 @@ import com.colt.ccam.client.render.CustomArmorRenderProperties;
 import com.colt.ccam.client.render.model.CCAMModelLayers;
 import com.colt.ccam.curio.render.model.CatEarCurioModel;
 import com.colt.ccam.curio.render.model.CurioRender;
+import com.colt.ccam.registries.ccamBlocks;
+import com.colt.ccam.registries.ccamData;
 import com.colt.ccam.registries.ccamItems;
 
 import com.colt.ccam.server.dedicated.DedicatedServerReference;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -40,6 +44,7 @@ public class ColtCosmeticArmorMod {
         //ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigData.SERVER_SPEC);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(),
                 forgeEventBus = MinecraftForge.EVENT_BUS;
+        ccamData.LoadRecepies(modEventBus);
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         addRegistries(modEventBus);
@@ -47,18 +52,23 @@ public class ColtCosmeticArmorMod {
 
     private void addRegistries(final IEventBus modEventBus) {
         ccamItems.ITEMS.register(modEventBus);
+        ccamBlocks.BLOCK.register(modEventBus);
         modEventBus.addListener(this::enqueueIMC);
         modEventBus.addListener(this::setupEntityModelLayers);
         modEventBus.addListener(this::CurioRenderReader);
+        modEventBus.addListener(this::SewingScreenLoader);
     }
 
     private void CurioRenderReader(final FMLClientSetupEvent event)
     {
         CustomArmorRenderProperties.CurioRenderReader(event);
     }
-
     private void setupEntityModelLayers(final EntityRenderersEvent.RegisterLayerDefinitions event) {
         CCAMModelLayers.register(event);
+    }
+    private void SewingScreenLoader(final FMLClientSetupEvent event)
+    {
+        ccamData.SewingTableScreen();
     }
     @SubscribeEvent
     public void enqueueIMC(final InterModEnqueueEvent event) {

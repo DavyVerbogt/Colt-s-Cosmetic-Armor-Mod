@@ -7,11 +7,15 @@ import com.colt.ccam.Item.*;
 import com.colt.ccam.armor.ModArmorMaterial;
 import com.colt.ccam.armor.*;
 
+import com.colt.ccam.itemgroup.ccamBlockGroup;
+import com.colt.ccam.itemgroup.ccamItemGroup;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.spongepowered.asm.mixin.Final;
 
 public class ccamItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
@@ -122,6 +126,9 @@ public class ccamItems {
     public static final RegistryObject<WolfArmorItem> WOLF_BOOTS = ITEMS.register("wolf_boots",
             () -> new WolfArmorItem(ModArmorMaterial.WOLFHIDE, EquipmentSlot.FEET));
 
+    public static final RegistryObject<FourthTheJullyArmorItem> FOURTHOFJULLY = ITEMS.register("fourth_the_jully",
+            () -> new FourthTheJullyArmorItem(ModArmorMaterial.FOURTHTHEJULLY, EquipmentSlot.HEAD));
+
     // Curio Items
  public static final RegistryObject<Item>
                         CAT_EARS = ITEMS.register("cat_ears", CatEarItem::new),
@@ -137,4 +144,6 @@ public class ccamItems {
                         SPURS = ITEMS.register("spur", SpurItem::new),
                         SUNGLASSES = ITEMS.register("sunglasses", SunglassItem::new);
 
+//SewingTable
+    public static final RegistryObject<BlockItem> SEWING_TABLE = ITEMS.register("sewing_table", () -> new BlockItem(ccamBlocks.Sewing_Table.get(), new Item.Properties().tab(ccamBlockGroup.CCAM_BLOCK_TAB).stacksTo(64)));
 }

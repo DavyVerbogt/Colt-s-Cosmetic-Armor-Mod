@@ -89,7 +89,11 @@ public enum ModArmorMaterial implements ArmorMaterial {
 			() -> Ingredient.of()),
 
 	SHOTCOWBOYHAT("shotcowboyhat", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+			() -> Ingredient.of()),
+
+	FOURTHTHEJULLY("fourththejully", 15, new int[] { 2, 5, 6, 2 }, 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
 			() -> Ingredient.of());
+
 
 	// Stuff that is needed
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };

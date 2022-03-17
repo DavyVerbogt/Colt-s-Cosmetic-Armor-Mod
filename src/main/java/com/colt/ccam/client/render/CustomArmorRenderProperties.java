@@ -1,8 +1,5 @@
 package com.colt.ccam.client.render;
 
-import com.colt.ccam.Item.BasicCurio;
-import com.colt.ccam.Item.HaloItem;
-import com.colt.ccam.Item.RabbitEarItem;
 import com.colt.ccam.client.render.model.*;
 import com.colt.ccam.curio.render.model.*;
 import com.colt.ccam.registries.ccamItems;
@@ -47,6 +44,8 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
     public static TulipArmorModel TULIP;
     public static WitchHatArmorModel WITCH_HAT;
     public static WolfArmorModel WOLF;
+    public static FourthOfJullyModel FOURTHTHEJULLY;
+    //Curio
     public static CatEarCurioModel CAT_EARS;
     public static CatTailCurio CAT_TAIL;
     public static DogEarsCurio DOG_EARS;
@@ -87,6 +86,7 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         TULIP = new TulipArmorModel(bakeLayer(CCAMModelLayers.TULIP));
         WITCH_HAT = new WitchHatArmorModel(bakeLayer(CCAMModelLayers.WITCH_HAT));
         WOLF = new WolfArmorModel(bakeLayer(CCAMModelLayers.WOLF));
+        FOURTHTHEJULLY = new FourthOfJullyModel(bakeLayer(CCAMModelLayers.FOURTHTHEJULLY));
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -236,7 +236,7 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         }
         if(itemStack.getItem() == ccamItems.TOPHAT.get())
         {
-            return TOPHAT;
+            return TOPHAT.withAnimations(entityLiving);
         }
         if(itemStack.getItem() == ccamItems.TOP_TOP_TOP_HAT.get())
         {
@@ -269,6 +269,10 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         if(itemStack.getItem() == ccamItems.WOLF_BOOTS.get())
         {
             return WOLF;
+        }
+        if(itemStack.getItem() == ccamItems.FOURTHOFJULLY.get())
+        {
+            return FOURTHTHEJULLY;
         }
         return _default;
     }

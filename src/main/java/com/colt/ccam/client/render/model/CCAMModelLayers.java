@@ -38,6 +38,7 @@ TOP_TOP_TOPHAT = createLocation("toptoptophat", "main"),
 TULIP = createLocation("tulip", "main"),
  WITCH_HAT = createLocation("witchhat", "main"),
  WOLF = createLocation("wolf", "main"),
+            FOURTHTHEJULLY = createLocation("fourththejully", "main"),
     //Curio
     CAT_EARS = createLocation("catears","main"),
     CAT_TAIL = createLocation("cattail","main"),
@@ -77,6 +78,7 @@ TULIP = createLocation("tulip", "main"),
         event.registerLayerDefinition(TULIP, () -> TulipArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(WITCH_HAT, () -> WitchHatArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(WOLF, () -> WolfArmorModel.createArmorLayer(new CubeDeformation(1f)));
+        event.registerLayerDefinition(FOURTHTHEJULLY, () -> FourthOfJullyModel.createArmorLayer(new CubeDeformation(1f)));
 //Curio
         event.registerLayerDefinition(CAT_EARS, () -> CatEarCurioModel.createCurioModel(new CubeDeformation(1f)));
         event.registerLayerDefinition(CAT_TAIL, () -> CatTailCurio.createCurioModel(new CubeDeformation(1f)));

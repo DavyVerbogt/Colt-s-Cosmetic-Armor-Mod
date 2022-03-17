@@ -3,6 +3,7 @@ package com.colt.ccam.client;
 import com.colt.ccam.ISidedReference;
 import com.colt.ccam.client.render.CustomArmorRenderProperties;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class ClientRefrence implements ISidedReference {

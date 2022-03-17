@@ -33,7 +33,6 @@ public class CurioRender implements ICurioRenderer{
     protected ResourceLocation getTexture() {
             return texture;
         }
-
         protected HumanoidModel<LivingEntity> getModel() {
             return model;
         }
