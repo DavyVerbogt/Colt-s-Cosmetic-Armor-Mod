@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " i ",
+        "#c#"
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:logs"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "c": {
+            "item": "minecraft:crafting_table"
+        }
+    },
+    "result": {
+        "item": "ccam:sewing_table"
+    }
+}
