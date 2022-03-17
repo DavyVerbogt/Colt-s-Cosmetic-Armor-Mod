@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:campfire_cooking",
+    "ingredient": {
+        "item":"ccam:cowboy_hat"
+    },
+    "result": {
+       "item": "ccam:shot_cowboy_hat"
+    },
+    "experience": 0,
+    "cookingtime": 200
+}
