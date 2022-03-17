@@ -1,0 +1,8 @@
+{
+    "type": "ccam:sewing",
+    "ingredient": {
+        "item": "ccam:basic_helmet"
+    },
+    "result": "ccam:top_top_top_hat",
+    "count": 1
+}

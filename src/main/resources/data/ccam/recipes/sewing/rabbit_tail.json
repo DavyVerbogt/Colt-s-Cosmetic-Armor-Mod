@@ -1,0 +1,8 @@
+{
+    "type": "ccam:sewing",
+    "ingredient": {
+        "item": "ccam:basic_curio"
+    },
+    "result": "ccam:rabbit_tail",
+    "count": 1
+}

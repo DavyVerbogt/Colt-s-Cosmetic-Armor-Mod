@@ -32,9 +32,8 @@ public class TopHatModel extends HumanoidModel {
 	}
 
 	public TopHatModel withAnimations(LivingEntity entity){
-		float partialTick = Minecraft.getInstance().getFrameTime();
 		Vec3 vector3d = entity.getDeltaMovement();
-		if (!entity.isOnGround() && vector3d.y < 0.0D) {
+		if (!entity.isOnGround() && !entity.isFallFlying() &&  vector3d.y < 0.0D) {
 			tophat.y = (float) (-6.5f -Math.pow(-vector3d.y, 5D));
 		}
 		else

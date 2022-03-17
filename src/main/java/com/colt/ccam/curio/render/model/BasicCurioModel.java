@@ -2,10 +2,8 @@ package com.colt.ccam.curio.render.model;
 
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.builders.CubeDeformation;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraft.client.model.geom.builders.MeshDefinition;
-import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.*;
 
 
 public class BasicCurioModel extends HumanoidModel {
@@ -17,7 +15,10 @@ public class BasicCurioModel extends HumanoidModel {
     public static LayerDefinition createCurioModel (CubeDeformation deformation) {
         MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0F);
         PartDefinition partdefinition = meshdefinition.getRoot();
-        PartDefinition head = partdefinition.getChild("head");
+        PartDefinition body = partdefinition.getChild("body");
+
+        body.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 59).addBox(-4.5F, 10.0F, -2.0F, 8.0F, 1.0F, 4.0F, new CubeDeformation(0.2F)),
+                PartPose.offset(0.5F, 1F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }

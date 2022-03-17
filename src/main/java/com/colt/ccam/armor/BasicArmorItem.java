@@ -15,11 +15,6 @@ public class BasicArmorItem extends ArmorItem implements DyeableLeatherItem {
         super(materialIn, slot, new Item.Properties().tab(ccamItemGroup.CCAM_TAB));
     }
 
-    @Override
-    public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
-        consumer.accept((net.minecraftforge.client.IItemRenderProperties) ColtCosmeticArmorMod.SIDED_SYSTEM.getArmorRenderProperties());
-    }
-
     public int getColor(ItemStack stack) {
         CompoundTag lvt_2_1_ = stack.getTagElement("display");
         return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0XF1F6FC;

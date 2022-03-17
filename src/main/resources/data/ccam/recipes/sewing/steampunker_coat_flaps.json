@@ -1,0 +1,8 @@
+{
+    "type": "ccam:sewing",
+    "ingredient": {
+        "item": "ccam:basic_leggings"
+    },
+    "result": "ccam:colt_leggings",
+    "count": 1
+}

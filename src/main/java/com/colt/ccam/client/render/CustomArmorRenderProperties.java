@@ -63,7 +63,6 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
 
         init=true;
         ARROW = new ArrowArmorModel(bakeLayer(CCAMModelLayers.ARROW));
-        BASIC = new BasicArmorModel(bakeLayer(CCAMModelLayers.BASIC));
         COLT = new ColtArmorModel(bakeLayer(CCAMModelLayers.COLT));
         CONSTRUCTION_HELMET = new ConstructionArmorModel(bakeLayer(CCAMModelLayers.CONSTRUCTION_HELMET));
         COW = new CowArmorModel(bakeLayer(CCAMModelLayers.COW));
@@ -113,22 +112,6 @@ public class CustomArmorRenderProperties implements IItemRenderProperties {
         if(itemStack.getItem() == ccamItems.ARROW.get())
         {
             return ARROW;
-        }
-        if(itemStack.getItem() == ccamItems.BASIC_HELMET.get())
-        {
-            return BASIC;
-        }
-        if(itemStack.getItem() == ccamItems.BASIC_CHESTPLATE.get())
-        {
-            return BASIC;
-        }
-        if(itemStack.getItem() == ccamItems.BASIC_BOOTS.get())
-        {
-            return BASIC;
-        }
-        if(itemStack.getItem() == ccamItems.BASIC_BOOTS.get())
-        {
-            return BASIC;
         }
         if(itemStack.getItem() == ccamItems.COLT_HELMET.get())
         {

@@ -15,7 +15,6 @@ public class CCAMModelLayers {
 
     public static final ModelLayerLocation
 ARROW = createLocation("arrow", "main"),
-BASIC = createLocation("basic", "main"),
 COLT = createLocation("colt", "main"),
 CONSTRUCTION_HELMET = createLocation("constructionhelmet", "main"),
 COW = createLocation("cow", "main"),
@@ -55,7 +54,6 @@ TULIP = createLocation("tulip", "main"),
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ARROW, () -> ArrowArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
-        event.registerLayerDefinition(BASIC, () -> BasicArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(COLT, () -> ColtArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(CONSTRUCTION_HELMET, () -> ConstructionArmorModel.createArmorLayer(new CubeDeformation(0.5f)));
         event.registerLayerDefinition(COW, () -> CowArmorModel.createArmorLayer(new CubeDeformation(1f)));
