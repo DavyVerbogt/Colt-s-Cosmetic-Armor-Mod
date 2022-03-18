@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "ccam:basic_boots"
-    },
-    "result": "ccam:gladiator_boots",
-    "count": 1
-}

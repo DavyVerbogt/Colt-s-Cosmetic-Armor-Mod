@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "ccam:basic_helmet"
-    },
-    "result": "ccam:nacho_sombrero",
-    "count": 1
-}
