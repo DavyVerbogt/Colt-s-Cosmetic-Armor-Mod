@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "ccam:top_hat"
+        },
+        "title": {
+            "text": "Getting dressed up"
+        },
+        "description": {
+            "text": "Make a top hat"
+        }
+    },
+    "parent": "ccam:root",
+    "criteria": {
+        "craft_top_hat": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "ccam:top_hat"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
