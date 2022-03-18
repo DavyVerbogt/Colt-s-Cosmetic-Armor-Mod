@@ -1,11 +1,10 @@
 package com.colt.ccam.client.render.model;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.render.model.*;
+import com.colt.ccam.intergration.curio.render.model.*;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;

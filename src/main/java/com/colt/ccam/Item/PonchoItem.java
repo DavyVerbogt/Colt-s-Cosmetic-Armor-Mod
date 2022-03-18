@@ -1,10 +1,7 @@
 package com.colt.ccam.Item;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.CurioItem;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import com.colt.ccam.intergration.curio.CurioItem;
 
 
 public class PonchoItem  extends CurioItem{

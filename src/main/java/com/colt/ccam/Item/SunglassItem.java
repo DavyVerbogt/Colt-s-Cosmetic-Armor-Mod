@@ -1,10 +1,7 @@
 package com.colt.ccam.Item;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.CurioItem;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.item.DyeableLeatherItem;
-import net.minecraft.world.item.ItemStack;
+import com.colt.ccam.intergration.curio.CurioItem;
 
 public class SunglassItem  extends CurioItem{
 

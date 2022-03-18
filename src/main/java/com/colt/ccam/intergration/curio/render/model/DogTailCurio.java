@@ -1,5 +1,4 @@
-package com.colt.ccam.curio.render.model;
-import com.colt.ccam.client.render.model.TopHatModel;
+package com.colt.ccam.intergration.curio.render.model;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -7,7 +6,6 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.phys.Vec3;
 
 public class DogTailCurio  extends HumanoidModel{
 	public ModelPart tail;

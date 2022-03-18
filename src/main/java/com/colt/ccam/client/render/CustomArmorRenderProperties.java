@@ -1,7 +1,7 @@
 package com.colt.ccam.client.render;
 
 import com.colt.ccam.client.render.model.*;
-import com.colt.ccam.curio.render.model.*;
+import com.colt.ccam.intergration.curio.render.model.*;
 import com.colt.ccam.registries.ccamItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;

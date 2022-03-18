@@ -1,4 +1,4 @@
-package com.colt.ccam.curio;
+package com.colt.ccam.intergration.curio;
 
 
 import com.colt.ccam.registries.ccamCurio;

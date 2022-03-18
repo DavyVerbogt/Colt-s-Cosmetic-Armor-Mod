@@ -154,4 +154,5 @@ public class ccamItems {
         public static final RegistryObject<BlockItem> SEWING_TABLE = ITEMS.register("sewing_table",
                         () -> new BlockItem(ccamBlocks.Sewing_Table.get(),
                                         new Item.Properties().tab(ccamBlockGroup.CCAM_BLOCK_TAB).stacksTo(64)));
+
 }

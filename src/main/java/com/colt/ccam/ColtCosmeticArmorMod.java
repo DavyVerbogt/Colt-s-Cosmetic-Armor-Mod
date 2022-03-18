@@ -6,19 +6,13 @@ import java.util.List;
 import com.colt.ccam.client.ClientRefrence;
 import com.colt.ccam.client.render.CustomArmorRenderProperties;
 import com.colt.ccam.client.render.model.CCAMModelLayers;
-import com.colt.ccam.curio.render.model.CatEarCurioModel;
-import com.colt.ccam.curio.render.model.CurioRender;
 import com.colt.ccam.registries.ccamBlocks;
 import com.colt.ccam.registries.ccamData;
 import com.colt.ccam.registries.ccamItems;
 
 import com.colt.ccam.server.dedicated.DedicatedServerReference;
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,7 +25,6 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod(ColtCosmeticArmorMod.MOD_ID)
 public class ColtCosmeticArmorMod {

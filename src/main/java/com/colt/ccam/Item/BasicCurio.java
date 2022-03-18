@@ -1,21 +1,12 @@
 
 package com.colt.ccam.Item;
 
-import java.util.List;
-
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.CurioItem;
+import com.colt.ccam.intergration.curio.CurioItem;
 
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import top.theillusivec4.curios.api.type.capability.ICurio;
 
 
 public class BasicCurio extends CurioItem implements DyeableLeatherItem {

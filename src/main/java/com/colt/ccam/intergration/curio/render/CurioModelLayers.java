@@ -1,9 +1,7 @@
-package com.colt.ccam.curio.render;
+package com.colt.ccam.intergration.curio.render;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
-import com.colt.ccam.curio.render.model.CatEarCurioModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.resources.ResourceLocation;

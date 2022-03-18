@@ -2,7 +2,7 @@ package com.colt.ccam.Item;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 
-import com.colt.ccam.curio.CurioItem;
+import com.colt.ccam.intergration.curio.CurioItem;
 
 
 

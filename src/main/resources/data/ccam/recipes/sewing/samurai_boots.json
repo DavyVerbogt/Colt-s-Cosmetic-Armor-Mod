@@ -1,0 +1,8 @@
+{
+  "type": "ccam:sewing",
+  "ingredient": {
+    "item": "ccam:basic_boots"
+  },
+  "result": "ccam:samurai_boots",
+  "count": 1
+}

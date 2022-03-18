@@ -1,4 +1,4 @@
-package com.colt.ccam.curio.render.model;
+package com.colt.ccam.intergration.curio.render.model;
 
 import com.colt.ccam.ColtCosmeticArmorMod;
 import com.mojang.blaze3d.vertex.PoseStack;

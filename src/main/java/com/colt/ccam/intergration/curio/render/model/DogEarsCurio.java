@@ -1,4 +1,4 @@
-package com.colt.ccam.curio.render.model;
+package com.colt.ccam.intergration.curio.render.model;
 
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;

@@ -1,0 +1,8 @@
+{
+    "type": "ccam:sewing",
+    "ingredient": {
+        "item": "ccam:basic_chestplate"
+    },
+    "result": "ccam:cow_chestplate",
+    "count": 1
+}
