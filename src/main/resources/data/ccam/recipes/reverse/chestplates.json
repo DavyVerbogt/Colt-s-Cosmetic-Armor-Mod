@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "ccam:chestplates"
+        }
+    ],
+    "result": {
+        "item": "ccam:basic_chestplate"
+    }
+}

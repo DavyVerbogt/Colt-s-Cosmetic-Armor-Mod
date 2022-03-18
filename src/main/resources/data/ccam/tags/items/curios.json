@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "ccam:rabbit_tail",
+        "ccam:dog_tail",
+        "ccam:cat_tail",
+        "ccam:rabbit_ears",
+        "ccam:dog_ears",
+        "ccam:cat_ears"
+    ]
+}

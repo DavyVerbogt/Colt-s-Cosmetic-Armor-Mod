@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:pink_tulip",
+        "minecraft:red_tulip",
+        "minecraft:orange_tulip",
+        "minecraft:white_tulip"
+    ]
+}

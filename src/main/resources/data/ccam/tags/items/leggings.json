@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "ccam:colt_leggings",
+        "ccam:cow_leggings",
+        "ccam:gladiator_leggings",
+        "ccam:samurai_leggings",
+        "ccam:wolf_leggings"
+    ]
+}

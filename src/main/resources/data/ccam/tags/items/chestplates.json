@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "ccam:colt_chestplate",
+        "ccam:cow_chestplate",
+        "ccam:gladiator_chestplate",
+        "ccam:samurai_chestplate",
+        "ccam:wolf_chestplate",
+        "ccam:fur_coat"
+    ]
+}
