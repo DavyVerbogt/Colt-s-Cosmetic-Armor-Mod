@@ -1,16 +1,19 @@
 {
     "display": {
         "icon": {
-            "item": "ccam:top_hat"
+            "item": "ccam:sewing_table"
         },
         "title": {
-            "text": "Getting dressed up"
+            "text": "Colt's Cosmetic Armor"
         },
         "description": {
-            "text": "Make a top hat"
-        }
+            "text": "Cosmetic armor"
+        },
+        "background": "ccam:textures/advancement_background.png",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
     },
-    "parent": "ccam:root",
     "criteria": {
         "craft_top_hat": {
             "trigger": "minecraft:inventory_changed",
@@ -18,7 +21,7 @@
                 "items": [
                     {
                         "items": [
-                            "ccam:top_hat"
+                            "ccam:sewing_table"
                         ]
                     }
                 ]
