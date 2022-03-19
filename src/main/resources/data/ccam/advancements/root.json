@@ -15,13 +15,13 @@
         "hidden": true
     },
     "criteria": {
-        "craft_top_hat": {
+        "receive_crafting_bench": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
                         "items": [
-                            "ccam:sewing_table"
+                            "minecraft:crafting_table"
                         ]
                     }
                 ]
