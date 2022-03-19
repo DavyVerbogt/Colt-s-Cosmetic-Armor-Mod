@@ -26,6 +26,6 @@ public class WitchHatArmorItem extends ArmorItem implements DyeableLeatherItem {
 
     public int getColor(ItemStack stack) {
         CompoundTag lvt_2_1_ = stack.getTagElement("display");
-        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0XF1F6FC;
+        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0Xcb11ed;
     }
 }
