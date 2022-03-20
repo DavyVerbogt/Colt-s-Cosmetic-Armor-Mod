@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "ccam:basic_curio",
+        "ccam:basic_helmet",
+        "ccam:basic_chestplate",
+        "ccam:basic_leggings",
+        "ccam:basic_boots"
+    ]
+}

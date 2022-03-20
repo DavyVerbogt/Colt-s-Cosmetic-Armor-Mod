@@ -6,6 +6,11 @@
         "ccam:cat_tail",
         "ccam:rabbit_ears",
         "ccam:dog_ears",
-        "ccam:cat_ears"
+        "ccam:cat_ears",
+        "ccam:spur",
+        "ccam:sunglasses",
+        "ccam:halo",
+        "ccam:poncho",
+        "ccam:poncho_side"
     ]
 }

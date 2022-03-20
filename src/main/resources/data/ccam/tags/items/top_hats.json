@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "ccam:long_small_top_hat",
+        "ccam:long_top_hat",
+        "ccam:small_top_hat",
+        "ccam:top_hat",
+        "ccam:top_top_top_hat"
+    ]
+}

@@ -1,13 +1,13 @@
 {
     "display": {
         "icon": {
-            "item": "ccam:top_hat"
+            "item": "ccam:sewing_table"
         },
         "title": {
-            "text": "Getting dressed up"
+            "text": "Sew you!"
         },
         "description": {
-            "text": "Make a top hat"
+            "text": "Make a sewing table"
         }
     },
     "parent": "ccam:root",
@@ -17,7 +17,9 @@
             "conditions": {
                 "items": [
                     {
-                        "tag": "ccam:top_hats"
+                        "items": [
+                            "ccam:sewing_table"
+                        ]
                     }
                 ]
             }

@@ -1,0 +1,14 @@
+{
+    "_comment": "all entry points to the mod (craftables for example)",
+    "replace": false,
+    "values": [
+        "ccam:basic_curio",
+        "ccam:basic_helmet",
+        "ccam:basic_chestplate",
+        "ccam:basic_leggings",
+        "ccam:basic_boots",
+        "ccam:sewing_table",
+        "ccam:tulip_hat",
+        "ccam:flower_crown"
+    ]
+}
