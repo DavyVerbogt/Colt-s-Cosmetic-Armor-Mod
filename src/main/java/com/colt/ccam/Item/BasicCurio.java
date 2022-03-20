@@ -13,7 +13,7 @@ public class BasicCurio extends CurioItem implements DyeableLeatherItem {
 
     public int getColor(ItemStack stack) {
         CompoundTag lvt_2_1_ = stack.getTagElement("display");
-        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X553917;
+        return lvt_2_1_ != null && lvt_2_1_.contains("color", 99) ? lvt_2_1_.getInt("color") : 0X5b3a29;
     }
     @Override
     public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
