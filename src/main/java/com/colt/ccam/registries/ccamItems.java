@@ -1,13 +1,11 @@
 package com.colt.ccam.registries;
 
-import ca.weblite.objc.Proxy;
 import com.colt.ccam.ColtCosmeticArmorMod;
 
 import com.colt.ccam.Item.*;
 import com.colt.ccam.armor.ModArmorMaterial;
 import com.colt.ccam.armor.*;
 
-import com.colt.ccam.itemgroup.ccamBlockGroup;
 import com.colt.ccam.itemgroup.ccamItemGroup;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
@@ -15,13 +13,17 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.spongepowered.asm.mixin.Final;
 
 public class ccamItems {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         ColtCosmeticArmorMod.MOD_ID);
-        // ArmorItems
 
+        // SewingTable
+        public static final RegistryObject<BlockItem> SEWING_TABLE = ITEMS.register("sewing_table",
+                () -> new BlockItem(ccamBlocks.Sewing_Table.get(),
+                        new Item.Properties().tab(ccamItemGroup.CCAM_TAB).stacksTo(64)));
+
+        // Basic Armor Items
         public static final RegistryObject<BasicArmorItem> BASIC_HELMET = ITEMS.register("basic_helmet",
                         () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlot.HEAD));
         public static final RegistryObject<BasicArmorItem> BASIC_CHESTPLATE = ITEMS.register("basic_chestplate",
@@ -30,9 +32,10 @@ public class ccamItems {
                         () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlot.LEGS));
         public static final RegistryObject<BasicArmorItem> BASIC_BOOTS = ITEMS.register("basic_boots",
                         () -> new BasicArmorItem(ModArmorMaterial.BASIC, EquipmentSlot.FEET));
-
+        // Basic Curio
         public static final RegistryObject<Item> BASIC_CURIO = ITEMS.register("basic_curio", BasicCurio::new);
 
+        //Armor Items
         public static final RegistryObject<ArrowArmorItem> ARROW = ITEMS.register("arrow_through_head",
                         () -> new ArrowArmorItem(ModArmorMaterial.ARROW, EquipmentSlot.HEAD));
 
@@ -149,10 +152,4 @@ public class ccamItems {
                         PONCHO_SIDE = ITEMS.register("poncho_side", PonchoSideItem::new),
                         SPURS = ITEMS.register("spur", SpurItem::new),
                         SUNGLASSES = ITEMS.register("sunglasses", SunglassItem::new);
-
-        // SewingTable
-        public static final RegistryObject<BlockItem> SEWING_TABLE = ITEMS.register("sewing_table",
-                        () -> new BlockItem(ccamBlocks.Sewing_Table.get(),
-                                        new Item.Properties().tab(ccamBlockGroup.CCAM_BLOCK_TAB).stacksTo(64)));
-
 }

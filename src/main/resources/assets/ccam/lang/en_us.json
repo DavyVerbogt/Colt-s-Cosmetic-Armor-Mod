@@ -6,6 +6,15 @@
     "container.sewing_table": "Sewing Machine",
     "sewing.sewing_machine": "Sewing Machine",
 
+    "gui.button.ccam.enable_filters": "Enable All Filters",
+    "gui.button.ccam.disable_filters": "Disable All Filters",
+    "gui.tag_filter.ccam.blocks": "Sewing Machine",
+    "gui.tag_filter.ccam.helmets": "Helmets",
+    "gui.tag_filter.ccam.chestplates": "chestplates",
+    "gui.tag_filter.ccam.leggings": "Leggings",
+    "gui.tag_filter.ccam.boots": "Boots",
+    "gui.tag_filter.ccam.curio": "Curios",
+
     "block.ccam.sewing_table": "§5Sewing Machine",
 
     "item.ccam.witch_hat": "Witch Hat",
